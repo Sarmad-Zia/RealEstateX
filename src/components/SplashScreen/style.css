@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,500;1,600&display=swap');
+
+
+.splash-screen {
+  animation: splashBgIn 0.5s ease-out both;
+}
+
+@keyframes splashBgIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Ambient glow behind the wordmark */
+.splash-glow {
+  background: radial-gradient(circle at 50% 45%, rgba(56, 189, 248, 0.14) 0%, rgba(15, 23, 42, 0) 60%);
+  animation: glowPulse 3.5s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50%      { opacity: 1;   transform: scale(1.06); }
+}
+
+/* Faint watermark icons (building, land plot, ledger, landmark) drifting
+   slowly in the background — reinforces "real estate" without competing
+   with the wordmark. Opacity and duration/delay are set per-icon inline
+   in index.jsx so they don't drift in unison. */
+.splash-bg-icon {
+  opacity: 0;
+  animation: bgIconIn 1s ease-out forwards, bgIconFloat 6s ease-in-out infinite;
+}
+
+@keyframes bgIconIn {
+  to { opacity: var(--bg-icon-opacity, 0.08); }
+}
+
+@keyframes bgIconFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-16px); }
+}
+
+/* Each letter of the wordmark rises into place; stagger comes from an
+   inline animation-delay set per span in index.jsx */
+.splash-letter {
+  opacity: 0;
+  transform: translateY(22px);
+  animation: letterRise 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes letterRise {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Accent underline grows from the center once the wordmark settles */
+.splash-underline {
+  transform: scaleX(0);
+  transform-origin: center;
+  animation: underlineGrow 0.5s ease-out 1s forwards;
+}
+
+@keyframes underlineGrow {
+  to { transform: scaleX(1); }
+}
+
+/* Boot progress bar, timed to the full splash duration (2600ms) */
+.splash-progress {
+  width: 0%;
+  animation: progressFill 2.6s linear forwards;
+}
+
+@keyframes progressFill {
+  to { width: 100%; }
+}
+
+/* Exit dissolve — background fades out slightly ahead of the content,
+   while the wordmark and icons drift apart and blur, so it reads as the
+   screen breaking apart rather than a flat fade. Must match
+   EXIT_DURATION (900ms) in index.jsx. */
+.splash-exit {
+  animation: splashExitBg 0.9s cubic-bezier(0.4, 0, 1, 1) forwards;
+  pointer-events: none;
+}
+
+@keyframes splashExitBg {
+  0%   { opacity: 1; transform: scale(1); }
+  40%  { opacity: 1; transform: scale(1.08); }
+  100% { opacity: 0; transform: scale(1.22); }
+}
+
+.splash-exit .splash-glow {
+  animation: splashExitGlow 0.9s ease-in forwards;
+}
+
+@keyframes splashExitGlow {
+  to { opacity: 0; transform: scale(1.3); }
+}
+
+/* Wordmark letters dissolve outward from center, each drifting a slightly
+   different direction/amount via --dissolve-x / --dissolve-y set inline
+   per letter in index.jsx, so the name visibly comes apart. */
+.splash-exit .splash-letter {
+  animation: letterDissolve 0.7s cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
+@keyframes letterDissolve {
+  0%   { opacity: 1; transform: translate(0, 0) scale(1); filter: blur(0); }
+  100% {
+    opacity: 0;
+    transform: translate(var(--dissolve-x, 0), var(--dissolve-y, -12px)) scale(0.85);
+    filter: blur(5px);
+  }
+}
+
+.splash-exit .splash-underline {
+  animation: dissolveFade 0.5s ease-in forwards;
+}
+
+.splash-exit .splash-badge {
+  animation: dissolveFadeDown 0.5s ease-in forwards;
+}
+
+@keyframes dissolveFade {
+  to { opacity: 0; transform: scaleX(1) translateY(-6px); filter: blur(3px); }
+}
+
+@keyframes dissolveFadeDown {
+  to { opacity: 0; transform: translateY(10px); filter: blur(3px); }
+}
+
+/* Background watermark icons drift outward and vanish a touch faster
+   than the wordmark, so the whole scene reads as coming apart in layers. */
+.splash-exit .splash-bg-icon {
+  animation: bgIconDissolve 0.6s ease-in forwards;
+}
+
+@keyframes bgIconDissolve {
+  to {
+    opacity: 0;
+    transform: translate(var(--dissolve-x, 0), var(--dissolve-y, 0)) scale(0.7);
+    filter: blur(4px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .splash-screen,
+  .splash-glow,
+  .splash-bg-icon,
+  .splash-letter,
+  .splash-underline,
+  .splash-progress,
+  .splash-exit {
+    animation-duration: 0.001ms !important;
+  }
+}

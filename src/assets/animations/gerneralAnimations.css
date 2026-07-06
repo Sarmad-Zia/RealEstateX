@@ -1,0 +1,375 @@
+/* ==========================================================================
+   LANDING PAGE ANIMATIONS LIBRARY
+   A collection of reusable entrance/hover animations for components,
+   text, and cards. Built with transform + opacity for smooth,
+   GPU-accelerated performance.
+
+   HOW TO USE:
+   1. Add the base class ".animate" to any element you want animated
+      (it just sets animation-fill-mode + timing defaults).
+   2. Add one of the animation classes below, e.g. "fade-up".
+   3. Optionally add a delay class like "delay-1" ... "delay-6".
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   0. BASE / UTILITY SETUP
+   -------------------------------------------------------------------------- */
+.animate {
+  animation-duration: 0.8s;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-fill-mode: both;
+}
+
+/* Delay utilities for staggering children (e.g. cards in a grid) */
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+.delay-5 { animation-delay: 0.5s; }
+.delay-6 { animation-delay: 0.6s; }
+
+/* Optional: pause all animations until a "in-view" class is toggled via
+   IntersectionObserver in JS — useful for scroll-triggered reveals */
+.animate.scroll-hidden {
+  animation-play-state: paused;
+  opacity: 0;
+}
+.animate.scroll-hidden.in-view {
+  animation-play-state: running;
+}
+
+
+/* --------------------------------------------------------------------------
+   1. FADE UP  — great for hero text, section titles, paragraphs
+   -------------------------------------------------------------------------- */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation-name: fadeUp; }
+
+
+/* --------------------------------------------------------------------------
+   2. FADE DOWN — good for dropdown navs, tooltips, top banners
+   -------------------------------------------------------------------------- */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-down { animation-name: fadeDown; }
+
+
+/* --------------------------------------------------------------------------
+   3. FADE IN — simple opacity-only fade, subtle background reveals
+   -------------------------------------------------------------------------- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.fade-in { animation-name: fadeIn; }
+
+
+/* --------------------------------------------------------------------------
+   4. SLIDE FROM LEFT — sidebars, feature rows, alternating sections
+   -------------------------------------------------------------------------- */
+@keyframes slideFromLeft {
+  from { opacity: 0; transform: translateX(-60px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.slide-left { animation-name: slideFromLeft; }
+
+
+/* --------------------------------------------------------------------------
+   5. SLIDE FROM RIGHT — mirrored feature rows, testimonial panels
+   -------------------------------------------------------------------------- */
+@keyframes slideFromRight {
+  from { opacity: 0; transform: translateX(60px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.slide-right { animation-name: slideFromRight; }
+
+
+/* --------------------------------------------------------------------------
+   6. SCALE IN (ZOOM) — modals, popups, image reveals, logos
+   -------------------------------------------------------------------------- */
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.85); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.scale-in { animation-name: scaleIn; }
+
+
+/* --------------------------------------------------------------------------
+   7. POP IN — CTA buttons, badges, icons that need a little punch
+   -------------------------------------------------------------------------- */
+@keyframes popIn {
+  0%   { opacity: 0; transform: scale(0.6); }
+  70%  { opacity: 1; transform: scale(1.05); }
+  100% { opacity: 1; transform: scale(1); }
+}
+.pop-in { animation-name: popIn; }
+
+
+/* --------------------------------------------------------------------------
+   8. BLUR IN — hero images, premium/soft reveals
+   -------------------------------------------------------------------------- */
+@keyframes blurIn {
+  from { opacity: 0; filter: blur(12px); transform: translateY(20px); }
+  to   { opacity: 1; filter: blur(0); transform: translateY(0); }
+}
+.blur-in { animation-name: blurIn; }
+
+
+/* --------------------------------------------------------------------------
+   9. ROTATE IN — icons, decorative elements, playful sections
+   -------------------------------------------------------------------------- */
+@keyframes rotateIn {
+  from { opacity: 0; transform: rotate(-10deg) scale(0.9); }
+  to   { opacity: 1; transform: rotate(0) scale(1); }
+}
+.rotate-in { animation-name: rotateIn; }
+
+
+/* --------------------------------------------------------------------------
+   10. TEXT REVEAL (CLIP) — headline "typewriter-ish" reveal without JS
+   -------------------------------------------------------------------------- */
+@keyframes textReveal {
+  from { opacity: 0; clip-path: inset(0 100% 0 0); }
+  to   { opacity: 1; clip-path: inset(0 0 0 0); }
+}
+.text-reveal { animation-name: textReveal; animation-duration: 1s; }
+
+
+/* --------------------------------------------------------------------------
+   11. STAGGER LETTERS (use with JS to wrap each letter in a <span>)
+   -------------------------------------------------------------------------- */
+@keyframes letterUp {
+  from { opacity: 0; transform: translateY(0.6em); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.letter-up {
+  display: inline-block;
+  animation: letterUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+/* Example usage in JS:
+   text.split('').forEach((ch, i) => {
+     span.style.animationDelay = `${i * 0.03}s`;
+   });
+*/
+
+
+/* --------------------------------------------------------------------------
+   12. FLOATING (LOOPING) — hero illustrations, badges, decorative shapes
+   -------------------------------------------------------------------------- */
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-14px); }
+}
+.float {
+  animation: floatY 3.5s ease-in-out infinite;
+}
+
+
+/* --------------------------------------------------------------------------
+   13. PULSE — "live"/notification dots, subtle CTA attention grabber
+   -------------------------------------------------------------------------- */
+@keyframes pulse {
+  0%   { transform: scale(1);   opacity: 1; }
+  50%  { transform: scale(1.08); opacity: 0.85; }
+  100% { transform: scale(1);   opacity: 1; }
+}
+.pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+
+/* --------------------------------------------------------------------------
+   14. SHIMMER — loading skeletons, "coming soon" placeholders
+   -------------------------------------------------------------------------- */
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 800px 100%;
+  animation: shimmer 1.6s linear infinite;
+}
+
+
+/* --------------------------------------------------------------------------
+   15. GRADIENT SHIFT — animated gradient text/backgrounds, hero accents
+   -------------------------------------------------------------------------- */
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.gradient-text {
+  background: linear-gradient(90deg, #6366f1, #ec4899, #6366f1);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientShift 4s linear infinite;
+}
+
+
+/* ==========================================================================
+   CARD-SPECIFIC ANIMATIONS
+   Entrance animation classes above (fade-up, scale-in, etc.) work great
+   for cards too — just stagger them with the delay-N classes.
+   Below are HOVER / INTERACTION animations made specifically for cards.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   C1. CARD LIFT — subtle elevate + shadow grow on hover
+   -------------------------------------------------------------------------- */
+.card-lift {
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.35s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.card-lift:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+
+/* --------------------------------------------------------------------------
+   C2. CARD TILT — 3D tilt effect on hover (pairs well with mouse-tracking JS,
+   but works as a flat fallback too)
+   -------------------------------------------------------------------------- */
+.card-tilt {
+  transition: transform 0.4s ease;
+  transform-style: preserve-3d;
+}
+.card-tilt:hover {
+  transform: perspective(800px) rotateX(4deg) rotateY(-6deg) translateY(-6px);
+}
+
+
+/* --------------------------------------------------------------------------
+   C3. CARD SCALE — gentle zoom, good for pricing/product cards
+   -------------------------------------------------------------------------- */
+.card-scale {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-scale:hover {
+  transform: scale(1.04);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* --------------------------------------------------------------------------
+   C4. CARD BORDER GLOW — animated gradient border appears on hover
+   -------------------------------------------------------------------------- */
+.card-glow {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: 16px;
+}
+.card-glow::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+  background: linear-gradient(120deg, #6366f1, #ec4899, #6366f1);
+  background-size: 200% 200%;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  animation: gradientShift 3s linear infinite;
+  border-radius: inherit;
+}
+.card-glow:hover::before {
+  opacity: 1;
+}
+
+
+/* --------------------------------------------------------------------------
+   C5. CARD IMAGE ZOOM — image scales inside a fixed, overflow-hidden card
+   -------------------------------------------------------------------------- */
+.card-image-zoom {
+  overflow: hidden;
+  border-radius: 12px;
+}
+.card-image-zoom img {
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: block;
+  width: 100%;
+}
+.card-image-zoom:hover img {
+  transform: scale(1.12);
+}
+
+
+/* --------------------------------------------------------------------------
+   C6. CARD FLIP — front/back flip reveal (requires paired .card-front/.card-back)
+   -------------------------------------------------------------------------- */
+.card-flip {
+  perspective: 1200px;
+}
+.card-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+}
+.card-flip:hover .card-flip-inner {
+  transform: rotateY(180deg);
+}
+.card-front,
+.card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 12px;
+}
+.card-back {
+  transform: rotateY(180deg);
+}
+
+
+/* ==========================================================================
+   ACCESSIBILITY: respect users who prefer reduced motion
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==========================================================================
+   USAGE EXAMPLES
+   --------------------------------------------------------------------------
+   Hero heading:
+     <h1 class="animate fade-up">Build something great</h1>
+
+   Subtext with delay:
+     <p class="animate fade-up delay-2">The fastest way to launch.</p>
+
+   Feature row alternating left/right:
+     <div class="animate slide-left">...</div>
+     <div class="animate slide-right delay-1">...</div>
+
+   Card grid with stagger:
+     <div class="animate fade-up delay-1 card-lift">Card 1</div>
+     <div class="animate fade-up delay-2 card-lift">Card 2</div>
+     <div class="animate fade-up delay-3 card-lift">Card 3</div>
+
+   Scroll-triggered (needs a tiny JS IntersectionObserver to toggle
+   ".in-view" on elements with class "scroll-hidden"):
+     <div class="animate fade-up scroll-hidden">Reveals on scroll</div>
+   ========================================================================== */

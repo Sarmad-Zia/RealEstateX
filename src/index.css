@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
+@import "./assets//animations/heroImageAnimtions.css";
+@import "./assets//animations/gerneralAnimations.css";
+@import "tailwindcss";
+
+@theme {
+   --font-poppins: "Poppins", sans-serif;
+   --font-inter: "Inter", sans-serif;
+   /* Note: the real site's computed styles show its body font as "Outfit, Arial, sans-serif"
+     at weight 300 (light). Keeping Poppins/Inter for now since only colors were requested —
+     say the word if you want the font swapped to Outfit too. */
+
+   /* ============ Core Palette (pulled directly from visitt.io computed vars) ============ */
+   --color-rough-black: #242424;
+   --color-ink: #122523;
+   /* --__base-2026---color-black. Darkest tone, near-black with a green undertone.
+     Use for: footer bg, dark CTA bands, primary headings, high-contrast body text on light bg. */
+
+   --color-forest-deep: #103732;
+   /* --__base-2026---color-green-900. Slightly lighter than ink, same dark family.
+     Use for: gradient end-point behind ink, dark section secondary shade, hover state on dark cards. */
+
+   --color-forest: #115946;
+   /* --__base-2026---color-green-700. Mid-dark green, readable on white.
+     Use for: secondary buttons, icon strokes, link hover color, active nav state. */
+
+   --color-mint: #5cdb97;
+   /* --__base-2026---color-green (bright). Vivid mid-green, good on both light and dark backgrounds.
+     Use for: icon fills, success/checkmark states, progress bars, small accent highlights. */
+
+   --color-neon: #b9fba6;
+   /* --__base-2026---color-neon-a. The standout accent — pale neon lime.
+     Use for: primary CTA button background (paired with --color-ink text), badges, active tab underline. */
+
+   --color-cream: #f6efe9;
+   /* --__base-2026---color-white-100. Warm off-white.
+     Use for: main page background (replaces plain white). */
+
+   --color-sand: #e5dad1;
+   /* --__base-2026---color-white variant. Warm beige, slightly deeper than cream.
+     Use for: card/section-alt backgrounds, borders, dividers, muted table rows. */
+
+   --color-paper: #fefcf9;
+   /* --__base-2026---color-white variant. Near-pure warm white.
+     Use for: card surfaces that need to stand out against the cream page background. */
+
+   --color-body-text: #33413e;
+   /* Derived, not directly given — a muted tint of --color-ink for comfortable reading.
+     Use for: paragraph copy, descriptions (kept in the same green-black hue family as ink). */
+
+   /* ============ Gradients ============ */
+   --background-image-grad-premium: linear-gradient(135deg, #122523 0%, #115946 100%);
+   /* Dark ink -> forest green. Use for: hero glow overlays, premium buttons, banner backgrounds. */
+
+   --background-image-grad-icon: linear-gradient(135deg, #f6efe9 0%, #e5dad1 100%);
+   /* Cream -> sand. Use for: icon tile backgrounds on light cards. */
+
+   /* Premium Box Shadows */
+   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+   --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+   --shadow-lg: 0 20px 50px -12px rgba(18, 37, 35, 0.14);
+}
+
+* {
+   backgroud-color: var(--color-cream);
+}
+
+/* Text Gradient Utility */
+.text-gradient {
+   background: linear-gradient(to right, #122523, #115946);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   font-weight: 800;
+}
+
+@keyframes pop-in {
+   0% {
+      transform: scale(4.5);
+      opacity: 0;
+      filter: blur(4px);
+   }
+
+   70% {
+      transform: scale(0.9);
+   }
+
+   100% {
+      transform: scale(1);
+      opacity: 1;
+      filter: blur(0);
+   }
+}
+
+.animate-logo-x {
+   animation: pop-in 4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes marquee-scroll {
+   0% {
+      transform: translateX(0);
+   }
+
+   100% {
+      transform: translateX(-50%);
+   }
+}
