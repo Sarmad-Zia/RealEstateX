@@ -63,7 +63,7 @@ export default function Agents() {
   const headerRef = useScrollAnimation(); // Separate hook observer for header section text
 
   return (
-    <section id="agents" className={styles.py5}>
+    <section id="agents" className={styles.py5 + " dark:bg-mint/40"}>
       <div className="max-w-7xl mx-auto">
 
         {/* Header wrapper section with scroll visibility tracking setup */}
@@ -72,7 +72,7 @@ export default function Agents() {
           className={`${styles.sectionHeader} animate blur-in scroll-hidden`}
         >
           <span className={styles.sectionTag}>Operational AI</span>
-          <h2 className={styles.sectionTitle}>Meet Your <span className="text-gradient">AI Workforce</span></h2>
+          <h2 className={styles.sectionTitle}>Meet Your <span className="text-gradient dark:lightText-gradient">AI Workforce</span></h2>
           <p className={styles.sectionDesc}>RealEstateX replaces manual effort with intelligent AI agents that understand your society data like a human expert.</p>
         </div>
 

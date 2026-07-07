@@ -7,7 +7,7 @@ export default function Footer() {
   const dividerRef = useScrollAnimation();
 
   return (
-    <div className="w-full h-auto flex justify-center items-center pt-10" >
+    <div className="w-full h-auto flex justify-center items-center pt-10 dark:bg-mint/40" >
       <footer className={styles.footer}>
         <div
           ref={footerContentRef}

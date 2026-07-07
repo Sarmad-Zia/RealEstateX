@@ -6,7 +6,7 @@ export const styles = {
   bodyText: "text-body-text text-base leading-relaxed mb-8",
 
   infraGrid: "grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8",
-  infraBox: "bg-paper p-8 rounded-2xl border border-sand text-center transition-all duration-300 hover:scale-105 hover:border-forest",
+  infraBox: "bg-paper p-8 dark:bg-mint/10 rounded-2xl border border-sand text-center transition-all duration-300 hover:scale-105 hover:border-forest",
   infraIcon: "text-forest text-3xl mb-2 w-full flex justify-center",
   infraTitle: "font-bold text-ink mt-3 text-base",
 

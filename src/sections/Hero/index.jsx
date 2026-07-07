@@ -48,7 +48,7 @@ export default function HeroSection() {
 
           <div className={styles.heroBtnGroup}>
             <button className={styles.heroBtnPremium + 
-              ' animate delay-5 pop-in'
+              ' animate delay-5 pop-in text-forest-deep!'
              }>Book a Live Demo</button>
             <button className={styles.heroBtnOutline+ 
               ' animate delay-5 pop-in'}>

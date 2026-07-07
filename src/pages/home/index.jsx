@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from '../../sections/Navbar';
 import Hero from '../../sections/Hero';
 import Agents from '../../sections/Agents';
@@ -18,6 +18,15 @@ import OperationsShowcase from '../../sections/Operations';
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    if(isDarkMode) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+    }
+  }, [isDarkMode]);
 
   return (
     <div className="font-sans text-navy-dark bg-white min-h-screen selection:bg-azure-primary selection:text-white antialiased">
@@ -34,7 +43,7 @@ export default function Home() {
       <CTA />
       <Footer /> */}
 
-      <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
+      <Navbar isOpen={isOpen} setIsOpen={setIsOpen} isDark={isDarkMode} setIsDark={setIsDarkMode} />
       <Hero />
 
       {/* 1. Immediate social proof & global reach right after the hook */}

@@ -11,7 +11,7 @@ export const styles = {
 
     cardFooter: 'bg-[var(--color-ink)] px-4 py-3',
     cardName: 'text-[var(--color-paper)] font-[var(--font-inter)] font-semibold text-sm leading-snug',
-    cardType: 'text-[var(--color-mint)] font-[var(--font-inter)] text-xs mt-1',
+    cardType: 'text-[var(--color-mint)] font-[var(--font-inter)] text-xs mt-1 dark:text-[var(--color-mint-dark)] ',
 
     controls: 'flex gap-3 mt-8',
     navButton: 'w-10 h-10 rounded-full border border-[var(--color-forest)] text-[var(--color-forest)] flex items-center justify-center transition hover:bg-[var(--color-forest)] hover:text-[var(--color-paper)]'

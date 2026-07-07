@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { styles } from './style';
 import { Button } from '../../components/CTAButton';
-import { Menu } from 'lucide-react';
+import { Menu, Moon, Sun } from 'lucide-react';
 import MobileMenu from '../../components/MobileMenu';
 
-export default function Navbar({ isOpen, setIsOpen }) {
+export default function Navbar({ isOpen, setIsOpen,isDark,setIsDark }) {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -59,15 +59,35 @@ export default function Navbar({ isOpen, setIsOpen }) {
           </a>
           
           <Button 
-            className={isScrolled ? styles.navBtnOutlineIsland : styles.navBtnOutlineFull} 
+            className={isScrolled ? styles.navBtnOutlineIsland : styles.navBtnOutlineFull } 
             text="Call Now" 
             onPress={() => window.location.href = 'tel:+923344071716'} 
           />
           <Button 
-            className={isScrolled ? styles.navBtnPremiumIsland : styles.navBtnPremiumFull} 
+            className={isScrolled ? styles.navBtnPremiumIsland : styles.navBtnPremiumFull + " text-forest-deep!"} 
             text="Book Live Demo" 
             onPress={() => console.log('Book Demo Clicked')} 
           />
+          {
+            isDark ? (
+              <Button 
+                className={isScrolled ? styles.navBtnPremiumIsland : styles.navBtnPremiumFull + " text-forest-deep!"}  
+              // text="Light Mode"
+                onPress={() => setIsDark(false)}
+              >
+                <Sun size={20} />
+              </Button>
+            ) : (
+              <Button
+                className={isScrolled ? styles.navBtnPremiumIsland : styles.navBtnPremiumFull}
+                // text="Dark Mode"
+                onPress={() => setIsDark(true)}
+              >
+                <Moon size={20} />
+              </Button>
+            )
+          }
+
         </div>
       </div>
     </nav>

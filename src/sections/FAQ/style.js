@@ -4,7 +4,7 @@ export const styles = {
   sectionHeader: "text-center mb-16",
   sectionTitle: "text-3xl md:text-4xl font-extrabold font-poppins text-ink tracking-tight",
   faqWrapper: "max-w-[850px] mx-auto space-y-4",
-  faqCard: "border border-sand rounded-2xl bg-paper transition-all duration-300 overflow-hidden",
+  faqCard: "border border-sand rounded-2xl bg-paper dark:bg-mint/10 transition-all duration-300 overflow-hidden",
   faqCardOpen: "border-forest shadow-md",
   faqHeader: "w-full px-8 py-6 bg-transparent flex justify-between items-center gap-4 font-bold text-lg text-ink text-left cursor-pointer transition-colors hover:text-forest",
   faqQuestionRow: "flex items-center gap-3",

@@ -17,8 +17,8 @@ export const styles = {
   featureDisplayGrid: "grid grid-cols-1 lg:grid-cols-2 gap-10 items-center w-full",
 
   featureVisualMockup: "h-[350px] bg-grad-icon rounded-2xl flex flex-col items-center justify-center gap-4 text-forest border border-sand shadow-inner text-center p-6",
-  featureVisualIcon: "w-16 h-16 text-forest",
-  featureVisualLabel: "font-extrabold text-sm uppercase tracking-wider text-forest/70",
+  featureVisualIcon: "w-16 h-16 text-forest dark:text-ink",
+  featureVisualLabel: "font-extrabold text-sm uppercase tracking-wider text-forest/70 dark:text-ink/70 ",
 
   featureTitle: "text-2xl lg:text-3xl font-bold text-gradient mb-4 font-poppins",
   featureBulletList: "space-y-3 mb-6",
