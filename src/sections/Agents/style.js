@@ -10,5 +10,5 @@ export const styles = {
   aiCardTitle: "text-xl font-bold font-poppins text-ink mb-2",
   aiCardDesc: "text-sm text-body-text leading-relaxed mb-6",
   aiCommandBox: "bg-sand border-l-4 border-mint p-4 rounded-r-xl font-mono text-xs text-ink font-semibold break-words",
-  heroBtnPremium: "bg-grad-premium text-white px-9 py-4 rounded-xl font-semibold shadow-[0_10px_20px_-5px_rgba(15,122,77,0.4)] hover:-translate-y-0.5 hover:shadow-[0_20px_30px_-10px_rgba(15,122,77,0.5)] active:translate-y-0 transition-all duration-300 text-base",
+  heroBtnPremium: "bg-grad-premium text-ink dark:text-white px-9 py-4 rounded-xl font-semibold shadow-[0_10px_20px_-5px_rgba(15,122,77,0.4)] hover:-translate-y-0.5 hover:shadow-[0_20px_30px_-10px_rgba(15,122,77,0.5)] active:translate-y-0 transition-all duration-300 text-base",
 };
