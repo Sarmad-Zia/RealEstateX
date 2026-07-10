@@ -63,7 +63,7 @@ export default function Agents() {
   const headerRef = useScrollAnimation(); // Separate hook observer for header section text
 
   return (
-    <section id="agents" className={styles.py5 + " dark:bg-mint/40"}>
+    <section id="agents" className={styles.py5 + " dark:bg-mint/40!"}>
       <div className="max-w-7xl mx-auto">
 
         {/* Header wrapper section with scroll visibility tracking setup */}

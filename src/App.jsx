@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Home from './pages/home'
 import SplashScreen from './components/SplashScreen'
+import AnnouncementBar from './components/Anouncement'
 
 function App() {
 
@@ -8,8 +9,10 @@ function App() {
 
   return (
     <>
-    {/* {showSplash && <SplashScreen onFinish={() => setShowSplash(false)} />} */}
-      {!showSplash && <Home />}
+      {/* <AnnouncementBar id="text-only">
+        We now support on-premise deployment for CDA-regulated projects.
+      </AnnouncementBar> */}
+      <Home />
     </>
   )
 }

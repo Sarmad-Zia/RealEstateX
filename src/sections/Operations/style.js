@@ -10,7 +10,7 @@ export const styles = {
 
   opsCol: "flex flex-col",
   opsLabel: "text-sm font-bold text-forest uppercase tracking-wide mb-4 text-center sm:text-left",
-  opsCard: "bg-sand rounded-3xl p-4 shadow-sm border border-sand transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg card-lift",
+  opsCard: "bg-sand rounded-3xl shadow-sm border border-sand transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg card-lift",
   opsImage: "w-full h-auto rounded-2xl object-cover",
-  opsDesc: "text-body-text text-sm leading-relaxed mt-4 text-center sm:text-left",
+  opsDesc: "text-body-text text-sm leading-relaxed mt-4 text-center sm:text-left m-4",
 };

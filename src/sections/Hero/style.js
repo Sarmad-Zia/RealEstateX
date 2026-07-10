@@ -1,9 +1,7 @@
 export const styles = {
   // Hero Area
-  // heroSection: "relative h-auto min-h-[80vh] pt-20 pb-15 px-6 bg-cream ",
-  // heroSection: "relative h-auto min-h-[80vh] pt-20 pb-15 px-6 bg-[radial-gradient(circle_at_90%_10%,rgba(185,251,166,0.15),transparent),radial-gradient(circle_at_10%_90%,rgba(18,37,35,0.06),transparent)]",
   heroSection: "relative h-auto min-h-[100vh] pt-25 lg:pt-10 max-lg:pb-10 px-6 bg-cream",
-  heroGrid: "w-full p-5 lg:p-20 pt-0 pb-0 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center",
+  heroGrid: "w-full p-5 lg:p-20 pt-0 pb-0 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center",
   sectionTag: "inline-block px-4 py-1.5 bg-sand text-forest font-bold text-xs uppercase tracking-wider rounded-full mb-6",
   heroTitle: "text-4xl md:text-5xl lg:text-6xl font-extrabold font-poppins mb-4 leading-tight text-ink",
   heroDescription: "text-lg text-body-text mb-8 font-normal leading-relaxed",
@@ -14,22 +12,10 @@ export const styles = {
   heroBtnPremium: "bg-neon text-ink px-9 py-4 rounded-xl font-semibold shadow-[0_10px_20px_-5px_rgba(185,251,166,0.5)] hover:-translate-y-0.5 hover:shadow-[0_20px_30px_-10px_rgba(185,251,166,0.6)] active:translate-y-0 transition-all duration-300 text-base",
   heroBtnOutline: "border-2 border-sand text-ink bg-paper px-9 py-4 rounded-xl font-semibold hover:border-forest hover:bg-sand transition-all duration-200 text-base",
 
-  // // Hero Mockup Graphics
-  // mockupWrapper: "relative justify-self-center lg:justify-self-end w-full max-w-[550px] mt-12 lg:mt-0",
-  // mockupContainer: "bg-paper rounded-[30px] p-4 shadow-lg border border-black/5 relative",
-  // floatBadge: "absolute bg-paper px-5 py-3 rounded-2xl shadow-md border border-sand font-bold text-xs text-forest animate-floating select-none whitespace-nowrap z-10",
-  // mockupImg: "w-full h-auto object-cover rounded-[20px] bg-sand border border-sand",
-
   // Hero Mockup Graphics
-  mockupWrapper: "relative justify-self-center lg:justify-self-end w-full max-w-[550px] mt-12 lg:mt-0 max-lg:mb-30",
-  
-  // Stripped background padding, surfaces, and borders that formed the outer border container frame
-  mockupContainer: "relative",
-  
-  // Clean layout style for the core photo component
+  mockupWrapper: "relative justify-self-center lg:justify-self-end w-full lg:max-w-[800px] mt-12 lg:mt-0 max-lg:mb-30",
+  mockupContainer: "relative w-full",
   mockupImg: "w-full h-auto object-cover rounded-[20px]",
-  
-  // Micro tags floating over the photo structure
   floatBadge: "absolute bg-paper px-5 py-3 rounded-2xl shadow-md border border-sand font-bold text-xs text-forest animate-floating select-none whitespace-nowrap z-10",
 
   // Sections Common

@@ -17,13 +17,20 @@ import {
 } from 'lucide-react';
 
 export default function Features() {
-  const [activeTab, setActiveTab] = useState('crm');
+  const [activeTab, setActiveTab] = useState('reports');
 
   // Create distinct observer node refs for macro entrance sequencing
   const headerRef = useScrollAnimation();
   const mainContentRef = useScrollAnimation();
 
   const featureData = {
+    reports: {
+      title: "Dashboards & Critical Reports",
+      icon: BarChart3,
+      bullets: ["Revenue leakage alerts", "Daily collection heatmaps", "Executive summaries"],
+      text: "Get a 360-degree view of your society's operational health.",
+      keywords: "real estate ERP Asia",
+    },
     crm: {
       title: "CRM & Lead Management",
       icon: Users,
@@ -101,13 +108,7 @@ export default function Features() {
       text: "Manage your internal team and sales agents with an integrated module.",
       keywords: "HRMS for property",
     },
-    reports: {
-      title: "Dashboards & Critical Reports",
-      icon: BarChart3,
-      bullets: ["Revenue leakage alerts", "Daily collection heatmaps", "Executive summaries"],
-      text: "Get a 360-degree view of your society's operational health.",
-      keywords: "real estate ERP Asia",
-    },
+    
   };
 
   const ActiveIcon = featureData[activeTab].icon;

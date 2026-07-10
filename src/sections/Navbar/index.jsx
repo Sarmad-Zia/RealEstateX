@@ -57,6 +57,9 @@ export default function Navbar({ isOpen, setIsOpen,isDark,setIsDark }) {
           <a href="#security" className={isScrolled ? styles.navLinkIsland : styles.navLinkFull}>
             Security
           </a>
+          <a href="#pricing" className={isScrolled ? styles.navLinkIsland : styles.navLinkFull}>
+            Pricing
+          </a>
           
           <Button 
             className={isScrolled ? styles.navBtnOutlineIsland : styles.navBtnOutlineFull } 

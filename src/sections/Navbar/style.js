@@ -2,7 +2,7 @@ export const styles = {
   // Base classes handled via dynamic logic in the component
   navbarBase: "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out font-inter",
   navbarFull: "w-full bg-paper/90 backdrop-blur-md border-b border-sand py-5 shadow-sm",
-  navbarIsland: "max-w-5xl mx-auto top-4 rounded-full bg-ink/95 backdrop-blur-md border border-forest/30 py-3 px-2 shadow-lg",
+  navbarIsland: "max-w-6xl mx-auto top-4 rounded-full bg-ink/95 backdrop-blur-md border border-forest/30 py-3 px-2 shadow-lg",
   
   menuIcon: "lg:hidden cursor-pointer transition-colors duration-200",
   navWrapper: "max-w-7xl mx-auto px-6 flex justify-between items-center w-full",

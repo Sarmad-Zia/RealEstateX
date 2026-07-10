@@ -17,8 +17,8 @@ function OperationCard({ op, index }) {
           loading="lazy"
           className={`${styles.opsImage} animate scale-in ${delayClass}`}
         />
-      </div>
       <p className={styles.opsDesc}>{op.desc}</p>
+      </div>
     </div>
   );
 }

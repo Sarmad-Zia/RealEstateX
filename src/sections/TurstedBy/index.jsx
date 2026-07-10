@@ -26,9 +26,9 @@ function TrustedBy() {
             </div>
             
             {/* This will now perfectly stay underneath the brand marquee on ALL devices */}
-            <div className="bg-white mt-10 mb-0">
-                <AssetPortfolio />
-            </div>
+            {/* <div className="bg-white mt-10 mb-0"> */}
+                {/* <AssetPortfolio /> */}
+            {/* </div> */}
         </div>
     )
 }

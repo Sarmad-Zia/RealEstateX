@@ -15,13 +15,17 @@ import FootprintStrip from '../../sections/Counter';
 import { Button } from '../../components/CTAButton';
 import Testimonials from '../../sections/Testimonials';
 import OperationsShowcase from '../../sections/Operations';
+import MarketInsights from '../../sections/Articles';
+import Pricing from '../../sections/Pricing';
+import ContactForm from '../../sections/ContactForm';
+import CTABanner from '../../sections/CTA_Mid';
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    if(isDarkMode) {
+    if (isDarkMode) {
       document.documentElement.setAttribute('data-theme', 'dark');
     } else {
       document.documentElement.removeAttribute('data-theme');
@@ -49,24 +53,26 @@ export default function Home() {
       {/* 1. Immediate social proof & global reach right after the hook */}
       <TrustedBy />
       <FootprintStrip />
-      <OperationsShowcase/>
-
-      {/* 2. Show the core tech differentiator (The AI Workers) */}
+      <CTA />
       <Agents />
-
-      {/* 3. Deep dive into the actual system mechanics */}
       <Features />
-
-      {/* 4. Show the business transformation & ROI (Before vs. After / Cost Savings) */}
-      <EdgeGrid />
-
       {/* 5. Back up your claims with human proof & enterprise trust */}
       <Testimonials />
+      <OperationsShowcase />
+      <CTABanner onBookDemo={() => setIsOpen(true)} />
+      <EdgeGrid />
       <Security />
 
+      {/* 2. Show the core tech differentiator (The AI Workers) */}
+      {/* 3. Deep dive into the actual system mechanics */}
+
+      {/* 4. Show the business transformation & ROI (Before vs. After / Cost Savings) */}
+
+      {/* <MarketInsights /> */}
       {/* 6. Address final hesitations just before the closing pitch */}
+      <Pricing />
       <FAQ />
-      <CTA />
+      <ContactForm />
 
       <Footer />
     </div>
