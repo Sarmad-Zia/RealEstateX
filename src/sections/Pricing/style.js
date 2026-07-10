@@ -54,7 +54,7 @@ export const styles = {
   ribbon:
     "absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full " +
     "bg-neon px-4 py-1.5 font-inter text-[11px] font-semibold uppercase tracking-wide text-ink " +
-    "shadow-[var(--shadow-sm)]",
+    "shadow-[var(--shadow-sm)] dark:text-forest-deep! ",
 
   tierName: "font-poppins text-xl md:text-2xl font-extrabold text-ink mb-2",
 

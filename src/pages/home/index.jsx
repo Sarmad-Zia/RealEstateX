@@ -6,7 +6,7 @@ import InterstitialBanner from '../../sections/Banner';
 import Features from '../../sections/Feature';
 import EdgeGrid from '../../sections/EdgeGrid';
 import Security from '../../sections/Security';
-import FAQ from '../../sections/FAQ';
+import FAQ from '../../sections/MultiFAQ';
 import CTA from '../../sections/CTA';
 import Footer from '../../sections/Footer';
 import TrustedBy from '../../sections/TurstedBy';
@@ -71,6 +71,7 @@ export default function Home() {
       {/* <MarketInsights /> */}
       {/* 6. Address final hesitations just before the closing pitch */}
       <Pricing />
+      {/* <FAQ /> */}
       <FAQ />
       <ContactForm />
 
