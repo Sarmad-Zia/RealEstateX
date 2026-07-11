@@ -1,17 +1,31 @@
 export const styles = {
-  section: "py-16 px-6 bg-cream w-full",
+  // No background here on purpose — section sits directly on the page bg
+  section: "py-6 px-6 md:py-8 w-full",
 
   label:
-    "text-center font-inter text-xl md:text-2xl font-semibold uppercase tracking-[0.14em] " +
-    "text-forest/80 mb-8",
+    "text-center font-inter text-xs md:text-sm font-semibold uppercase tracking-[0.14em] " +
+    "text-mint mb-10",
 
-  // 2-column grid on mobile, forces a single horizontal row with no wrapping from md onwards
-  row: "grid grid-cols-2 md:flex md:flex-nowrap items-center justify-center gap-8 md:gap-12 lg:gap-16 max-w-5xl mx-auto justify-items-center",
+  // Clips the scrolling track + anchors the two edge-fade overlays
+  marqueeOuter: "relative w-auto mx-auto overflow-hidden",
 
-  logoWrap: "flex items-center justify-center w-full md:w-auto",
+  // Edge fades blend into whatever page bg sits behind (cream flips in dark mode too)
+  fadeEdge: "pointer-events-none absolute inset-y-0 z-10 w-16 md:w-28",
+  // fadeLeft: "left-0 bg-gradient-to-r from-cream to-transparent",
+  // fadeRight: "right-0 bg-gradient-to-l from-cream to-transparent",
 
-  // Small size for mobile grid, scales up naturally across larger screen breakpoints
+  // Infinite loop reuses the existing `marquee-scroll` keyframe (0% -> -50%)
+  // already defined in index.css — no new CSS needed. Pauses on hover.
+  track:
+    "flex w-max items-center gap-6 md:gap-10 lg:gap-14 " +
+    "[animation:marquee-scroll_26s_linear_infinite] hover:[animation-play-state:paused]",
+
+  logoWrap:
+    "group flex h-24 w-40 md:h-28 md:w-48 shrink-0 items-center justify-center " +
+    "rounded-2xl border border-sand bg-paper px-6 shadow-sm transition-all duration-300 " +
+    "hover:-translate-y-1 hover:border-forest/40 hover:shadow-lg dark:bg-mint/5",
+
   logoImage:
-    "max-h-14 sm:max-h-16 md:max-h-20 lg:max-h-24 w-auto object-contain " +
-    "hover:grayscale-0 hover:opacity-100 transition-all duration-300",
+    "max-h-10 md:max-h-20 w-auto object-contain grayscale opacity-70 " +
+    "transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100",
 };

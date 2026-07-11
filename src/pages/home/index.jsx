@@ -20,6 +20,7 @@ import Pricing from '../../sections/Pricing';
 import ContactForm from '../../sections/ContactForm';
 import CTABanner from '../../sections/CTA_Mid';
 import RegulatoryCompliance from '../../sections/Accredatation';
+import FeatureComparisonMatrix from '../../sections/Comparison';
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,18 +53,22 @@ export default function Home() {
       <Hero />
 
       {/* 1. Immediate social proof & global reach right after the hook */}
-      <TrustedBy />
+      {/* <TrustedBy /> */}
       <FootprintStrip />
-      <CTA />
-      <OperationsShowcase />
+      {/* <CTA />
+       */}
+      <CTABanner onBookDemo={() => setIsOpen(true)} />=
       <Agents />
       <Features />
       {/* 5. Back up your claims with human proof & enterprise trust */}
-      <RegulatoryCompliance/>
+      {/* <RegulatoryCompliance/> */}
       <Testimonials />
-      <CTABanner onBookDemo={() => setIsOpen(true)} />
-      <EdgeGrid />
+      {/* <CTABanner onBookDemo={() => setIsOpen(true)} /> */}
+      <CTA />
+      {/* <EdgeGrid /> */}
+      <FeatureComparisonMatrix/>
       <Security />
+      {/* <OperationsShowcase /> */}
 
       {/* 2. Show the core tech differentiator (The AI Workers) */}
       {/* 3. Deep dive into the actual system mechanics */}

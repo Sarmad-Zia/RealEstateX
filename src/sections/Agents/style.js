@@ -1,5 +1,6 @@
 export const styles = {
-  py5: "py-15 px-6",
+  // py5: "py-5 px-6",
+  py5: "pb-10 px-6",
   sectionHeader: "text-center mb-16",
   sectionTag: "inline-block px-4 py-1.5 bg-sand text-forest font-bold text-xs uppercase tracking-wider rounded-full mb-6 dark:text-ink",
   sectionTitle: "text-3xl md:text-4xl font-extrabold font-poppins text-ink tracking-tight dark:text-forest",

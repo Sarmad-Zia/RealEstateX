@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { styles } from './style.js'
 import { footprintData } from './data.js'
 import { Button } from '../../components/CTAButton/index.jsx'
+import RegulatoryCompliance from '../Accredatation/index.jsx'
 
 const ANIMATION_DURATION = 1800 // ms
 
@@ -79,13 +80,15 @@ function FootprintStrip() {
 
             <div className={styles.divider} />
 
-            <p className={styles.subtext}>
+            <RegulatoryCompliance/>
+
+            {/* <p className={styles.subtext}>
                 Enterprise-grade real estate infrastructure trusted across the Asian
                 market to eliminate manual paperwork and secure operational records.
             </p>
             <div className="flex justify-center mt-6">
                 <Button text={"Book Live Demo"} className={styles.ctaBtn}  />
-            </div>
+            </div> */}
         </section>
     )
 }

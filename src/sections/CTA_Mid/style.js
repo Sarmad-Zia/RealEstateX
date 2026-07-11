@@ -1,5 +1,5 @@
 export const styles = {
-  wrap: "py-16 px-6 dark:bg-mint/40! ",
+  wrap: "py-10 px-6 dark:bg-mint/40! ",
 
   card:
     "max-w-5xl mx-auto bg-sand border border-forest/20 rounded-[32px] " +

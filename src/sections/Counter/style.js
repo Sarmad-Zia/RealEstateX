@@ -1,7 +1,7 @@
 export const styles = {
     section: 'w-full bg-[var(--color-ink)] dark:bg-mint/40 py-14 px-6 relative',
 
-    tag: 'text-center text-xs md:text-sm font-[var(--font-inter)] font-semibold tracking-[0.2em] text-[var(--color-mint)] uppercase mb-10 dark:text-forest-deep!',
+    tag: 'text-center text-sm md:text-lg font-[var(--font-inter)] font-semibold tracking-[0.2em] text-[var(--color-mint)] uppercase mb-10 dark:text-forest-deep!',
 
     grid: 'grid grid-cols-2 md:grid-cols-5 gap-y-10 gap-x-6 max-w-6xl mx-auto',
 

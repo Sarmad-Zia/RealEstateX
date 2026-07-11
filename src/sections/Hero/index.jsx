@@ -1,5 +1,4 @@
 import { styles } from "./style";
-// Explicitly import the image so the bundler tracks and resolves the path correctly
 import heroImage from "../../assets/images/heroImage.png";
 
 const painPoints = [
@@ -52,17 +51,18 @@ export default function HeroSection() {
         {/* Right column — composite visual */}
         <div className={styles.mockupWrapper + ' animate delay-5 blur-in'}>
           <div className={styles.mockupContainer}>
-            {/* Background wrapper: Fixed responsive mobile heights via Tailwind classes */}
-            <div
-              className={`${styles.mockupImg}`}
-            >
+            {/* The Image Layer */}
+            <div className={styles.mockupImg}>
               <img
                 src={heroImage}
                 alt="RealEstateX Dashboard"
-                className="w-full h-full object-cover rounded-[20px]"
+                className="w-full h-auto object-contain rounded-[20px]"
                 loading="eager"
               />
             </div>
+            
+            {/* The Circular Floating Drop Shadow Layer */}
+            <div className={styles.mockupShadow} />
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 
 export const styles = {
   section:
-    "relative overflow-hidden py-24 md:py-32 px-6 text-[#f6efe9] " +
+    "relative overflow-hidden py-4 md:py-10 px-6 text-[#f6efe9] " +
     "bg-[linear-gradient(135deg,#122523,#115946)]",
 
   glowTopLeft:
@@ -14,24 +14,24 @@ export const styles = {
   badge:
     "inline-flex items-center gap-2 bg-[#f6efe9]/10 border border-[#f6efe9]/20 rounded-full " +
     "px-4 py-1.5 backdrop-blur-sm mb-6",
-  badgeIcon: "w-3.5 h-3.5 text-neon",
+  badgeIcon: "w-3.5 h-3.5 text-neon", 
   badgeText: "font-inter text-xs font-semibold uppercase tracking-wide text-[#f6efe9]/90",
 
   heading:
-    "font-poppins text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#f6efe9] leading-[1.08] mb-6",
+    "font-poppins text-2xl md:text-3xl lg:text-5xl font-extrabold text-[#f6efe9] leading-[1.08] mb-6",
 
   subhead:
-    "font-inter text-base md:text-lg text-[#f6efe9]/75 max-w-xl mx-auto leading-relaxed mb-10",
+    "font-inter text-base md:text-sm text-[#f6efe9]/75 max-w-xl mx-auto leading-relaxed mb-5",
 
-  buttonsRow: "flex flex-col sm:flex-row items-center justify-center gap-4 mb-14",
+  buttonsRow: "flex flex-col sm:flex-row items-center justify-center gap-4 mb-5",
 
   primaryButton:
-    "inline-flex items-center justify-center gap-2 rounded-full bg-neon px-8 py-4 " +
+    "inline-flex items-center justify-center gap-2 rounded-full bg-neon px-4 py-2 " +
     "font-inter text-sm md:text-base font-bold text-[#122523] shadow-[var(--shadow-lg)] " +
     "transition-colors duration-300 hover:bg-mint w-full sm:w-auto",
 
   secondaryButton:
-    "inline-flex items-center justify-center gap-2 rounded-full border border-[#f6efe9]/30 px-8 py-4 " +
+    "inline-flex items-center justify-center gap-2 rounded-full border border-[#f6efe9]/30 px-4 py-2 " +
     "font-inter text-sm md:text-base font-semibold text-[#f6efe9] transition-colors duration-300 " +
     "hover:bg-[#f6efe9]/10 hover:border-[#f6efe9]/50 w-full sm:w-auto",
 

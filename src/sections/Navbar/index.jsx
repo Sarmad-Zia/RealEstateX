@@ -71,7 +71,7 @@ export default function Navbar({ isOpen, setIsOpen,isDark,setIsDark }) {
             text="Book Live Demo" 
             onPress={() => console.log('Book Demo Clicked')} 
           />
-          {
+          {/* {
             isDark ? (
               <Button 
                 className={isScrolled ? styles.navBtnPremiumIsland : styles.navBtnPremiumFull + " text-forest-deep!"}  
@@ -89,7 +89,7 @@ export default function Navbar({ isOpen, setIsOpen,isDark,setIsDark }) {
                 <Moon size={20} />
               </Button>
             )
-          }
+          } */}
 
         </div>
       </div>
