@@ -62,7 +62,7 @@ export default function Pricing({ onSelectTier = () => {} }) {
         </p>
       </header>
 
-      <div
+      {/* <div
         className={`${styles.toggleWrap} animate fade-up delay-1 scroll-hidden ${
           isVisible ? "in-view" : ""
         }`}
@@ -91,7 +91,7 @@ export default function Pricing({ onSelectTier = () => {} }) {
           })}
         </div>
         <p className={styles.toggleNote}>{activeHosting.note}</p>
-      </div>
+      </div> */}
 
       <div className={styles.grid}>
         {pricingTiers.map((tier, index) => {

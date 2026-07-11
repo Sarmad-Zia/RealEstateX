@@ -2,7 +2,7 @@
 import React from 'react';
 import { styles } from './style';
 import { Button } from '../CTAButton';
-import { X, Bot, LayoutGrid, ShieldCheck, Phone, CalendarCheck } from 'lucide-react';
+import { X, Bot, LayoutGrid, ShieldCheck, Phone, CalendarCheck, Currency, BadgePercent } from 'lucide-react';
 
 function MobileMenu({ isOpen, setIsOpen }) {
   if (!isOpen) return null;
@@ -35,6 +35,10 @@ function MobileMenu({ isOpen, setIsOpen }) {
           <a href="#security" className={`${styles.navLink} group`} onClick={() => setIsOpen(false)}>
             <ShieldCheck size={20} className={styles.navLinkIcon} />
             Security
+          </a>
+          <a href="#pricing" className={`${styles.navLink} group`} onClick={() => setIsOpen(false)}>
+            <BadgePercent  size={20} className={styles.navLinkIcon} />
+            Pricing
           </a>
 
           <div className="flex flex-col gap-3 mt-6">

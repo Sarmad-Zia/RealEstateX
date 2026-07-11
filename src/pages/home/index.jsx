@@ -19,6 +19,7 @@ import MarketInsights from '../../sections/Articles';
 import Pricing from '../../sections/Pricing';
 import ContactForm from '../../sections/ContactForm';
 import CTABanner from '../../sections/CTA_Mid';
+import RegulatoryCompliance from '../../sections/Accredatation';
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,11 +55,12 @@ export default function Home() {
       <TrustedBy />
       <FootprintStrip />
       <CTA />
+      <OperationsShowcase />
       <Agents />
       <Features />
       {/* 5. Back up your claims with human proof & enterprise trust */}
+      <RegulatoryCompliance/>
       <Testimonials />
-      <OperationsShowcase />
       <CTABanner onBookDemo={() => setIsOpen(true)} />
       <EdgeGrid />
       <Security />

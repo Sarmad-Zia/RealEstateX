@@ -3,7 +3,7 @@ import { styles } from './style';
 import { testimonials } from './data';
 import { useScrollAnimation } from '../../hooks/UserInteractionObserver'; // Adjust path if needed
 import '../../assets/animations/gerneralAnimations.css'; // Uses .animate, .scale-in, .pop-in, .pulse etc.
-import { ChevronLeft,ChevronRight} from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function Testimonials() {
   const [index, setIndex] = useState(0);
@@ -25,15 +25,16 @@ export default function Testimonials() {
       </h2>
 
       <div className={styles.carouselRow}>
+        {/* Desktop Left Button */}
         <button
           onClick={goPrev}
           aria-label="Previous testimonial"
-          className={styles.navBtn}
+          className={`${styles.navBtn} hidden md:flex`}
         >
           <ChevronLeft size={30} />
         </button>
 
-        {/* key={current.id} forces the scale-in animation to replay on every slide change */}
+        {/* Card Component (Optimized Responsiveness) */}
         <div key={current.id} className={`${styles.card} animate scale-in`}>
           <p className={styles.quoteText}>
             "{current.before}
@@ -62,12 +63,31 @@ export default function Testimonials() {
           </div>
         </div>
 
+        {/* Desktop Right Button */}
+        <button
+          onClick={goNext}
+          aria-label="Next testimonial"
+          className={`${styles.navBtn} hidden md:flex`}
+        >
+          <ChevronRight size={30} />
+        </button>
+      </div>
+
+      {/* Mobile Navigation Controls Row */}
+      <div className={styles.mobileNavRow}>
+        <button
+          onClick={goPrev}
+          aria-label="Previous testimonial"
+          className={styles.navBtn}
+        >
+          <ChevronLeft size={24} />
+        </button>
         <button
           onClick={goNext}
           aria-label="Next testimonial"
           className={styles.navBtn}
         >
-          <ChevronRight size={30} />
+          <ChevronRight size={24} />
         </button>
       </div>
     </section>
