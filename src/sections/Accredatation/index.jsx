@@ -8,7 +8,12 @@ export default function RegulatoryCompliance() {
 
   return (
     <section id="compliance" className={styles.section}>
-      <p className={styles.label}>Aligned With Pakistan&apos;s Regulatory Bodies</p>
+      <p className={styles.label}>Built for Compliance, Regulated for Security
+      </p>
+
+      <p className={styles.discrption}>
+        Our real estate ecosystem integrates natively with regional housing authorities, land departments, and financial frameworks to protect legal data and transaction integrity. 
+      </p>
 
       {/* Entrance animation lives here; the infinite scroll animation lives
           on the inner track below, so the two never fight over the

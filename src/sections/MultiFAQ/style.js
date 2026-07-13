@@ -1,7 +1,7 @@
 export const styles = {
   // ============ Section shell ============
   section: "relative overflow-hidden py-24 px-6 md:py-32 dark:bg-forest-deep ",
-  container: "relative z-10 max-w-7xl mx-auto",
+  container: "relative z-10 max-w-4xl mx-auto",
 
   // ============ Header ============
   sectionHeader: "max-w-2xl mx-auto mb-12 text-center md:mb-14",
@@ -23,7 +23,7 @@ export const styles = {
   tabIcon: "shrink-0",
 
   // ============ FAQ grid & cards ============
-  faqGrid: "mx-auto grid max-w-6xl grid-cols-1 items-start gap-5 lg:grid-cols-2",
+  faqGrid: "flex flex-col gap-6 md:gap-8 ",
   faqCard:
     "group relative overflow-hidden rounded-2xl border border-sand bg-paper shadow-sm transition-all duration-300 hover:shadow-md dark:bg-mint/5",
   faqCardOpen: "border-forest/50 shadow-lg ring-1 ring-forest/10",

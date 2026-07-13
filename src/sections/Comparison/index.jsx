@@ -1,14 +1,31 @@
 import React from 'react';
-import { CheckCircle2, XCircle } from 'lucide-react';
+import { CheckCircle2, XCircle, MinusCircle } from 'lucide-react';
 import { styles } from './style';
 import { competitors, comparisonRows } from './data';
 import { useScrollAnimation } from '../../hooks/UserInteractionObserver'; // Adjust file path if needed
 
+function getStatus(value) {
+  if (typeof value === 'boolean') return value ? 'positive' : 'negative';
+  if (/^yes/i.test(value)) return 'positive';
+  if (/^no$/i.test(value)) return 'negative';
+  return 'neutral';
+}
+
 function Availability({ value }) {
-  return value ? (
-    <CheckCircle2 className={styles.iconYes} aria-label="Yes" />
-  ) : (
-    <XCircle className={styles.iconNo} aria-label="No" />
+  const status = getStatus(value);
+  const label = typeof value === 'boolean' ? (value ? 'Yes' : 'No') : value;
+
+  const Icon = status === 'positive' ? CheckCircle2 : status === 'negative' ? XCircle : MinusCircle;
+  const iconClass =
+    status === 'positive' ? styles.iconYes : status === 'negative' ? styles.iconNo : 'inline-block h-5 w-5 text-body-text/50';
+
+  return (
+    <span className="flex flex-col items-center gap-1">
+      <Icon className={iconClass} aria-hidden="true" />
+      <span className="whitespace-normal text-center text-xs font-inter font-medium text-body-text">
+        {label}
+      </span>
+    </span>
   );
 }
 
@@ -49,7 +66,7 @@ export default function FeatureComparisonMatrix() {
           <table className={styles.table}>
             <thead>
               <tr className={styles.theadRow}>
-                <th className={styles.thFeature}>Core ERP &amp; Automation Features</th>
+                <th className={styles.thFeature}>Feature Matrix</th>
                 {competitors.map((c) => (
                   <th
                     key={c.key}

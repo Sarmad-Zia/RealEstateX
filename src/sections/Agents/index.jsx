@@ -1,34 +1,39 @@
 import React from 'react';
 import { styles } from './style';
-import { Banknote, UsersRound, Blocks, ChartPie } from 'lucide-react';
+import {
+  UsersRound,
+  ChartPie,
+  FileText,
+  Sparkles
+} from "lucide-react";
 import { useScrollAnimation } from '../../hooks/UserInteractionObserver'; // Adjust path as necessary
 import { Button } from '../../components/CTAButton';
 
 
 const agentsData = [
   {
-    title: "Recovery Agent",
-    desc: "Automates overdue tracking and multi-channel reminders.",
-    cmd: '"Show overdue files in Block B above 3 months."',
-    icon: "Banknote"
-  },
-  {
-    title: "Dealer Agent",
-    desc: "Calculates complex tiered rebates and payout schedules.",
-    cmd: '"Calculate March commission for Platinum dealers."',
+    title: "Predictive Smart Lead & Tenant Matching",
+    desc: "Match verified buyers and prospective tenants with available properties, plots, or commercial spaces using predictive budget and behavioral analysis.",
+    cmd: '"Match verified buyers with suitable properties based on budget and behavior."',
     icon: "UsersRound"
   },
   {
-    title: "Balloting Agent",
-    desc: "Handles provable digital plot allocations and letters.",
-    cmd: '"Ballot 50% paid 10 Marla files in Phase 2."',
-    icon: "Blocks"
+    title: "Automated Smart Contract & Rental Generation",
+    desc: "Feed property parameters directly into our localized AI engine to draft, audit, and instantly generate air-tight rental agreements and purchase deeds.",
+    cmd: '"Generate a rental agreement for a commercial property."',
+    icon: "FileText"
   },
   {
-    title: "Report Agent",
-    desc: "Instant revenue summaries and possession readiness lists.",
-    cmd: '"Generate cashflow summary for management."',
+    title: " Intelligent Real-Time Revenue  Forecasting \u00A0 ",
+    desc: "Run predictive cash flow models on your entire development portfolio. Let AI calculate project timelines against future monthly installment collections.",
+    cmd: '"Forecast monthly cash flow for all active development projects."',
     icon: "ChartPie"
+  },
+  {
+    title: "AI-Generated SEO Optimization for Listings",
+    desc: "Instantly generate high-converting, professional property descriptions tailored for regional listing portals with a single click inside your dashboard.",
+    cmd: '"Generate an SEO-optimized listing description for a 10 Marla plot."',
+    icon: "Sparkles"
   }
 ];
 
@@ -46,10 +51,10 @@ function AgentCard({ agent, index }) {
       {/* color="currentColor" lets each icon inherit text-forest from aiIconBox
           instead of being locked to a hardcoded hex — retheme-proof going forward */}
       <div className={styles.aiIconBox}>
-        {agent.icon === "Banknote" && <Banknote size={25} color="currentColor" />}
-        {agent.icon === "UsersRound" && <UsersRound size={25} color="currentColor" />}
-        {agent.icon === "Blocks" && <Blocks size={25} color="currentColor" />}
-        {agent.icon === "ChartPie" && <ChartPie size={25} color="currentColor" />}
+          {agent.icon === "UsersRound" && <UsersRound size={25} color="currentColor" />}
+          {agent.icon === "ChartPie" && <ChartPie size={25} color="currentColor" />}
+          {agent.icon === "FileText" && <FileText size={25} color="currentColor" />}
+          {agent.icon === "Sparkles" && <Sparkles size={25} color="currentColor" />}
       </div>
 
       <h4 className={styles.aiCardTitle}>{agent.title}</h4>
@@ -72,7 +77,7 @@ export default function Agents() {
           className={`${styles.sectionHeader} animate blur-in scroll-hidden`}
         >
           <span className={styles.sectionTag}>Operational AI</span>
-          <h2 className={styles.sectionTitle}>Meet Your <span className="text-gradient dark:lightText-gradient">AI Workforce</span></h2>
+          <h2 className={styles.sectionTitle}>Intelligent Property Tech:   <span className="text-gradient dark:lightText-gradient">AI-Driven Real Estate Operations</span></h2>
           <p className={styles.sectionDesc}>RealEstateX replaces manual effort with intelligent AI agents that understand your society data like a human expert.</p>
         </div>
 
@@ -83,9 +88,9 @@ export default function Agents() {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <Button className={`${styles.heroBtnPremium} px-12`} text="Activate AI Mode" onPress={()=>console.log('Activate AI Mode')} />
-        </div>
+        {/* <div className="text-center mt-12">
+          <Button className={`${styles.heroBtnPremium} px-12`} text="Activate AI Mode" onPress={() => console.log('Activate AI Mode')} />
+        </div> */}
       </div>
     </section>
   );

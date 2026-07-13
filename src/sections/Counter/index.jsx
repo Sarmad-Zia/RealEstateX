@@ -15,7 +15,7 @@ function StatBlock({ item, shouldAnimate }) {
     const frameRef = useRef(null)
 
     useEffect(() => {
-        if (!shouldAnimate) return
+        if (!shouldAnimate || item.value === null) return
 
         const start = performance.now()
 
@@ -31,16 +31,24 @@ function StatBlock({ item, shouldAnimate }) {
         }
 
         frameRef.current = requestAnimationFrame(tick)
+
         return () => cancelAnimationFrame(frameRef.current)
     }, [shouldAnimate, item.value])
 
     return (
         <div className={styles.block}>
             <span className={styles.value}>
-                {item.prefix}
-                {current}
-                {item.suffix}
+                {item.value === null ? (
+                    item.display
+                ) : (
+                    <>
+                        {item.prefix}
+                        {current}
+                        {item.suffix}
+                    </>
+                )}
             </span>
+
             <span className={styles.label}>{item.label}</span>
         </div>
     )
@@ -70,6 +78,7 @@ function FootprintStrip() {
 
     return (
         <section ref={sectionRef} className={styles.section}>
+
             <p className={styles.tag}>Our Operating Footprint</p>
 
             <div className={styles.grid}>
@@ -77,10 +86,9 @@ function FootprintStrip() {
                     <StatBlock key={index} item={item} shouldAnimate={hasTriggered} />
                 ))}
             </div>
-
             <div className={styles.divider} />
 
-            <RegulatoryCompliance/>
+            <RegulatoryCompliance />
 
             {/* <p className={styles.subtext}>
                 Enterprise-grade real estate infrastructure trusted across the Asian

@@ -1,3 +1,4 @@
+// src/components/ContactForm/style.js
 export const styles = {
   section: "py-24 px-6 bg-sand",
 
@@ -48,9 +49,6 @@ export const styles = {
     "bg-transparent outline-none w-full text-sm text-ink placeholder:text-body-text/50 " +
     "font-inter resize-none leading-relaxed",
 
-  select:
-    "bg-transparent outline-none w-full text-sm text-ink font-inter appearance-none cursor-pointer",
-
   errorText: "font-inter text-[11px] text-red-600 mt-0.5",
 
   submitRow: "flex flex-col sm:flex-row items-center gap-4 mt-7 sm:col-span-2",
@@ -69,4 +67,30 @@ export const styles = {
   successText: "font-inter text-sm text-body-text leading-relaxed",
   successReset:
     "font-inter text-xs font-semibold text-forest underline decoration-dotted underline-offset-4 mt-3 hover:text-ink transition-colors",
+
+  // ---- custom dropdown (Project Scale) ----
+  dropdownRoot: "relative",
+
+  dropdownTrigger:
+    "flex items-center gap-2 w-full bg-cream border border-sand rounded-xl px-4 py-3 " +
+    "text-left transition-colors duration-200 cursor-pointer " +
+    "focus:outline-none focus-visible:border-forest",
+  dropdownTriggerOpen: "border-forest",
+
+  dropdownIcon: "w-4 h-4 text-forest shrink-0",
+
+  dropdownValue: "flex-1 text-sm font-inter text-ink truncate",
+  dropdownPlaceholder: "flex-1 text-sm font-inter text-body-text/50 truncate",
+
+  dropdownChevron: "w-4 h-4 text-body-text shrink-0 transition-transform duration-200",
+  dropdownChevronOpen: "rotate-180 text-forest",
+
+  dropdownMenu:
+    "absolute z-20 mt-2 w-full bg-paper border border-sand rounded-xl shadow-[var(--shadow-md)] " +
+    "overflow-hidden py-1 animate fade-down",
+
+  dropdownOption:
+    "px-4 py-2.5 text-sm font-inter text-ink cursor-pointer transition-colors duration-150 " +
+    "hover:bg-cream",
+  dropdownOptionActive: "bg-mint/15 text-forest font-semibold",
 };

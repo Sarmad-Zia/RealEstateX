@@ -1,26 +1,76 @@
 export const styles = {
-  // Hero Area
-  heroSection: "relative h-auto min-h-[100vh] pt-25 lg:pt-10 max-lg:pb-10 px-6 bg-cream",
-  heroGrid: "w-full p-5 lg:p-20 pt-0 pb-0 mx-auto grid grid-cols-1 lg:grid-cols-[1.1fr_1.4fr] gap-12 lg:gap-20 items-center",
-  sectionTag: "inline-block px-4 py-1.5 bg-sand text-forest font-bold text-xs uppercase tracking-wider rounded-full mb-6",
-  heroTitle: "text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold font-poppins mb-4 leading-tight text-ink",
-  heroDescription: "text-base sm:text-lg text-body-text mb-8 font-normal leading-relaxed",
+  // Hero Area — mobile-first, natural flow, image only appears at md+
+  heroSection:
+    "relative w-full pt-28 pb-14 px-5 sm:px-6 " +
+    "md:pt-32 lg:pt-24 lg:pb-0 lg:h-screen lg:max-h-screen " +
+    "bg-cream overflow-hidden flex items-center",
+
+  heroGrid:
+    "w-full mx-auto flex flex-col-reverse lg:flex-row " +
+    "gap-2 md:gap-5 lg:gap-10 " +
+    "lg:px-10",
+
+  copyCol: "w-full h-[100] lg:w-[38%] text-center lg:text-left flex flex-col justify-between ",
+
+  textSection: "flex flex-col justify-center items-center lg:items-start",
+
+  sectionTag:
+    "inline-block px-4 py-1.5 bg-sand text-forest font-bold " +
+    "text-xs uppercase tracking-wider rounded-full mb-4 w-fit",
+
+  // Reasonable, restrained scale — no oversized mobile jump
+  heroTitle:
+    "text-2xl sm:text-3xl md:text-4xl lg:text-[40px] " +
+    "font-extrabold align-left font-poppins my-4 leading-[1.2] text-ink",
+
+  heroDescription:
+    "text-sm sm:text-base text-body-text mb-6 font-normal align-left " +
+    "leading-relaxed max-w-md mx-auto lg:max-w-lg lg:mx-0 my-5",
+
   painList: "space-y-4 mb-10",
   painItem: "flex items-center text-body-text font-medium text-sm sm:text-base",
   painIcon: "text-rose-500 mr-4 text-xl shrink-0",
-  heroBtnGroup: "flex flex-wrap gap-3",
-  heroBtnPremium: "bg-neon text-ink px-7 sm:px-9 py-3.5 sm:py-4 rounded-xl font-semibold shadow-[0_10px_20px_-5px_rgba(185,251,166,0.5)] hover:-translate-y-0.5 hover:shadow-[0_20px_30px_-10px_rgba(185,251,166,0.6)] active:translate-y-0 transition-all duration-300 text-sm sm:text-base",
-  heroBtnOutline: "border-2 border-sand text-ink bg-paper px-7 sm:px-9 py-3.5 sm:py-4 rounded-xl font-semibold hover:border-forest hover:bg-sand transition-all duration-200 text-sm sm:text-base",
 
-  // Hero Mockup Graphics
-  mockupWrapper: "relative justify-self-center lg:justify-self-end w-full lg:max-w-[1000px] mt-8 lg:mt-0 max-lg:mb-10",
-  mockupContainer: "relative w-full z-10",
-  mockupImg: "w-full h-auto object-cover rounded-[20px] relative z-10",
-  
-  // ADDED: Circular gradient shadow styling underneath the image layer
-  mockupShadow: "absolute -bottom-8 left-1/2 -translate-x-1/2 w-[85%] h-8 bg-black/10 rounded-[100%] blur-xl z-0 pointer-events-none",
-  
-  floatBadge: "absolute bg-paper px-5 py-3 rounded-2xl shadow-md border border-sand font-bold text-xs text-forest animate-floating select-none whitespace-nowrap z-10",
+  heroBtnGroup: "flex flex-wrap gap-3 justify-center lg:justify-end",
+
+  heroBtnPremium:
+    "bg-neon text-ink px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl font-semibold " +
+    "shadow-[0_10px_20px_-5px_rgba(185,251,166,0.5)] " +
+    "hover:-translate-y-0.5 hover:shadow-[0_20px_30px_-10px_rgba(185,251,166,0.6)] " +
+    "active:translate-y-0 transition-all duration-300 text-sm",
+
+  heroBtnOutline:
+    "border-2 border-sand text-ink bg-paper px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl " +
+    "font-semibold hover:border-forest hover:bg-sand transition-all duration-200 text-sm",
+
+  // // Mockup — hidden on phones, doubled in size, takes majority width at lg+
+  // mockupWrapper:
+  //   "lg:flex w-full lg:w-[62%] lg:items-center lg:justify-center bg-red-900",
+
+  // mockupContainer: "relative w-full lg:flex lg:items-center lg:justify-center",
+
+  // mockupImg:
+  //   "w-full h-full lg:h-auto max-w-[1100px] lg:max-w-none lg:max-h-[88vh] object- lg:object-cover rounded-[20px]",
+
+    mockupWrapper:
+    "flex w-full h-[260px] sm:h-[340px] md:h-[420px] " +
+    "lg:h-auto lg:w-[62%] lg:items-center lg:justify-center",
+
+  mockupContainer:
+    "relative w-full h-full flex items-center justify-center " +
+    "lg:h-auto",
+
+  mockupImg:
+    "w-full h-full object-cover rounded-[20px] " +
+    "lg:w-full lg:h-auto lg:max-w-none lg:max-h-[88vh] lg:object-cover",
+
+  mockupShadow:
+    "absolute -bottom-8 left-1/2 -translate-x-1/2 w-[85%] h-8 bg-black/10 " +
+    "rounded-[100%] blur-xl z-0 pointer-events-none",
+
+  floatBadge:
+    "absolute bg-paper px-5 py-3 rounded-2xl shadow-md border border-sand " +
+    "font-bold text-xs text-forest animate-floating select-none whitespace-nowrap z-10",
 
   // Rest of your styles remain untouched...
   py5: "py-24 px-6",
@@ -83,5 +133,14 @@ export const styles = {
   footerContactItem: "flex items-center gap-3 text-sm mb-3 text-slate-400",
   footerIcon: "text-neon text-base",
   footerDivider: "max-w-7xl mx-auto my-12 border-slate-800",
-  footerBottomRow: "max-w-7xl mx-auto text-center text-xs text-slate-500 font-medium"
+  footerBottomRow: "max-w-7xl mx-auto text-center text-xs text-slate-500 font-medium",
+
+ decorIconWrap: "relative w-full flex justify-center lg:justify-start mb-2",
+  decorIconSparkle:
+    "absolute -top-2 left-2 lg:left-0 text-mint w-8 h-8 md:w-9 md:h-9 float",
+  decorIconStar:
+    "absolute top-6 left-20 lg:left-16 text-forest/60 w-4 h-4 md:w-5 md:h-5 pulse",
+  decorIconZap:
+    "absolute -top-4 left-36 lg:left-32 text-neon w-5 h-5 md:w-6 md:h-6 float",
+
 };

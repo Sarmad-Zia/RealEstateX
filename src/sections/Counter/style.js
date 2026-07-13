@@ -1,9 +1,9 @@
 export const styles = {
     section: 'w-full bg-[var(--color-ink)] dark:bg-mint/40 py-14 px-6 relative',
 
-    tag: 'text-center text-sm md:text-lg font-[var(--font-inter)] font-semibold tracking-[0.2em] text-[var(--color-mint)] uppercase mb-10 dark:text-forest-deep!',
+    tag: 'text-center text-lg md:text-xl font-[var(--font-inter)] font-semibold tracking-[0.2em] text-[var(--color-mint)] uppercase mb-10 dark:text-forest-deep!',
 
-    grid: 'grid grid-cols-2 md:grid-cols-5 gap-y-10 gap-x-6 max-w-6xl mx-auto',
+    grid: 'flex direction-row flex-wrap justify-center gap-6 lg:gap-20 max-w-6xl mx-auto',
 
     block: 'flex flex-col items-center text-center px-2',
     value: ' dark:text-forest! font-[var(--font-poppins)] font-extrabold text-3xl sm:text-4xl md:text-5xl text-[var(--color-neon)] leading-none mb-3',

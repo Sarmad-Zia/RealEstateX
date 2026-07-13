@@ -80,7 +80,7 @@ export const styles = {
 
   priceNote: "font-inter text-xs text-body-text mt-1",
 
-  featureList: "flex flex-col gap-3 mb-8 flex-1",
+  featureList: "flex flex-col gap-3 mb-8 flex-1 pt-5 mt-5 border-t border-sand",
 
   featureRow: "flex items-start gap-2.5",
 

@@ -1,5 +1,5 @@
 export const styles = {
-  section: "relative bg-forest py-16 md:py-24 px-4 md:px-6 overflow-hidden",
+  section: "relative bg-forest py-7 md:py-12 px-4 md:px-6 overflow-hidden",
   heading: "text-center text-white text-2xl md:text-4xl font-extrabold font-poppins mb-10 md:mb-14 px-2",
   headingAccent: "text-neon",
 
@@ -13,7 +13,7 @@ export const styles = {
   quoteText: "text-lg md:text-2xl leading-relaxed text-ink font-medium",
   quoteBold: "font-extrabold",
 
-  authorRow: "flex items-center justify-center gap-3 mt-8 md:mt-10",
+  authorRow: "flex items-center justify-center gap-3 mt-8",
   avatarPhoto: "w-12 h-12 rounded-full object-cover border-2 border-sand",
   avatarInitials: "w-12 h-12 rounded-full bg-forest-deep text-white flex items-center justify-center font-bold text-sm",
   authorInfo: "text-left",
@@ -22,6 +22,8 @@ export const styles = {
 
   // Mobile dedicated row selector (Hidden by default on md/desktop screens)
   mobileNavRow: "flex md:hidden items-center justify-center gap-6 mt-8",
+  divider: "max-w-4xl m-auto h-[1.5px] bg-paper/20 mt-10",
+
   
   cornerBadge: "absolute bottom-6 right-6 w-12 h-12 rounded-full bg-mint text-white flex items-center justify-center text-lg shadow-md",
 };

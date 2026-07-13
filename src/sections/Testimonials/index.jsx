@@ -4,6 +4,7 @@ import { testimonials } from './data';
 import { useScrollAnimation } from '../../hooks/UserInteractionObserver'; // Adjust path if needed
 import '../../assets/animations/gerneralAnimations.css'; // Uses .animate, .scale-in, .pop-in, .pulse etc.
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import TrustedBy from '../TrustedBy';
 
 export default function Testimonials() {
   const [index, setIndex] = useState(0);
@@ -90,6 +91,8 @@ export default function Testimonials() {
           <ChevronRight size={24} />
         </button>
       </div>
+      <div className={styles.divider} ></div>
+      <TrustedBy/>
     </section>
   );
 }

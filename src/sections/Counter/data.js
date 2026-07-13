@@ -1,37 +1,30 @@
 export const footprintData = [
     {
-        value: 2,
+        value: 35,
+        suffix: '%',
+        prefix: '',
+        display: '35%',
+        label: 'Decrease in Installment and Collection Delays'
+    },
+    {
+        value: null,
         suffix: '',
         prefix: '',
-        display: '02',
-        label: 'Continents Active'
+        display: '24/7',
+        label: 'Real-Time Cash Flow, Escrow, and Sales Visibility'
     },
     {
-        value: 5,
-        suffix: '+',
+        value: null,
+        suffix: '',
         prefix: '',
-        display: '05+',
-        label: 'Countries Deployed'
-    },
-    {
-        value: 25,
-        suffix: '+',
-        prefix: '',
-        display: '25+',
-        label: 'Cities Across Pakistan & Asia'
+        display: 'Zero',
+        label: 'Manual Errors on Complex Agent Commission Splits'
     },
     {
         value: 100,
-        suffix: '+',
+        suffix: '%',
         prefix: '',
-        display: '100+',
-        label: 'Housing Societies & Developer Networks'
-    },
-    {
-        value: 50,
-        suffix: 'B+',
-        prefix: 'PKR ',
-        display: 'PKR 50B+',
-        label: 'Automated Installments Processed Securely'
+        display: '100%',
+        label: 'Automated Invoicing and Rental Agreement Reminders'
     }
 ]

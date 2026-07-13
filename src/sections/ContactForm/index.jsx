@@ -1,39 +1,24 @@
-import React, { useState } from 'react';
+// src/components/ContactForm/index.jsx
+import React, { useState, useRef, useEffect } from 'react';
 import { styles } from './style';
+import {
+  SALES_EMAIL,
+  SALES_PHONE,
+  SALES_PHONE_HREF,
+  PROJECT_TYPES,
+  initialForm,
+} from './data';
 import { useScrollAnimation } from '../../hooks/UserInteractionObserver'; // Adjust file path if needed
 import {
   User,
   Building2,
   Mail,
-  Phone,
   MessageSquare,
   Send,
   CheckCircle2,
   MapPin,
+  ChevronDown,
 } from 'lucide-react';
-
-// TODO: replace with your real sales inbox and line before this goes live.
-const SALES_EMAIL = 'sales@realestatex.com';
-const SALES_PHONE = '+92 300 1234567';
-const SALES_PHONE_HREF = 'tel:+923001234567';
-
-// Mirrors the pricing tier names so a prospect's self-selection here lines
-// up with the Pricing section instead of introducing new, unrelated labels.
-const PROJECT_TYPES = [
-  'Emerging Society',
-  'Established Enterprise',
-  'Mega-Project Elite',
-  'Not Sure Yet',
-];
-
-const initialForm = {
-  fullName: '',
-  companyName: '',
-  workEmail: '',
-  phone: '',
-  projectType: '',
-  message: '',
-};
 
 function validate(form) {
   const errors = {};
@@ -47,6 +32,66 @@ function validate(form) {
   return errors;
 }
 
+function ProjectTypeDropdown({ value, onChange }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const rootRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(e) {
+      if (rootRef.current && !rootRef.current.contains(e.target)) {
+        setIsOpen(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  const handleSelect = (type) => {
+    onChange(type);
+    setIsOpen(false);
+  };
+
+  return (
+    <div ref={rootRef} className={styles.dropdownRoot}>
+      <button
+        type="button"
+        onClick={() => setIsOpen((prev) => !prev)}
+        aria-haspopup="listbox"
+        aria-expanded={isOpen}
+        className={`${styles.dropdownTrigger} ${isOpen ? styles.dropdownTriggerOpen : ''}`}
+      >
+        <Building2 className={styles.dropdownIcon} />
+        {value ? (
+          <span className={styles.dropdownValue}>{value}</span>
+        ) : (
+          <span className={styles.dropdownPlaceholder}>Select the closest fit&hellip;</span>
+        )}
+        <ChevronDown
+          className={`${styles.dropdownChevron} ${isOpen ? styles.dropdownChevronOpen : ''}`}
+        />
+      </button>
+
+      {isOpen && (
+        <ul role="listbox" className={styles.dropdownMenu}>
+          {PROJECT_TYPES.map((type) => (
+            <li
+              key={type}
+              role="option"
+              aria-selected={value === type}
+              onClick={() => handleSelect(type)}
+              className={`${styles.dropdownOption} ${
+                value === type ? styles.dropdownOptionActive : ''
+              }`}
+            >
+              {type}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
 export default function ContactForm({ onSubmit = async () => {} }) {
   const contentRef = useScrollAnimation();
   const [form, setForm] = useState(initialForm);
@@ -56,6 +101,10 @@ export default function ContactForm({ onSubmit = async () => {} }) {
 
   const handleChange = (field) => (e) => {
     setForm((prev) => ({ ...prev, [field]: e.target.value }));
+  };
+
+  const handleProjectTypeChange = (value) => {
+    setForm((prev) => ({ ...prev, projectType: value }));
   };
 
   const handleSubmit = async (e) => {
@@ -90,16 +139,12 @@ export default function ContactForm({ onSubmit = async () => {} }) {
               <span className={styles.eyebrow}>Talk to Our Team</span>
             </div>
 
-            <h2 className={styles.heading}>Request a Proposal</h2>
-            <p className={styles.subhead}>
-              Tell us about your society or portfolio and we&apos;ll scope a proposal &mdash;
-              or just reach us directly using the details below.
-            </p>
+            <h2 className={styles.heading}>Request a Tailored Property Management Strategy Session </h2>
 
             <div className={styles.contactList}>
               <div className={styles.contactItem}>
                 <span className={styles.contactIconWrap}>
-                  <Phone className="w-4 h-4" />
+                  <Building2 className="w-4 h-4" />
                 </span>
                 <div>
                   <p className={styles.contactLabel}>Phone</p>
@@ -191,7 +236,7 @@ export default function ContactForm({ onSubmit = async () => {} }) {
                     )}
                   </div>
 
-                  <div className={styles.fieldWrap}>
+                  <div className={styles.fieldWrapFull}>
                     <label className={styles.label} htmlFor="workEmail">
                       Work Email
                     </label>
@@ -209,43 +254,12 @@ export default function ContactForm({ onSubmit = async () => {} }) {
                     {errors.workEmail && <span className={styles.errorText}>{errors.workEmail}</span>}
                   </div>
 
-                  <div className={styles.fieldWrap}>
-                    <label className={styles.label} htmlFor="phone">
-                      Phone Number
-                    </label>
-                    <div className={styles.inputWrap}>
-                      <Phone className={styles.inputIcon} />
-                      <input
-                        id="phone"
-                        type="tel"
-                        className={styles.input}
-                        placeholder="+92 3XX XXXXXXX"
-                        value={form.phone}
-                        onChange={handleChange('phone')}
-                      />
-                    </div>
-                  </div>
-
                   <div className={styles.fieldWrapFull}>
-                    <label className={styles.label} htmlFor="projectType">
-                      Project Scale
-                    </label>
-                    <div className={styles.inputWrap}>
-                      <Building2 className={styles.inputIcon} />
-                      <select
-                        id="projectType"
-                        className={styles.select}
-                        value={form.projectType}
-                        onChange={handleChange('projectType')}
-                      >
-                        <option value="">Select the closest fit&hellip;</option>
-                        {PROJECT_TYPES.map((type) => (
-                          <option key={type} value={type}>
-                            {type}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
+                    <label className={styles.label}>Project Scale</label>
+                    <ProjectTypeDropdown
+                      value={form.projectType}
+                      onChange={handleProjectTypeChange}
+                    />
                   </div>
 
                   <div className={styles.fieldWrapFull}>
@@ -269,11 +283,11 @@ export default function ContactForm({ onSubmit = async () => {} }) {
                 <div className={styles.submitRow}>
                   <button type="submit" className={styles.submitButton} disabled={isSubmitting}>
                     <Send className="w-4 h-4" />
-                    {isSubmitting ? 'Sending…' : 'Request Proposal'}
+                    {isSubmitting ? 'Sending…' : ' Book My Platform Architecture Preview '}
                   </button>
-                  <p className={styles.submitNote}>
+                  {/* <p className={styles.submitNote}>
                     No credit card, no obligation &mdash; just a scoped proposal.
-                  </p>
+                  </p> */}
                 </div>
               </form>
             )}

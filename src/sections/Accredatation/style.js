@@ -3,8 +3,8 @@ export const styles = {
   section: "py-6 px-6 md:py-8 w-full",
 
   label:
-    "text-center font-inter text-xs md:text-sm font-semibold uppercase tracking-[0.14em] " +
-    "text-mint mb-10",
+    "text-center font-inter text-lg md:text-xl  uppercase tracking-[0.14em] " +
+    "text-mint mb-10 font-bold! ",
 
   // Clips the scrolling track + anchors the two edge-fade overlays
   marqueeOuter: "relative w-auto mx-auto overflow-hidden",
@@ -16,6 +16,10 @@ export const styles = {
 
   // Infinite loop reuses the existing `marquee-scroll` keyframe (0% -> -50%)
   // already defined in index.css — no new CSS needed. Pauses on hover.
+
+  discrption:
+    "text-center font-inter text-sm md:text-base text-paper/80 max-w-3xl mx-auto mb-10",
+
   track:
     "flex w-max items-center gap-6 md:gap-10 lg:gap-14 " +
     "[animation:marquee-scroll_26s_linear_infinite] hover:[animation-play-state:paused]",

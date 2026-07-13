@@ -12,7 +12,7 @@ export const styles = {
     "font-inter text-xs font-semibold uppercase tracking-[0.14em] text-forest mb-2",
 
   heading:
-    "font-poppins text-2xl md:text-3xl font-extrabold text-ink leading-snug",
+    "font-poppins text-2xl md:text-3xl font-bold text-ink leading-snug",
 
   subhead:
     "font-inter text-sm md:text-base text-body-text mt-2 max-w-md leading-relaxed",

@@ -1,20 +1,45 @@
 // data.js
 export const competitors = [
-  { key: 'realestatex', name: 'RealEstateX', highlight: true },
-  { key: 'she', name: 'SHE Technologies' },
-  { key: 'zameen', name: 'Zameen CRM' },
-  { key: 'qistpro', name: 'UR QistPro' },
+  { key: 'realestatex', name: 'Our Real Estate OS', highlight: true },
+  { key: 'legacyErps', name: 'Legacy Real Estate ERPs' },
+  { key: 'basicCrms', name: 'Basic Listing CRMs' },
+  { key: 'manualSheets', name: 'Manual Spreadsheets' },
 ];
 
 export const comparisonRows = [
-  { feature: '1-Click Atomic File Transfer & Ledger Mapping', realestatex: true, she: false, zameen: false, qistpro: true },
-  { feature: 'Multi-Phase Installment Schedule Engine', realestatex: true, she: true, zameen: false, qistpro: true },
-  { feature: 'Automated Regulatory Tax Portals (FBR/PRA)', realestatex: true, she: false, zameen: false, qistpro: false },
-  { feature: 'Deep Native Mobile App Ecosystem', realestatex: true, she: true, zameen: false, qistpro: false },
-  { feature: 'Portals-Independent Lead & Inventory Engines', realestatex: true, she: false, zameen: true, qistpro: true },
-  { feature: 'Real-Time Biometric & CNIC Identity Sync', realestatex: true, she: false, zameen: false, qistpro: false },
-  { feature: 'Multi-Project Financial Escrow Tracking', realestatex: true, she: false, zameen: false, qistpro: false },
-  { feature: 'Dynamic Smart Late Surcharge Management', realestatex: true, she: true, zameen: false, qistpro: true },
-  { feature: 'Native Society Map & Layout Visualizer', realestatex: true, she: true, zameen: false, qistpro: false },
-  { feature: 'Zero-Installation Ultra Modern Cloud Setup', realestatex: true, she: false, zameen: true, qistpro: true },
+  {
+    feature: 'Custom Installment Matrices',
+    realestatex: 'Yes (Built-in)',
+    legacyErps: 'Add-on Only',
+    basicCrms: 'No',
+    manualSheets: 'Error-Prone',
+  },
+  {
+    feature: 'Native Customer & Buyer Portal',
+    realestatex: 'Yes (Free Native)',
+    legacyErps: 'Highly Expensive',
+    basicCrms: 'No',
+    manualSheets: 'No',
+  },
+  {
+    feature: 'Multi-Tier Agent Commission Splits',
+    realestatex: 'Yes (Automated)',
+    legacyErps: 'Basic Tracking',
+    basicCrms: 'Manual',
+    manualSheets: 'Manual Calculation',
+  },
+  {
+    feature: 'Rental & Sale/Purchase Modes',
+    realestatex: 'Yes (Unified)',
+    legacyErps: 'Separate Modules',
+    basicCrms: 'Sale Only',
+    manualSheets: 'Separate Files',
+  },
+  {
+    feature: 'Automated Invoicing & Reminders',
+    realestatex: 'Yes (SMS & Email)',
+    legacyErps: 'Complex Setup',
+    basicCrms: 'Manual',
+    manualSheets: 'Manual',
+  },
 ];

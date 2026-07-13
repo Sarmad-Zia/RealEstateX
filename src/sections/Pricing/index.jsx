@@ -108,7 +108,7 @@ export default function Pricing({ onSelectTier = () => {} }) {
               <h3 className={styles.tierName}>{tier.name}</h3>
               <p className={styles.tierAudience}>{tier.audience}</p>
 
-              <div className={styles.metricsRow}>
+              {/* <div className={styles.metricsRow}>
                 {tier.metrics.map((metric) => {
                   const MetricIcon = METRIC_ICONS[metric.icon] ?? FileText;
                   return (
@@ -119,13 +119,13 @@ export default function Pricing({ onSelectTier = () => {} }) {
                     </div>
                   );
                 })}
-              </div>
+              </div> */}
 
-              <div className={styles.priceBlock}>
+              {/* <div className={styles.priceBlock}>
                 <p className={styles.priceEyebrow}>{tier.price.eyebrow}</p>
                 <p className={styles.priceAmount}>{tier.price.amount}</p>
                 <p className={styles.priceNote}>{tier.price.note}</p>
-              </div>
+              </div> */}
 
               <div className={styles.featureList}>
                 {tier.features.map((feature, i) => (
@@ -149,13 +149,13 @@ export default function Pricing({ onSelectTier = () => {} }) {
         })}
       </div>
 
-      <div
+      {/* <div
         className={`${styles.disclaimerWrap} animate fade-up delay-3 scroll-hidden ${
           isVisible ? "in-view" : ""
         }`}
       >
         <p className={styles.disclaimerText}>{pricingDisclaimer}</p>
-      </div>
+      </div> */}
     </section>
   );
 }

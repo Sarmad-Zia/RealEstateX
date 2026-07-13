@@ -9,7 +9,7 @@ import Security from '../../sections/Security';
 import FAQ from '../../sections/MultiFAQ';
 import CTA from '../../sections/CTA';
 import Footer from '../../sections/Footer';
-import TrustedBy from '../../sections/TurstedBy';
+// import TrustedBy from '../../sections/TurstedBy';
 import AssetPortfolio from '../../sections/AssetsPorfolio';
 import FootprintStrip from '../../sections/Counter';
 import { Button } from '../../components/CTAButton';
@@ -52,33 +52,23 @@ export default function Home() {
       <Navbar isOpen={isOpen} setIsOpen={setIsOpen} isDark={isDarkMode} setIsDark={setIsDarkMode} />
       <Hero />
 
-      {/* 1. Immediate social proof & global reach right after the hook */}
-      {/* <TrustedBy /> */}
-      <FootprintStrip />
-      {/* <CTA />
-       */}
-      <CTABanner onBookDemo={() => setIsOpen(true)} />=
+      <FootprintStrip /> 
+
+      <CTABanner onBookDemo={() => setIsOpen(true)} />
       <Agents />
       <Features />
-      {/* 5. Back up your claims with human proof & enterprise trust */}
-      {/* <RegulatoryCompliance/> */}
+
       <Testimonials />
-      {/* <CTABanner onBookDemo={() => setIsOpen(true)} /> */}
+
       <CTA />
-      {/* <EdgeGrid /> */}
-      <FeatureComparisonMatrix/>
+
+      <FeatureComparisonMatrix />
       <Security />
-      {/* <OperationsShowcase /> */}
 
-      {/* 2. Show the core tech differentiator (The AI Workers) */}
-      {/* 3. Deep dive into the actual system mechanics */}
 
-      {/* 4. Show the business transformation & ROI (Before vs. After / Cost Savings) */}
 
-      {/* <MarketInsights /> */}
-      {/* 6. Address final hesitations just before the closing pitch */}
       <Pricing />
-      {/* <FAQ /> */}
+
       <FAQ />
       <ContactForm />
 

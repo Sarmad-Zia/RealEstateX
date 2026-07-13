@@ -15,6 +15,15 @@ export default function Footer() {
         >
           {/* Brand + Social Column */}
           <div className={styles.footerColBrand}>
+            <div className={`${styles.logo} ${styles.logoFull} animate fade-in delay-2`}>
+              RealEstate
+              <span className={`${styles.logoAccent} animate-logo-x`}>
+                X
+              </span>
+            </div>
+            <p className={`${styles.footerBrandDesc} animate fade-in delay-3 mb-5 `}>
+              Building high-performance software systems for global property and business automation. 
+            </p>
             <div className={`${styles.footerSocialRow} animate fade-in delay-3`}>
               <a href="#" aria-label="LinkedIn" className={styles.footerSocialIcon}>in</a>
               <a href="#" aria-label="Facebook" className={styles.footerSocialIcon}>f</a>
@@ -25,7 +34,7 @@ export default function Footer() {
           </div>
 
           {/* Company Column */}
-          <div className={styles.footerColLinks}>
+          {/* <div className={styles.footerColLinks}>
             <h6 className={`${styles.footerSectionHeading} animate fade-down delay-2`}>Company</h6>
             <ul className={styles.footerList}>
               <li className="animate slide-left delay-3">
@@ -38,14 +47,14 @@ export default function Footer() {
                 <a href="#partners" className={styles.footerLink}>Partners</a>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Other Links Column */}
           <div className={styles.footerColLinks}>
             <h6 className={`${styles.footerSectionHeading} animate fade-down delay-2`}>Other Links</h6>
             <ul className={styles.footerList}>
               <li className="animate slide-left delay-3">
-                <a href="#login" className={styles.footerLink}>Login</a>
+                {/* <a href="#login" className={styles.footerLink}>Login</a> */}
               </li>
               <li className="animate slide-left delay-4">
                 <a href="#help" className={styles.footerLink}>Help Center</a>
