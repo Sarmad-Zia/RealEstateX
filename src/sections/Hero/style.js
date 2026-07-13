@@ -52,6 +52,8 @@ export const styles = {
   // mockupImg:
   //   "w-full h-full lg:h-auto max-w-[1100px] lg:max-w-none lg:max-h-[88vh] object- lg:object-cover rounded-[20px]",
 
+  //testing the changes to the git
+
     mockupWrapper:
     "flex w-full h-[260px] sm:h-[340px] md:h-[420px] " +
     "lg:h-auto lg:w-[62%] lg:items-center lg:justify-center",
