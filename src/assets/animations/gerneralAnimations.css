@@ -373,3 +373,20 @@
    ".in-view" on elements with class "scroll-hidden"):
      <div class="animate fade-up scroll-hidden">Reveals on scroll</div>
    ========================================================================== */
+
+   /* --------------------------------------------------------------------------
+   16. WATERMARK WAVE — subtle, low-opacity sway for decorative brand icons.
+   Unlike .float (large vertical bounce) or .pulse (scale pop), this stays
+   at a fixed low opacity and only gently rocks side-to-side + rotates,
+   like a light watermark shimmer rather than an interactive UI element.
+   -------------------------------------------------------------------------- */
+@keyframes watermarkWave {
+  0%   { transform: translateX(0) rotate(0deg);   opacity: 0.35; }
+  25%  { transform: translateX(3px) rotate(4deg); opacity: 0.55; }
+  50%  { transform: translateX(0) rotate(0deg);   opacity: 0.35; }
+  75%  { transform: translateX(-3px) rotate(-4deg); opacity: 0.55; }
+  100% { transform: translateX(0) rotate(0deg);   opacity: 0.35; }
+}
+.watermark-wave {
+  animation: watermarkWave 4.5s ease-in-out infinite;
+}

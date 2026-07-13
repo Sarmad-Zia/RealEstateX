@@ -31,7 +31,7 @@ export const styles = {
   painItem: "flex items-center text-body-text font-medium text-sm sm:text-base",
   painIcon: "text-rose-500 mr-4 text-xl shrink-0",
 
-  heroBtnGroup: "flex flex-wrap gap-3 justify-center lg:justify-end",
+  heroBtnGroup: "flex flex-wrap gap-3 justify-center lg:justify-start",
 
   heroBtnPremium:
     "bg-neon text-ink px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl font-semibold " +
@@ -137,10 +137,6 @@ export const styles = {
 
  decorIconWrap: "relative w-full flex justify-center lg:justify-start mb-2",
   decorIconSparkle:
-    "absolute -top-2 left-2 lg:left-0 text-mint w-8 h-8 md:w-9 md:h-9 float",
-  decorIconStar:
-    "absolute top-6 left-20 lg:left-16 text-forest/60 w-4 h-4 md:w-5 md:h-5 pulse",
-  decorIconZap:
-    "absolute -top-4 left-36 lg:left-32 text-neon w-5 h-5 md:w-6 md:h-6 float",
+    "absolute -top-2 left-2 lg:left-0 text-mint w-8 h-8 md:w-9 md:h-9 watermark-wave", 
 
 };
