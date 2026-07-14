@@ -21,7 +21,11 @@ export default function Testimonials() {
       ref={sectionRef}
       className={`${styles.section} animate fade-up scroll-hidden`}
     >
-      <h2 className={styles.heading}>
+      <TrustedBy />
+
+      <div className={styles.divider} ></div>
+
+      <h2 className={styles.heading + 'pt-6'}>
         Our Customers Love <span className={styles.headingAccent}>RealEstateX</span>
       </h2>
 
@@ -91,8 +95,6 @@ export default function Testimonials() {
           <ChevronRight size={24} />
         </button>
       </div>
-      <div className={styles.divider} ></div>
-      <TrustedBy/>
     </section>
   );
 }

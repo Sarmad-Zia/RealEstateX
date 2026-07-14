@@ -1,163 +1,104 @@
-  import React, { useState } from 'react';
-  import { styles } from './style';
-  import { useScrollAnimation } from '../../hooks/UserInteractionObserver'; // Double-check this matches your hook's file name
-  import {
-    Building2,
-    Receipt,
-    Handshake,
-    LayoutDashboard,
-    Users,
-  } from "lucide-react";
+import { useState } from "react";
+import { styles } from "./style";
+import { featureData } from "./data";
+import { useScrollAnimation } from "../../hooks/UserInteractionObserver";
 
-  export default function Features() {
-    const [activeTab, setActiveTab] = useState('property');
+export default function Features() {
+  const [activeTab, setActiveTab] = useState("property");
 
-    // Create distinct observer node refs for macro entrance sequencing
-    const headerRef = useScrollAnimation();
-    const mainContentRef = useScrollAnimation();
+  const headerRef = useScrollAnimation();
+  const mainContentRef = useScrollAnimation();
 
-    const featureData = {
-    property: {
-      title: "Multi-Mode Property, Plot & Land Management",
-      icon: Building2,
-      bullets: [
-        "Manage development portfolios",
-        "Commercial spaces management",
-        "Rental, purchase & off-plan booking modes"
-      ],
-      text: "Efficiently manage vast development portfolios, commercial spaces, or multi-family properties under rental, purchase, or off-plan booking modes.",
-      keywords: "property management software",
-    },
+  const active = featureData[activeTab];
 
-    accounting: {
-      title: "Advanced Installment Plans & Dynamic Accounting",
-      icon: Receipt,
-      bullets: [
-        "Custom down-payment matrices",
-        "Balloon-payment & monthly installment plans",
-        "Automated ledgers, rebates & digital receipts"
-      ],
-      text: "Create custom down-payment, balloon-payment, and monthly installment matrices with automated ledger calculation, rebates, and instant digital receipts.",
-      keywords: "installment accounting software",
-    },
+  return (
+    <section id="features" className={`${styles.py5} bg-cream`}>
+      <div className="max-w-7xl mx-auto">
 
-    realtor: {
-      title: "Realtor, Broker & Commission Management",
-      icon: Handshake,
-      bullets: [
-        "Track broker networks",
-        "Manage internal sales agents",
-        "Multi-tier commission splits & rebate structures"
-      ],
-      text: "Keep your sales pipelines healthy. Track external broker networks and internal agents with automated multi-tier commission splits and automated rebate structures.",
-      keywords: "broker commission management",
-    },
+        <div
+          ref={headerRef}
+          className={`${styles.sectionHeader} animate blur-in scroll-hidden delay-2`}
+        >
+          <h2 className={styles.sectionTitle}>
+            Everything Needed to Scale Your{" "}
+            <span className="text-gradient">Real Estate Operations</span>
+          </h2>
+          <p className={styles.sectionDesc}>
+            A full-lifecycle ERP designed for the high-stakes property market.
+          </p>
+        </div>
 
-    listings: {
-      title: "Secure Public Property Listings Portal",
-      icon: LayoutDashboard,
-      bullets: [
-        "Publish from internal inventory",
-        "High-resolution property galleries",
-        "Interactive booking forms"
-      ],
-      text: "Push properties live directly from your internal inventory onto an external, lightning-fast public listing site complete with high-res galleries and interactive booking forms.",
-      keywords: "property listings portal",
-    },
+        <div
+          ref={mainContentRef}
+          className={`${styles.featureBox} animate fade-up scroll-hidden`}
+        >
+          {/* Sidebar */}
+          <div className={styles.featureSidebar}>
+            {Object.keys(featureData).map((key) => {
+              const item = featureData[key];
+              const Icon = item.icon;
+              const isActive = activeTab === key;
 
-    customer: {
-      title: "Transparent End-User Customer Portal",
-      icon: Users,
-      bullets: [
-        "Track remaining balance",
-        "Download invoices & payment history",
-        "Request maintenance online"
-      ],
-      text: "Give buyers and tenants complete control. Let them log in to track their remaining balance, download active invoices, view payment histories, and request maintenance.",
-      keywords: "customer property portal",
-    },
-  };
-
-    const ActiveIcon = featureData[activeTab].icon;
-
-    return (
-      <section id="features" className={`${styles.py5} ${'bg-cream'}`}>
-        <div className="max-w-7xl mx-auto">
-
-          {/* Header Block: Entrance sequence utilizing blur-in */}
-          <div
-            ref={headerRef}
-            className={`${styles.sectionHeader} animate blur-in scroll-hidden delay-2`}
-          >
-            <h2 className={styles.sectionTitle}>Everything Needed to Scale Your   <span className="text-gradient">Real Estate Operations</span></h2>
-            <p className={styles.sectionDesc}>A full-lifecycle ERP designed for the high-stakes property market.</p>
+              return (
+                <div
+                  key={key}
+                  onClick={() => setActiveTab(key)}
+                  className={`${styles.tabItemBase} ${
+                    isActive ? styles.tabItemActive : styles.tabItemInactive
+                  }`}
+                >
+                  <span
+                    className={`${styles.iconBadgeBase} ${
+                      isActive ? styles.iconBadgeActive : styles.iconBadgeInactive
+                    }`}
+                  >
+                    <Icon size={18} strokeWidth={2.25} />
+                  </span>
+                  <span
+                    className={`${styles.tabLabelBase} ${
+                      isActive ? styles.tabLabelActive : styles.tabLabelInactive
+                    }`}
+                  >
+                    {item.title}
+                  </span>
+                </div>
+              );
+            })}
           </div>
 
-          {/* Feature Layout Console: Sweeps gently from the base when visible */}
-          <div
-            ref={mainContentRef}
-            className={`${styles.featureBox} animate fade-up scroll-hidden`}
-          >
-            {/* Navigation Sidebar Layout Wrapper */}
-            <div className={styles.featureSidebar}>
-              {Object.keys(featureData).map((key) => {
-                const Icon = featureData[key].icon;
-                const isActive = activeTab === key;
-                return (
-                  <div
-                    key={key}
-                    onClick={() => setActiveTab(key)}
-                    className={`${styles.tabItemBase} ${isActive ? styles.tabItemActive : styles.tabItemInactive}`}
-                  >
-                    <span className="flex items-center gap-3">
-                      <Icon size={18} className="shrink-0" />
-                      <span className="text-sm md:text-base">{featureData[key].title}</span>
-                    </span>
-                    <span className="hidden lg:inline text-xs opacity-40">➔</span>
-                  </div>
-                );
-              })}
-            </div>
+          {/* Content panel — this whole side IS the window now */}
+          <div key={activeTab} className={`${styles.featureContentArea} animate fade-in`}>
+            <div className={styles.featureWindowCard}>
+              {/* Chrome bar spans the full top edge of the right panel */}
+              <div className={styles.featureWindowChrome}>
+                <span className={styles.chromeDotRed} />
+                <span className={styles.chromeDotAmber} />
+                <span className={styles.chromeDotGreen} />
+                <span className={styles.featureWindowUrlBar}>
+                  app.realestatex.io
+                </span>
+              </div>
 
-            {/* Active Content Panel: Changes key configuration on tab toggles to reset CSS animations */}
-            <div
-              key={activeTab}
-              className={`${styles.featureContentArea} animate fade-in`}
-            >
-              <div className={styles.featureDisplayGrid}>
-
-                {/* Mockup Element: icon-led visual instead of plain text placeholder */}
-                <div className={`${styles.featureVisualMockup} animate scale-in`}>
-                  <ActiveIcon className={styles.featureVisualIcon} strokeWidth={1.5} />
-                  <span className={styles.featureVisualLabel}>
-                    {featureData[activeTab].title} Console
-                  </span>
-                </div>
-
-                {/* Explanatory Typography Panel: Uses slide-right on selection change */}
-                <div className="animate slide-right">
-                  <h3 className={styles.featureTitle}>{featureData[activeTab].title}</h3>
-                  <ul className={styles.featureBulletList}>
-                    {featureData[activeTab].bullets.map((bullet, i) => (
-                      <li
-                        key={i}
-                        className={`${styles.featureBulletItem} animate fade-up delay-${Math.min(i + 1, 3)}`}
-                      >
-                        <span className={styles.featureCheckmark}>✓</span> {bullet}
-                      </li>
-                    ))}
-                  </ul>
-                  <p className={`${styles.featureTextDescription} animate fade-up delay-2`}>{featureData[activeTab].text}</p>
-                  <span className={`${styles.featureKeywordTag} inline-block animate pop-in delay-3`}>
-                    {featureData[activeTab].keywords}
-                  </span>
-                </div>
-
+              {/* Image fully contained — nothing gets cropped or squished */}
+              <div className={`${styles.featureImageClip} animate scale-in`}>
+                <img
+                  src={active.image}
+                  alt={active.title}
+                  className={styles.featureImage}
+                  loading="lazy"
+                />
               </div>
             </div>
 
+            {/* Caption strip below the window, still inside the same panel */}
+            <div className={`${styles.featureTextWrap} animate fade-up delay-2`}>
+              <h3 className={styles.featureTitle}>{active.title}</h3>
+              <span className={styles.featureUnderline} />
+              <p className={styles.featureTextDescription}>{active.text}</p>
+            </div>
           </div>
         </div>
-      </section>
-    );
-  }
+      </div>
+    </section>
+  );
+}

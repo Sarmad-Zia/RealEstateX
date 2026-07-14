@@ -51,7 +51,7 @@ export const styles = {
 
   errorText: "font-inter text-[11px] text-red-600 mt-0.5",
 
-  submitRow: "flex flex-col sm:flex-row items-center gap-4 mt-7 sm:col-span-2",
+  submitRow: "flex flex-col sm:flex-row items-center justify-end  gap-4 mt-7 sm:col-span-2",
 
   submitButton:
     "inline-flex items-center justify-center gap-2 rounded-full bg-ink px-7 py-3.5 " +

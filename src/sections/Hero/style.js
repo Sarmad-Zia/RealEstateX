@@ -2,13 +2,12 @@ export const styles = {
   // Hero Area — mobile-first, natural flow, image only appears at md+
   heroSection:
     "relative w-full pt-28 pb-14 px-5 sm:px-6 " +
-    "md:pt-32 lg:pt-24 lg:pb-0 lg:h-screen lg:max-h-screen " +
+    "md:pt-32 lg:pt-[50vh] xl:pt-24 lg:pb-0 lg:h-screen lg:max-h-screen " +
     "bg-cream overflow-hidden flex items-center",
 
   heroGrid:
     "w-full mx-auto flex flex-col-reverse lg:flex-row " +
-    "gap-2 md:gap-5 lg:gap-10 " +
-    "lg:px-10",
+    "gap-2 md:gap-5 lg:gap-2 ",
 
   copyCol:
     "w-full lg:w-[38%] text-center lg:text-left flex flex-col justify-center md:gap-10",
@@ -17,7 +16,7 @@ export const styles = {
 
 sectionTag:
     "inline-block px-4 py-1.5 bg-sand text-forest font-bold " +
-    "text-xs uppercase tracking-wider rounded-full mb-3 w-fit",
+    "text-xs lg:text-sm uppercase tracking-wider rounded-full mb-3 w-fit",
 
   heroTitle:
     "text-2xl sm:text-3xl md:text-4xl lg:text-[40px] " +

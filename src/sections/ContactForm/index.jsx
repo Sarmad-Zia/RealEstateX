@@ -280,10 +280,10 @@ export default function ContactForm({ onSubmit = async () => {} }) {
                   </div>
                 </div>
 
-                <div className={styles.submitRow}>
+                <div className={styles.submitRow  }>
                   <button type="submit" className={styles.submitButton} disabled={isSubmitting}>
                     <Send className="w-4 h-4" />
-                    {isSubmitting ? 'Sending…' : ' Book My Platform Architecture Preview '}
+                    {isSubmitting ? 'Submiting…' : ' Submit'}
                   </button>
                   {/* <p className={styles.submitNote}>
                     No credit card, no obligation &mdash; just a scoped proposal.

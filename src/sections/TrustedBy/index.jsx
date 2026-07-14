@@ -19,7 +19,7 @@ export default function TrustedBy() {
         </div>
 
         <h2 className={styles.heading}>
-          Leading Societies &amp; Developers Run on RealEstateX
+          <span className={styles.headingAccent}>Leading Societies & Developers</span> Run on RealEstateX
         </h2>
 
         <div className={styles.logoRow}>

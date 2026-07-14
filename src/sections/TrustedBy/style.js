@@ -1,16 +1,17 @@
 // src/components/TrustedBy/style.js
 export const styles = {
-  section: "py-5 md:py-6 px-6",
-  container: "max-w-6xl mx-auto flex flex-col items-center",
+  section: " px-3",
+  container: "max-w-[80%] mx-auto flex flex-col items-center",
 
   eyebrowRow: "flex items-center gap-3 mb-4",
-  eyebrowLine: "h-px w-8 bg-forest/40",
-  eyebrow: "font-inter text-xs md:text-sm font-semibold tracking-[0.2em] uppercase text-forest",
+  eyebrowLine: "h-px w-8 bg-mint/40",
+  eyebrow: "font-inter text-xs md:text-sm font-semibold tracking-[0.2em] uppercase text-mint",
 
-  heading: "font-poppins text-lg md:text-2xl font-bold text-ink text-center mb-10 md:mb-12 text-neon ",
+  heading: "text-center text-white text-2xl md:text-4xl font-extrabold font-poppins mb-10 md:mb-14 px-2",
+  headingAccent: "text-neon",
 
   // no overflow, wraps naturally — never scrolls in any direction
-  logoRow: "flex flex-wrap items-center justify-spacebetween mx-auto",
+  logoRow: "flex flex-wrap items-center justify-center gap-3 md:gap-5 w-full w-full  ",
 
   logoWrap:
     "flex items-center justify-center h-22 md:h-30 w-auto grayscale opacity-60 " +
