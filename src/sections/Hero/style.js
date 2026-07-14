@@ -11,9 +11,9 @@ export const styles = {
     "lg:px-10",
 
   copyCol:
-    "w-full lg:w-[38%] text-center lg:text-left flex flex-col justify-center lg:gap-30",
+    "w-full lg:w-[38%] text-center lg:text-left flex flex-col justify-center md:gap-10",
 
-  textSection: "flex flex-col justify-center items-center lg:items-start",
+  textSection: "flex flex-col justify-center items-center lg:items-start lg:gap-6",
 
 sectionTag:
     "inline-block px-4 py-1.5 bg-sand text-forest font-bold " +
@@ -27,10 +27,10 @@ sectionTag:
     "text-sm sm:text-base text-body-text mb-6 font-normal align-left " +
     "leading-relaxed max-w-md mx-auto lg:max-w-lg lg:mx-0",
 
-  painList: "space-y-3 mb-6 flex flex-col items-center lg:items-start",
+  painList: "space-y-3 mb-6 flex flex-col items-start",
 
   painItem:
-    "flex items-center gap-3 text-ink font-semibold text-sm sm:text-base",
+    "flex  items-center  gap-3 text-ink font-semibold text-sm sm:text-base",
 
   painIconBadge:
     "flex items-center justify-center w-6 h-6 rounded-md " +
