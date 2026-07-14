@@ -10,24 +10,24 @@ export const styles = {
     "gap-2 md:gap-5 lg:gap-10 " +
     "lg:px-10",
 
-  copyCol: "w-full h-[100] lg:w-[38%] text-center lg:text-left flex flex-col justify-between ",
+  copyCol:
+    "w-full lg:w-[38%] text-center lg:text-left flex flex-col justify-center lg:gap-30",
 
   textSection: "flex flex-col justify-center items-center lg:items-start",
 
-  sectionTag:
+sectionTag:
     "inline-block px-4 py-1.5 bg-sand text-forest font-bold " +
-    "text-xs uppercase tracking-wider rounded-full mb-4 w-fit",
+    "text-xs uppercase tracking-wider rounded-full mb-3 w-fit",
 
-  // Reasonable, restrained scale — no oversized mobile jump
   heroTitle:
     "text-2xl sm:text-3xl md:text-4xl lg:text-[40px] " +
-    "font-extrabold align-left font-poppins my-4 leading-[1.2] text-ink",
+    "font-extrabold justify-center font-poppins mb-4 leading-[1.2] text-ink",
 
   heroDescription:
     "text-sm sm:text-base text-body-text mb-6 font-normal align-left " +
-    "leading-relaxed max-w-md mx-auto lg:max-w-lg lg:mx-0 my-5",
+    "leading-relaxed max-w-md mx-auto lg:max-w-lg lg:mx-0",
 
-  painList: "space-y-3 mb-8 flex flex-col items-center lg:items-start",
+  painList: "space-y-3 mb-6 flex flex-col items-center lg:items-start",
 
   painItem:
     "flex items-center gap-3 text-ink font-semibold text-sm sm:text-base",
@@ -36,7 +36,7 @@ export const styles = {
     "flex items-center justify-center w-6 h-6 rounded-md " +
     "bg-rose-50 border border-rose-200 text-rose-500 shrink-0",
 
-  heroBtnGroup: "flex flex-wrap gap-3 justify-center lg:justify-start",
+  heroBtnGroup: "flex flex-wrap gap-3 justify-center lg:justify-start mt-2",
 
   heroBtnPremium:
     "bg-neon text-ink px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl font-semibold " +

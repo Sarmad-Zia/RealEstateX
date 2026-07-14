@@ -1,6 +1,6 @@
 import { styles } from "./style";
 import heroImage from "../../assets/images/heroImage.png";
-import { Sparkles, ShieldAlert } from "lucide-react";
+import { ShieldAlert } from "lucide-react";
 
 const painPoints = [
   "Losing revenue due to manual installment tracking?",
@@ -15,12 +15,9 @@ export default function HeroSection() {
       <div className={styles.heroGrid}>
         {/* Copy column */}
         <div className={styles.copyCol + " animate delay-3 py-10 slide-left"}>
-          {/* Decorative icon cluster */}
-          <div className={styles.decorIconWrap}>
-            <Sparkles className={styles.decorIconSparkle} strokeWidth={2.5} />
-          </div>
           <div className={styles.textSection}>
             <span className={styles.sectionTag}>The Next-Gen Real Estate OS</span>
+
             <h1 className={styles.heroTitle}>
               The Enterprise Real Estate OS: Automate Listings, Installments,
               and Agent Commissions
@@ -33,7 +30,6 @@ export default function HeroSection() {
               installment plans, and an instant client portal.
             </p>
 
-            {/* Pain points — mirrors your reference: icon badge + statement, builds urgency before the CTA */}
             <ul className={styles.painList + " animate delay-4 fade-up"}>
               {painPoints.map((point, i) => (
                 <li key={i} className={styles.painItem}>
@@ -57,9 +53,7 @@ export default function HeroSection() {
             </button>
 
             <button
-              className={
-                styles.heroBtnOutline + " animate delay-5 pop-in"
-              }
+              className={styles.heroBtnOutline + " animate delay-5 pop-in"}
             >
               📞 Call Sales Team
             </button>
