@@ -26,4 +26,5 @@ export const styles = {
   featureCheckmark: "text-forest mr-3 text-lg shrink-0",
   featureTextDescription: "text-body-text text-sm md:text-base leading-relaxed mb-6",
   featureKeywordTag: "inline-block bg-forest/10 text-forest text-xs font-bold px-3.5 py-1.5 rounded-md uppercase tracking-wider",
+  
 };

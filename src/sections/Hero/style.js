@@ -27,9 +27,14 @@ export const styles = {
     "text-sm sm:text-base text-body-text mb-6 font-normal align-left " +
     "leading-relaxed max-w-md mx-auto lg:max-w-lg lg:mx-0 my-5",
 
-  painList: "space-y-4 mb-10",
-  painItem: "flex items-center text-body-text font-medium text-sm sm:text-base",
-  painIcon: "text-rose-500 mr-4 text-xl shrink-0",
+  painList: "space-y-3 mb-8 flex flex-col items-center lg:items-start",
+
+  painItem:
+    "flex items-center gap-3 text-ink font-semibold text-sm sm:text-base",
+
+  painIconBadge:
+    "flex items-center justify-center w-6 h-6 rounded-md " +
+    "bg-rose-50 border border-rose-200 text-rose-500 shrink-0",
 
   heroBtnGroup: "flex flex-wrap gap-3 justify-center lg:justify-start",
 

@@ -1,6 +1,13 @@
 import { styles } from "./style";
 import heroImage from "../../assets/images/heroImage.png";
-import { Sparkles, Star, Zap } from "lucide-react";
+import { Sparkles, ShieldAlert } from "lucide-react";
+
+const painPoints = [
+  "Losing revenue due to manual installment tracking?",
+  "Dealing with agent commission disputes?",
+  "Struggling with messy Excel file records?",
+  "Customers constantly calling for ledger updates?",
+];
 
 export default function HeroSection() {
   return (
@@ -25,6 +32,18 @@ export default function HeroSection() {
               and leasing with automated invoicing, localized flexible
               installment plans, and an instant client portal.
             </p>
+
+            {/* Pain points — mirrors your reference: icon badge + statement, builds urgency before the CTA */}
+            <ul className={styles.painList + " animate delay-4 fade-up"}>
+              {painPoints.map((point, i) => (
+                <li key={i} className={styles.painItem}>
+                  <span className={styles.painIconBadge}>
+                    <ShieldAlert className="w-3.5 h-3.5" strokeWidth={2.5} />
+                  </span>
+                  {point}
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div className={styles.heroBtnGroup}>
