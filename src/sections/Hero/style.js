@@ -5,8 +5,8 @@ export const styles = {
     "bg-cream overflow-hidden lg:overflow-visible flex items-center",
 
   heroGrid:
-    "w-full mx-auto flex flex-col-reverse lg:flex-row " +
-    "gap-2 md:gap-5 lg:gap-6 xl:gap-2",
+    "w-full mx-auto flex flex-col-reverse lg:flex-row md:p-2 " +
+    "gap-2 md:gap-2 lg:gap-2 xl:gap-2",
 
   copyCol:
     "w-full md:max-w-2xl md:mx-auto lg:max-w-none lg:mx-0 lg:w-[46%] xl:w-[38%] " +
@@ -36,17 +36,20 @@ export const styles = {
     "bg-rose-50 border border-rose-200 text-rose-500 shrink-0",
 
   heroBtnGroup: "flex flex-wrap gap-3 justify-center lg:justify-start mt-2",
+  heroBtnPremium: "bg-neon text-ink px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl font-semibold shadow-[0_10px_20px_-5px_rgba(185,251,166,0.5)] hover:-translate-y-0.5 hover:shadow-[0_20px_30px_-10px_rgba(185,251,166,0.6)] active:translate-y-0 transition-all duration-300 text-sm",
+  heroBtnOutline: "border-2 border-sand text-ink bg-paper px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl font-semibold hover:border-forest hover:bg-sand transition-all duration-200 text-sm",
+
 
   // Mockup — shrinks its footprint at lg so it stops squeezing the copy column's height
   mockupWrapper:
     "flex w-full h-[16.25rem] sm:h-[21.25rem] md:h-[26.25rem] " +
-    "lg:h-auto lg:w-[54%] xl:w-[62%] lg:items-center lg:justify-center lg:self-center",
+    "lg:h-[30%] lg:w-[54%] xl:w-[62%] lg:items-center lg:justify-center lg:self-center",
 
   mockupContainer:
     "relative w-full h-full flex items-center justify-center lg:h-auto",
 
   mockupImg:
-    "w-full h-full object-cover rounded-[1.25rem] " +
+    "w-full h-full object-contain rounded-[1.25rem] " +
     "lg:w-full lg:h-auto lg:max-w-none lg:max-h-[52vh] xl:max-h-[88vh] lg:object-contain xl:object-cover",
   mockupShadow:
     "absolute -bottom-8 left-1/2 -translate-x-1/2 w-[85%] h-8 bg-black/10 " +
