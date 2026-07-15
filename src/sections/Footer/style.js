@@ -3,14 +3,14 @@ export const styles = {
   footerGrid: "max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10",
 
   // Brand / social column
-  footerColBrand: "lg:col-span-3",
+  footerColBrand: "lg:col-span-5",
   footerCheckIcon: "text-forest text-2xl mb-4 inline-block",
   footerSocialRow: "flex items-center gap-3 mb-5",
   footerSocialIcon: "w-12 h-12 flex items-center justify-center rounded-full border border-sand text-ink hover:bg-forest hover:text-white hover:border-forest transition-colors duration-200 text-lg font-bold text-forest ",
   footerContactLink: "inline-flex items-center gap-1 text-ink font-semibold text-sm hover:text-forest transition-colors duration-200",
 
   // Link columns (Company / Other Links)
-  footerColLinks: "lg:col-span-2",
+  footerColLinks: "lg:col-span-3",
   logoAccent: "text-forest",
   footerBrandDesc: "text-sm leading-relaxed mt-4 text-body-text max-w-sm",
   footerSectionHeading: "text-ink font-bold mb-5 text-sm",

@@ -20,11 +20,11 @@ export const styles = {
 
   heroTitle:
     "text-2xl sm:text-3xl md:text-[2.25rem] lg:text-[1.85rem] xl:text-[2.5rem] " +
-    "font-extrabold justify-center font-poppins mb-3 lg:mb-4 leading-[1.2] text-ink",
+    "font-extrabold text-center lg:text-left xl:text-justify font-poppins mb-3 lg:mb-4 leading-[1.2] text-ink",
 
   heroDescription:
-    "text-sm sm:text-base md:text-lg lg:text-sm xl:text-lg text-body-text mb-4 lg:mb-6 font-normal align-left " +
-    "leading-relaxed max-w-md md:max-w-xl mx-auto lg:max-w-md xl:max-w-lg lg:mx-0",
+    "text-sm sm:text-base md:text-lg lg:text-sm xl:text-lg text-body-text mb-4 lg:mb-6 font-normal align-left text-justify " + " w-full! ",
+    // "leading-relaxed max-w-md md:max-w-xl mx-auto lg:max-w-md xl:max-w-lg lg:mx-0",
 
   painList: "space-y-2 lg:space-y-2 mb-4 lg:mb-6 flex flex-col items-start",
 

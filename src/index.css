@@ -167,3 +167,13 @@
     transform: translateX(-50%);
   }
 }
+
+::selection {
+  background-color: #007BFF ; /* Change this to your desired highlight background color */
+  color: #ffffff;            /* Change this to the color of the text itself */
+}
+
+::-moz-selection {
+  background-color: #007BFF ; /* Same color for Firefox compatibility */
+  color: #ffffff;
+}

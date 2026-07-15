@@ -69,7 +69,7 @@ export default function Navbar({ isOpen, setIsOpen,isDark,setIsDark }) {
           <Button 
             className={isScrolled ? styles.navBtnPremiumIsland : styles.navBtnPremiumFull + " text-forest-deep!"} 
             text="Book Live Demo" 
-            onPress={() => console.log('Book Demo Clicked')} 
+            onPress={() => {console.log('Book Demo Clicked'); window.location.href= '#contact' }} 
           />
           {/* {
             isDark ? (
