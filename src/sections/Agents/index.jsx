@@ -78,7 +78,7 @@ export default function Agents() {
         >
           <span className={styles.sectionTag}>Operational AI</span>
           <h2 className={styles.sectionTitle + ' generalTitle' }>Intelligent Property Tech:   <span className="text-gradient dark:lightText-gradient">AI-Driven Real Estate Operations</span></h2>
-          <p className={styles.sectionDesc}>PropertyVerx replaces manual effort with intelligent AI agents that understand your society data like a human expert.</p>
+          <p className={styles.sectionDesc+ ' generalDesc'}>PropertyVerx replaces manual effort with intelligent AI agents that understand your society data like a human expert.</p>
         </div>
 
         {/* Dynamic grid engine mapping structural item containers */}

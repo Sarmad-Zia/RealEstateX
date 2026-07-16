@@ -195,6 +195,29 @@ html, body {
   }
 }
 
+.generalDesc {
+  /* mt-4 */
+  /* margin-top: 1rem; 16px */
+
+  /* mx-auto */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* max-w-2xl */
+  max-width: 42rem; /* 672px */
+
+  /* text-base & leading-relaxed */
+  font-size: 1rem; /* 16px */
+  line-height: 1.625; 
+}
+
+/* md:text-lg (Tailwind's md breakpoint is 768px) */
+@media (min-width: 768px) {
+  .generalDesc {
+    font-size: 1.125rem; /* 18px */
+  }
+}
+
 ::selection {
   background-color: #007BFF ; /* Change this to your desired highlight background color */
   color: #ffffff;            /* Change this to the color of the text itself */

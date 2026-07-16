@@ -25,11 +25,11 @@ export const styles = {
   // ============ FAQ grid & cards ============
   faqGrid: "flex flex-col gap-6 md:gap-8 ",
   faqCard:
-    "group relative overflow-hidden rounded-2xl border border-sand bg-paper shadow-sm transition-all duration-300 hover:shadow-md dark:bg-mint/5",
+    "group relative overflow-hidden rounded-2xl border border-sand bg-paper shadow-sm transition-all duration-300 hover:shadow-md dark:bg-mint/5 p-4",
   faqCardOpen: "border-forest/50 shadow-lg ring-1 ring-forest/10",
 
   faqHeader:
-    "flex w-full cursor-pointer items-center justify-between gap-4 bg-transparent px-6 py-5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest/50 focus-visible:ring-offset-2 focus-visible:ring-offset-paper md:px-7 md:py-6",
+    "flex w-full cursor-pointer items-center justify-between gap-4 bg-transparent py-5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest/50 focus-visible:ring-offset-2 focus-visible:ring-offset-paper md:py-6",
   faqQuestionRow: "flex min-w-0 items-center gap-4",
   faqNumber:
     "flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-grad-icon font-poppins text-xs font-bold text-forest transition-all duration-300 dark:text-white",

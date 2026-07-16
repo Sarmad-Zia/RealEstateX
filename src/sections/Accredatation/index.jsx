@@ -11,7 +11,7 @@ export default function RegulatoryCompliance() {
       <p className={styles.label}>Built for Compliance, Regulated for Security
       </p>
 
-      <p className={styles.discrption}>
+      <p className={styles.discrption + ' generalDesc'}>
         Our real estate ecosystem integrates natively with regional housing authorities, land departments, and financial frameworks to protect legal data and transaction integrity. 
       </p>
 

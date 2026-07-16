@@ -49,7 +49,7 @@ function StatBlock({ item, shouldAnimate }) {
                 )}
             </span>
 
-            <span className={styles.label}>{item.label}</span>
+            <span className={styles.label + 'generalDesc'}>{item.label}</span>
         </div>
     )
 }
@@ -79,7 +79,7 @@ function FootprintStrip() {
     return (
         <section ref={sectionRef} className={styles.section}>
 
-            <p className={styles.tag}>Our Operating Footprint</p>
+            <p className={styles.tag + ' font-bold!'}>Our Operating Footprint</p>
 
             <div className={styles.grid}>
                 {footprintData.map((item, index) => (

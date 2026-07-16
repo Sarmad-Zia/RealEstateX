@@ -23,7 +23,7 @@ export default function Features() {
             Everything Needed to Scale Your{" "}
             <span className="text-gradient">Real Estate Operations</span>
           </h2>
-          <p className={styles.sectionDesc}>
+          <p className={styles.sectionDesc+ ' generalDesc'}>
             A full-lifecycle ERP designed for the high-stakes property market.
           </p>
         </div>

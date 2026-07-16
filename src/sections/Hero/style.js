@@ -23,12 +23,12 @@ export const styles = {
     "font-extrabold text-center lg:text-left xl:text-left font-poppins mb-2 lg:mb-4 leading-[1.15] text-ink", // REMOVED text-justify to fix word gaps
 
   heroDescription:
-    "text-xs sm:text-sm lg:text-xs xl:text-sm 2xl:text-base text-body-text mb-4 lg:mb-5 font-normal text-center lg:text-left xl:text-left w-full", // REMOVED text-justify to keep readable alignment
+    "generalDesc mb-4 lg:mb-5 font-normal text-center lg:text-left xl:text-left w-full", // REMOVED text-justify to keep readable alignment
 
   painList: "space-y-2 lg:space-y-1.5 mb-4 lg:mb-5 flex flex-col items-start",
 
   painItem:
-    "flex items-center gap-3 text-ink font-semibold text-xs sm:text-sm lg:text-[11px] xl:text-sm",
+    "flex items-center gap-3 text-ink font-semibold text-sm sm:text-[14px] lg:text-[14px] xl:text-[16px]",
 
   painIconBadge:
     "flex items-center justify-center w-5 h-5 md:w-6 md:h-6 lg:w-5 lg:h-5 rounded-md " + 

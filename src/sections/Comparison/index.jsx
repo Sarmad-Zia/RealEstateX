@@ -53,7 +53,7 @@ export default function FeatureComparisonMatrix() {
           <h2 className={styles.title + ' generalTitle'}>
             One Platform, <span className="text-gradient">No Compromises</span>
           </h2>
-          <p className={styles.subtitle}>
+          <p className={styles.subtitle + ' generalDesc'}>
             See how PropertyVerx stacks up against the tools you&apos;re already juggling.
           </p>
         </div>
