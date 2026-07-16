@@ -11,10 +11,10 @@ export const styles = {
   headingAccent: "text-neon",
 
   // no overflow, wraps naturally — never scrolls in any direction
-  logoRow: "flex flex-wrap items-center justify-center gap-3 md:gap-5 w-full w-full  ",
+  logoRow: "flex flex-wrap items-center justify-center gap-3 w-full w-full  ",
 
   logoWrap:
-    "flex items-center justify-center h-22 md:h-30 w-auto grayscale opacity-60 " +
+    "flex items-center justify-center h-20 md:h-25 w-auto grayscale opacity-60 " +
     "hover:grayscale-0 hover:opacity-100 transition-all duration-300",
 
   logoImg: "h-full w-auto object-contain",

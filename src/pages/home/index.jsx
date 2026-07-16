@@ -35,7 +35,7 @@ export default function Home() {
   }, [isDarkMode]);
 
   return (
-    <div className="w-full p-0">
+    <div className="w-full bg-paper text-ink overflow-x-hidden">
       {/* <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
       <Hero />
       <TrustedBy />
