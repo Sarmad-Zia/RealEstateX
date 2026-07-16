@@ -50,11 +50,11 @@ export default function FeatureComparisonMatrix() {
           className={`${styles.sectionHeader} animate blur-in scroll-hidden`}
         >
           <span className={styles.eyebrow}>How We Compare</span>
-          <h2 className={styles.title}>
+          <h2 className={styles.title + ' generalTitle'}>
             One Platform, <span className="text-gradient">No Compromises</span>
           </h2>
           <p className={styles.subtitle}>
-            See how RealEstateX stacks up against the tools you&apos;re already juggling.
+            See how PropertyVerx stacks up against the tools you&apos;re already juggling.
           </p>
         </div>
 

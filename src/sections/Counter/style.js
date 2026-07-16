@@ -7,7 +7,7 @@ export const styles = {
 
     block: 'flex flex-col items-center text-center px-2',
     value: ' dark:text-forest! font-[var(--font-poppins)] font-extrabold text-3xl sm:text-4xl md:text-5xl text-[var(--color-neon)] leading-none mb-3',
-    label: 'font-[var(--font-inter)] text-xs sm:text-sm text-[var(--color-paper)]/80 leading-snug max-w-[160px]',
+    label: 'font-[var(--font-inter)] text-xs sm:text-sm text-[var(--color-paper)]/80 leading-snug max-w-[180px] text-center',
 
     divider: 'w-full h-px bg-[var(--color-paper)]/10 max-w-6xl mx-auto mt-12 mb-6',
 

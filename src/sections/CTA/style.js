@@ -10,7 +10,7 @@ export const styles = {
     "pointer-events-none absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-mint/10 blur-3xl",
 
   content:
-    "relative z-10 max-w-3xl mx-auto text-center flex flex-col items-center",
+    "relative z-10 generalTitle mx-auto text-center flex flex-col items-center",
 
   heading:
     "font-poppins text-3xl md:text-3xl lg:text-4xl font-bold text-[#f6efe9] leading-tight max-w-5xl mx-auto",

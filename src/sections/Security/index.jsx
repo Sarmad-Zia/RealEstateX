@@ -54,13 +54,13 @@ export default function Security() {
             Cybersecurity &amp; Deployment
           </span>
 
-          <h2 className={`${styles.heading} animate fade-up delay-2`}>
-            Enterprise-Grade Security &amp; Deployment Flexibility
+          <h2 className={`${styles.heading + ' generalTitle' } animate fade-up delay-2`}>
+            Enterprise Grade Security &amp; Deployment Flexibility
           </h2>
 
-          <p className={`${styles.bodyText} animate fade-up delay-3`}>
-            Run RealEstateX on Tier-1 AWS cloud infrastructure, or keep every record on a
-            server you control — the same security guarantees apply either way.
+          <p className={`${styles.bodyText } animate fade-up delay-3`}>
+            Run PropertyVerx on Tier-1 AWS cloud infrastructure, or keep every record on a
+            server you control the same security guarantees apply either way.
           </p>
 
           {/* Hosting options */}
@@ -113,12 +113,12 @@ export default function Security() {
 
       </div>
 
-      <div className={`${styles.ctaWrap} animate fade-up delay-5`}>
+      {/* <div className={`${styles.ctaWrap} animate fade-up delay-5`}>
         <button type="button" className={styles.ctaButton}>
           Review Security &amp; Deployment Options
           <ArrowRight className="w-4 h-4" />
         </button>
-      </div>
+      </div> */}
     </section>
   );
 }

@@ -30,7 +30,7 @@ export default function Navbar({ isOpen, setIsOpen,isDark,setIsDark }) {
       <div className={styles.navWrapper}>
         {/* Dynamic Logo Text Color */}
         <div className={`${styles.logo} ${isScrolled ? styles.logoIsland : styles.logoFull}`}>
-          RealEstate
+          PropertyVer
           <span className={`${styles.logoAccent} animate-logo-x`}>
             X
           </span>

@@ -211,7 +211,7 @@ export default function MarketInsights({ onArticleClick = () => {} }) {
 
               <div>
                 <p className={styles.modalSectionLabel} style={{ marginBottom: "0.75rem" }}>
-                  How RealEstateX Solves This
+                  How PropertyVerx Solves This
                 </p>
                 <div className={styles.bulletList} style={ledgerLinesStyle}>
                   {activeItem.bullets.map((bullet, i) => (

@@ -2,7 +2,7 @@ export const featureData = {
     crm: {
       title: "CRM & Lead Management",
       bullets: ["Track walk-in, digital & dealer leads", "Convert leads to members in 1 click", "Automated follow-up reminders"],
-      text: "RealEstateX provides a powerful real estate CRM built for Asian property markets. Track every inquiry and convert prospects into file holders with ease.",
+      text: "PropertyVerx provides a powerful real estate CRM built for Asian property markets. Track every inquiry and convert prospects into file holders with ease.",
       keywords: "real estate management system"
     },
     member: {
@@ -32,7 +32,7 @@ export const featureData = {
     noc: {
       title: "File Transfer & NOC System",
       bullets: ["Workflow-based transfers", "NDC/NOC issuance portal", "Buyer verification"],
-      text: "Streamline transfers safely. RealEstateX ensures all dues are clear before a file ownership is transferred.",
+      text: "Streamline transfers safely. PropertyVerx ensures all dues are clear before a file ownership is transferred.",
       keywords: "Property management system"
     },
     dealer: {

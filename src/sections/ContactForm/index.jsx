@@ -139,7 +139,7 @@ export default function ContactForm({ onSubmit = async () => {} }) {
               <span className={styles.eyebrow}>Talk to Our Team</span>
             </div>
 
-            <h2 className={styles.heading}>Request a Tailored Property Management Strategy Session </h2>
+            <h2 className={styles.heading + ' generalTitle' }>Request a Tailored Property Management Strategy Session </h2>
 
             <div className={styles.contactList}>
               <div className={styles.contactItem}>

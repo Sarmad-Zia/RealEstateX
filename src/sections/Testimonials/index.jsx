@@ -26,7 +26,7 @@ export default function Testimonials() {
       <div className={styles.divider} ></div>
 
       <h2 className={styles.heading + 'pt-6'}>
-        Our Customers Love <span className={styles.headingAccent}>RealEstateX</span>
+        Our Customers Love <span className={styles.headingAccent}>PropertyVerx</span>
       </h2>
 
       <div className={styles.carouselRow}>

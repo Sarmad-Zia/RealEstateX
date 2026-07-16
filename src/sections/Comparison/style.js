@@ -43,5 +43,5 @@ export const styles = {
   iconYes: "inline-block h-5 w-5 text-forest dark:text-mint",
   iconNo: "inline-block h-5 w-5 text-rose-400",
 
-  footnote: "mt-4 text-center font-inter text-xs text-body-text/70",
+  footnote: "mt-4 md:hidden text-center font-inter text-xs text-body-text/70",
 };

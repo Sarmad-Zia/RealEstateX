@@ -3,7 +3,7 @@ export const styles = {
   heading: "text-center text-white text-xl md:text-3xl font-extrabold font-poppins mb-10 md:mb-14 px-2",
   headingAccent: "text-neon",
 
-  carouselRow: "relative max-w-4xl mx-auto flex items-center justify-center gap-4 md:gap-8 w-full",
+  carouselRow: "relative max-w-6xl mx-auto flex items-center justify-center gap-4 md:gap-8 w-full",
   
   // Shared base navigation styling
   navBtn: "shrink-0 w-10 h-10 rounded-full bg-paper text-ink flex items-center justify-center shadow-md hover:bg-sand transition-colors duration-200 active:scale-95 transform",

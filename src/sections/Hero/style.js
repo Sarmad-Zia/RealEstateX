@@ -1,129 +1,60 @@
 export const styles = {
- heroSection:
-    "relative w-full pt-24 pb-10 px-5 sm:px-6 " +
-    "md:pt-28 md:pb-14 lg:pt-20 lg:pb-10 lg:min-h-screen xl:pt-24 xl:pb-0 xl:h-screen xl:max-h-screen " +
-    "bg-cream overflow-hidden lg:overflow-visible flex items-center",
+  heroSection:
+    "relative w-full bg-cream overflow-hidden lg:overflow-visible flex items-center " +
+    "pt-24 pb-12 px-6 sm:px-10 lg:px-12 xl:px-16  " + // Reduced side padding to let content stretch further out
+    "lg:h-screen lg:min-h-[650px] lg:max-h-[950px]", // Safe vertical constraints for 150% zoom responsiveness
 
   heroGrid:
-    "w-full mx-auto flex flex-col-reverse lg:flex-row md:p-2 " +
-    "gap-2 md:gap-2 lg:gap-2 xl:gap-2",
+    "w-full h-full flex flex-col-reverse lg:flex-row items-center justify-between " + // Expanded container width to eliminate side gaps
+    "gap-8 lg:gap-10 xl:gap-14", 
 
+  // copyCol:
+  //   "w-full lg:w-[48%] xl:w-[46%] " + // Optimized split to give text breathing room
+  //   "text-center lg:text-left flex flex-col justify-center h-full gap-6 lg:gap-5 xl:gap-6 ",
   copyCol:
-    "w-full md:max-w-2xl md:mx-auto lg:max-w-none lg:mx-0 lg:w-[46%] xl:w-[38%] " +
-    "text-center lg:text-left flex flex-col justify-center md:gap-6 lg:gap-4 xl:gap-10",
+    "w-full lg:w-[48%] xl:w-[46%] " + // Optimized split to give text breathing room
+    "text-center lg:text-left grid grid-col-1 grid-row-6 h-full gap-6 lg:gap-5 xl:gap-6 ",
 
-  textSection: "flex flex-col justify-center items-center lg:items-start lg:gap-4 xl:gap-6",
+  textSection: " row-span-3  flex flex-col justify-center items-center lg:items-start gap-3 lg:gap-3 xl:gap-4",
 
-  sectionTag:
-    "inline-block px-4 py-1.5 bg-sand text-forest font-bold " +
-    "text-xs md:text-sm uppercase tracking-wider rounded-full mb-3 w-fit",
+  sectionTag: "row-span-2 self-end inline-block px-3.5 py-1.5 bg-sand text-forest font-bold " + 
+            "text-[10px] md:text-xs uppercase tracking-wider rounded-full mb-1 w-fit!",
 
   heroTitle:
-    "text-2xl sm:text-3xl md:text-[2.25rem] lg:text-[1.85rem] xl:text-[2.5rem] " +
-    "font-extrabold text-center lg:text-left xl:text-justify font-poppins mb-3 lg:mb-4 leading-[1.2] text-ink",
+    "text-xl sm:text-2xl md:text-[1.85rem] lg:text-[2.1rem] xl:text-[2rem] 2xl:text-[2.5rem] " + 
+    "font-extrabold text-center lg:text-left xl:text-left font-poppins mb-2 lg:mb-4 leading-[1.15] text-ink", // REMOVED text-justify to fix word gaps
 
   heroDescription:
-    "text-sm sm:text-base md:text-lg lg:text-sm xl:text-lg text-body-text mb-4 lg:mb-6 font-normal align-left text-justify " + " w-full! ",
-    // "leading-relaxed max-w-md md:max-w-xl mx-auto lg:max-w-md xl:max-w-lg lg:mx-0",
+    "text-xs sm:text-sm lg:text-xs xl:text-sm 2xl:text-base text-body-text mb-4 lg:mb-5 font-normal text-center lg:text-justify xl:text-justify w-full", // REMOVED text-justify to keep readable alignment
 
-  painList: "space-y-2 lg:space-y-2 mb-4 lg:mb-6 flex flex-col items-start",
+  painList: "space-y-2 lg:space-y-1.5 mb-4 lg:mb-5 flex flex-col items-start",
 
   painItem:
-    "flex items-center gap-3 text-ink font-semibold text-sm md:text-base lg:text-xs xl:text-base",
+    "flex items-center gap-3 text-ink font-semibold text-xs sm:text-sm lg:text-[11px] xl:text-sm",
 
   painIconBadge:
-    "flex items-center justify-center w-6 h-6 md:w-7 md:h-7 lg:w-6 lg:h-6 rounded-md " +
+    "flex items-center justify-center w-5 h-5 md:w-6 md:h-6 lg:w-5 lg:h-5 rounded-md " + 
     "bg-rose-50 border border-rose-200 text-rose-500 shrink-0",
 
-  heroBtnGroup: "flex flex-wrap gap-3 justify-center lg:justify-start mt-2",
-  heroBtnPremium: "bg-neon text-ink px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl font-semibold shadow-[0_10px_20px_-5px_rgba(185,251,166,0.5)] hover:-translate-y-0.5 hover:shadow-[0_20px_30px_-10px_rgba(185,251,166,0.6)] active:translate-y-0 transition-all duration-300 text-sm",
-  heroBtnOutline: "border-2 border-sand text-ink bg-paper px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl font-semibold hover:border-forest hover:bg-sand transition-all duration-200 text-sm",
+  heroBtnGroup: "row-span-1 self-start flex flex-wrap gap-3 justify-center lg:justify-start mt-2",
+  heroBtnPremium: "bg-neon text-ink px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl font-semibold shadow-[0_10px_20px_-5px_rgba(185,251,166,0.5)] hover:-translate-y-0.5 hover:shadow-[0_20px_30px_-10px_rgba(185,251,166,0.6)] active:translate-y-0 transition-all duration-300 text-xs sm:text-sm",
+  heroBtnOutline: "border-2 border-sand text-ink bg-paper px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl font-semibold hover:border-forest hover:bg-sand transition-all duration-200 text-xs sm:text-sm",
 
-
-  // Mockup — shrinks its footprint at lg so it stops squeezing the copy column's height
+  // --- STYLING SPECIFICALLY TAILORED FOR 4:3 RATIO IMAGE ---
   mockupWrapper:
-    "flex w-full h-[16.25rem] sm:h-[21.25rem] md:h-[26.25rem] " +
-    "lg:h-[30%] lg:w-[54%] xl:w-[62%] lg:items-center lg:justify-center lg:self-center",
+    "w-full lg:w-[50%] xl:w-[52%] " + 
+    "flex items-center justify-center lg:self-center",
 
   mockupContainer:
-    "relative w-full h-full flex items-center justify-center lg:h-auto",
+    "relative w-full max-w-[320px] sm:max-w-[480px] md:max-w-[580px] lg:max-w-[620px] xl:max-w-[760px] " + // Scaled up container to let the 4:3 dashboard pop on desktop
+    "flex items-center justify-center",
 
   mockupImg:
-    "w-full h-full object-contain rounded-[1.25rem] " +
-    "lg:w-full lg:h-auto lg:max-w-none lg:max-h-[52vh] xl:max-h-[88vh] lg:object-contain xl:object-cover",
+    "w-full h-auto aspect-[4/3] object-contain rounded-[1.25rem] " + // Forced clean 4:3 bounding rendering
+    "max-h-[260px] sm:max-h-[360px] md:max-h-[400px] lg:max-h-[50vh] xl:max-h-[62vh] 2xl:max-h-[66vh] " + // Keeps mockup within view bounds during high browser zooms
+    "shadow-lg transition-transform duration-300",
+
   mockupShadow:
-    "absolute -bottom-8 left-1/2 -translate-x-1/2 w-[85%] h-8 bg-black/10 " +
+    "absolute -bottom-6 left-1/2 -translate-x-1/2 w-[85%] h-6 " +
     "rounded-[100%] blur-xl z-0 pointer-events-none",
-
-  floatBadge:
-    "absolute bg-paper px-5 py-3 rounded-2xl shadow-md border border-sand " +
-    "font-bold text-xs md:text-sm text-forest animate-floating select-none whitespace-nowrap z-10",
-
-  // Rest of your styles remain untouched...
-  py5: "py-24 px-6",
-  bgLight: "bg-sand",
-  bgWhite: "bg-paper",
-  sectionHeader: "text-center mb-16",
-  sectionTitle: "text-3xl md:text-4xl font-extrabold font-poppins text-ink tracking-tight",
-  sectionDesc: "text-body-text mt-4 max-w-2xl mx-auto text-base md:text-lg leading-relaxed",
-  agentsGrid: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6",
-  aiCard: "bg-paper border border-sand rounded-3xl p-10 shadow-sm relative overflow-hidden group hover:-translate-y-2.5 hover:shadow-lg transition-all duration-400 before:absolute before:top-0 before:left-0 before:w-full before:h-1 before:bg-grad-premium before:opacity-0 group-hover:before:opacity-100 before:transition-opacity before:duration-300",
-  aiIconBox: "w-[70px] h-[70px] bg-grad-icon text-forest flex items-center justify-center rounded-2xl text-2xl mb-8 transition-transform duration-300 group-hover:scale-105",
-  aiCardTitle: "text-xl font-bold font-poppins text-ink mb-2",
-  aiCardDesc: "text-sm text-body-text leading-relaxed mb-6",
-  aiCommandBox: "bg-sand border-l-4 border-mint p-4 rounded-r-xl font-mono text-xs text-ink font-semibold break-words",
-  interstitialBanner: "py-16 px-6 bg-grad-premium text-center text-white relative overflow-hidden",
-  bannerTitle: "text-2xl md:text-3xl font-bold font-poppins mb-3 max-w-4xl mx-auto leading-snug",
-  bannerDesc: "opacity-75 text-base md:text-lg mb-8 max-w-2xl mx-auto",
-  bannerBtn: "bg-neon text-ink font-bold rounded-full px-9 py-4 hover:scale-105 active:scale-95 transition-all shadow-md text-sm tracking-wide",
-  featureBox: "bg-paper border border-sand rounded-[32px] shadow-lg flex flex-col lg:flex-row min-h-[600px] overflow-hidden",
-  featureSidebar: "w-full lg:w-[350px] bg-sand border-b lg:border-b-0 lg:border-r border-sand py-10 overflow-x-auto lg:overflow-x-visible flex lg:flex-col shrink-0 custom-scrollbar",
-  featureContentArea: "p-8 lg:p-14 flex-grow flex items-center bg-paper",
-  featureDisplayGrid: "grid grid-cols-1 lg:grid-cols-2 gap-10 items-center w-full",
-  featureVisualMockup: "h-[350px] bg-gradient-to-br from-sand to-sand/40 rounded-2xl flex items-center justify-center font-extrabold text-forest/50 border border-sand shadow-inner text-center p-6 text-sm uppercase tracking-wider",
-  featureTitle: "text-2xl lg:text-3xl font-bold text-gradient mb-4 font-poppins",
-  featureBulletList: "space-y-3 mb-6",
-  featureBulletItem: "flex items-center font-medium text-body-text text-sm md:text-base",
-  featureCheckmark: "text-forest mr-3 text-lg shrink-0",
-  featureTextDescription: "text-body-text text-sm md:text-base leading-relaxed mb-6",
-  featureKeywordTag: "inline-block bg-forest/10 text-forest text-xs font-bold px-3.5 py-1.5 rounded-md uppercase tracking-wider",
-  tableResponsive: "w-full overflow-x-auto rounded-3xl shadow-md border border-sand",
-  table: "w-full border-collapse bg-paper text-left text-sm text-ink",
-  th: "bg-ink text-white font-bold p-6 text-center text-base font-poppins tracking-wide border-none",
-  tdLabel: "p-5 font-bold text-body-text border-b border-sand pl-8",
-  tdValueSuccess: "p-5 text-center text-forest font-bold border-b border-sand",
-  tdValueMuted: "p-5 text-center text-slate-400 font-medium opacity-60 border-b border-sand",
-  infraGrid: "grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8",
-  infraBox: "bg-paper p-8 rounded-2xl border border-sand text-center transition-all duration-300 hover:scale-105 hover:border-forest",
-  infraTitle: "font-bold text-ink mt-3 text-base",
-  specsCard: "bg-paper p-10 rounded-[40px] shadow-lg border-l-8 border-forest h-full flex flex-col justify-center",
-  specsTitle: "text-xl font-bold mb-6 font-poppins text-ink",
-  specsList: "space-y-4",
-  specsItem: "flex items-center text-body-text font-medium text-base",
-  specsCheck: "text-mint mr-4 text-xl shrink-0",
-  faqWrapper: "max-w-[850px] mx-auto space-y-4",
-  faqCard: "border border-sand rounded-2xl bg-paper transition-all duration-300 overflow-hidden",
-  faqCardOpen: "border-forest shadow-md",
-  faqHeader: "w-full px-8 py-6 bg-transparent flex justify-between items-center font-bold text-lg text-ink text-left cursor-pointer transition-colors hover:text-forest",
-  faqIcon: "text-forest text-2xl transition-transform duration-300",
-  faqBody: "transition-all duration-300 text-body-text text-base leading-relaxed pl-8 pr-8 pb-6",
-  footer: "bg-ink text-slate-400 pt-24 pb-8 px-6",
-  footerGrid: "max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12",
-  footerColBrand: "lg:col-span-5",
-  footerColLinks: "lg:col-span-3 lg:ml-auto",
-  footerColContact: "lg:col-span-4",
-  footerBrand: "text-white text-3xl font-bold font-poppins mb-4",
-  footerBrandDesc: "text-sm leading-relaxed mt-4 text-slate-400 max-w-sm",
-  footerSectionHeading: "text-white font-bold mb-6 uppercase tracking-wider text-xs",
-  footerList: "space-y-3 text-sm",
-  footerLink: "hover:text-white transition-colors duration-200 text-slate-400 text-decoration-none",
-  footerContactItem: "flex items-center gap-3 text-sm mb-3 text-slate-400",
-  footerIcon: "text-neon text-base",
-  footerDivider: "max-w-7xl mx-auto my-12 border-slate-800",
-  footerBottomRow: "max-w-7xl mx-auto text-center text-xs text-slate-500 font-medium",
-
- decorIconWrap: "relative w-full flex justify-center lg:justify-start mb-2",
-  decorIconSparkle:
-    "absolute -top-2 left-2 lg:left-0 text-mint w-8 h-8 md:w-9 md:h-9 watermark-wave", 
-
 };

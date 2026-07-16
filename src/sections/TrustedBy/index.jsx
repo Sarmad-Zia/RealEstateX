@@ -13,13 +13,13 @@ export default function TrustedBy() {
       className={`${styles.section} animate fade-up scroll-hidden`}
     >
       <div className={styles.container}>
-        <div className={styles.eyebrowRow}>
-          <span className={styles.eyebrowLine} />
-          <span className={styles.eyebrow}>Trusted By</span>
-        </div>
+        {/* <div className={styles.eyebrowRow}> */}
+          {/* <span className={styles.eyebrowLine} /> */}
+          {/* <span className={styles.eyebrow + ' generalTitle' }>Trusted By</span> */}
+        {/* </div> */}
 
         <h2 className={styles.heading}>
-          <span className={styles.headingAccent}>Leading Societies & Developers</span> Run on RealEstateX
+          <span className={styles.headingAccent}>Leading Societies & Developers</span> Run on PropertyVerx
         </h2>
 
         <div className={styles.logoRow}>

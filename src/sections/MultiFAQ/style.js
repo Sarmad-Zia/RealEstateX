@@ -8,7 +8,7 @@ export const styles = {
   eyebrow:
     "inline-flex items-center gap-2 mb-5 rounded-full bg-forest/10 px-4 py-1.5 font-inter text-xs font-bold uppercase tracking-[0.2em] text-forest dark:bg-mint/10 dark:text-mint",
   sectionTitle:
-    "mb-4 font-poppins text-4xl font-extrabold tracking-tight text-ink md:text-5xl",
+    "mb-4 font-poppins font-extrabold tracking-tight text-ink",
   sectionSubtitle:
     "font-inter text-base leading-relaxed text-body-text md:text-lg",
 

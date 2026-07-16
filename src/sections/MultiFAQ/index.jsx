@@ -49,11 +49,11 @@ export default function FAQ() {
           className={`${styles.sectionHeader} animate blur-in scroll-hidden`}
         >
           <span className={styles.eyebrow}>Support Center</span>
-          <h2 className={styles.sectionTitle}>
+          <h2 className={styles.sectionTitle + ' generalTitle'}>
             Frequently Asked <span className="text-gradient">Questions</span>
           </h2>
           <p className={styles.sectionSubtitle}>
-            Everything you need to know about deploying RealEstateX for your
+            Everything you need to know about deploying PropertyVerx for your
             society, development company, or broker network.
           </p>
         </div>

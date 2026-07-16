@@ -3,7 +3,9 @@ import { styles } from "./style";
 import { useScrollAnimation } from "../../hooks/UserInteractionObserver";
 import { CalendarCheck } from "lucide-react";
 
-export default function CTA({ onBookDemo = () => {} }) {
+export default function CTA({ onBookDemo = () => {
+  window.location.href='#contact'
+} }) {
   const contentRef = useScrollAnimation();
 
   return (
@@ -15,7 +17,7 @@ export default function CTA({ onBookDemo = () => {} }) {
         ref={contentRef}
         className={`${styles.content} animate fade-up scroll-hidden`}
       >
-        <h2 className={`${styles.heading} animate fade-up delay-1`}>
+        <h2 className={`${styles.heading + ' generalTitle' } animate fade-up delay-1`}>
           Ready to eliminate manual spreadsheets and centralize your entire
           property inventory?
         </h2>

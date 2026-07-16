@@ -132,7 +132,7 @@ const marketInsights = [
     ref: "RX-2026-08",
     category: "Update",
     icon: "sparkle",
-    title: "What's New in RealEstateX: Winter Release Notes",
+    title: "What's New in PropertyVerx: Winter Release Notes",
     description:
       "This release focuses on faster commission settlements, a redesigned tenant portal, and smarter overdue-file alerts built for how Pakistani societies actually operate day to day.",
     bullets: [
@@ -140,7 +140,7 @@ const marketInsights = [
       "Tenant self-service portal for statements, receipts, and complaints",
       "Smarter overdue alerts that account for local holiday and payment cycles",
     ],
-    keywords: ["RealEstateX release notes", "property ERP update", "tenant portal Pakistan"],
+    keywords: ["PropertyVerx release notes", "property ERP update", "tenant portal Pakistan"],
     cta: "Explore the Update",
     image: "https://picsum.photos/seed/rx-dashboard-ui/700/500",
   },

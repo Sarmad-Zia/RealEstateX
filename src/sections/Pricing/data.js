@@ -10,7 +10,7 @@ export const hostingOptions = [
     id: 'onprem',
     label: 'On-Premises Local Server',
     icon: 'server',
-    note: 'For developers who require data residency inside Pakistan. Your ledger, your servers, your compliance file — RealEstateX runs entirely on infrastructure you control.',
+    note: 'For developers who require data residency inside Pakistan. Your ledger, your servers, your compliance file — PropertyVerx runs entirely on infrastructure you control.',
   },
 ];
 
@@ -21,8 +21,8 @@ export const pricingTiers = [
     badge: 'Agency Suite',
     audience:
       'Ideal for growing real estate brokerages focusing heavily on sales, leasing, and listing management.',
-    highlighted: true,
-    ribbon: 'Agency Suite',
+    highlighted: false,
+    ribbon: '',
     metrics: [
       { icon: 'files', label: 'Property Listings', value: 'Unlimited' },
       { icon: 'seats', label: 'Agent Seats', value: '10' },
@@ -34,11 +34,11 @@ export const pricingTiers = [
       note: 'One-time implementation + custom annual license',
     },
     features: [
-      'Property Listings',
-      'Client CRM',
-      'Basic Rental/Sale Tracking',
-      'Agent Performance Dashboard',
-      'External Property Portal',
+      'Property Listings.',
+      'Client CRM.',
+      'Basic Rental/Sale Tracking.',
+      'Agent Performance Dashboard.',
+      'External Property Portal.',
     ],
     cta: 'Start Scaling Your Agency',
   },
@@ -49,7 +49,7 @@ export const pricingTiers = [
     audience:
       'Engineered for real estate companies, property owners, and asset managers tracking long-term payments.',
     highlighted: true,
-    ribbon: 'Developer & Management Plus — Recommended',
+    ribbon: 'Recommended',
     metrics: [
       { icon: 'files', label: 'Active Files / Plots', value: 'Up to 5,000' },
       { icon: 'seats', label: 'User Seats', value: '25' },
@@ -61,12 +61,12 @@ export const pricingTiers = [
       note: 'Phased implementation + custom annual license',
     },
     features: [
-      'Everything in Agency Suite, plus:',
-      'Advanced Custom Installment Plans',
-      'Automated Invoicing',
-      'Realtor Commission Splits',
-      'Tenant Maintenance Requests',
-      'Native Customer Portal',
+      'Everything in Agency Suite plus.',
+      'Advanced Custom Installment Plans.',
+      'Automated Invoicing.',
+      'Realtor Commission Splits.',
+      'Tenant Maintenance Requests.',
+      'Native Customer Portal.',
     ],
     cta: 'Run Your Development Portfolio',
   },
@@ -76,8 +76,8 @@ export const pricingTiers = [
     badge: 'Mega Project / Real Estate Society',
     audience:
       'Custom multi-branch system deployed for massive mega-developments, housing societies, and regional land networks.',
-    highlighted: true,
-    ribbon: 'Mega Project / Real Estate Society',
+    highlighted: false,
+    ribbon: '',
     metrics: [
       { icon: 'files', label: 'Properties & Plot Registry', value: 'Unlimited' },
       { icon: 'seats', label: 'User Seats', value: 'Unlimited' },
@@ -89,11 +89,11 @@ export const pricingTiers = [
       note: 'Scoped to portfolio size and infrastructure model',
     },
     features: [
-      'Unlimited Properties & Plot Ledger Registry',
-      'Dedicated Cloud Infrastructure',
-      'Custom Local Bank API Integrations',
-      'Full AI Automation Suite',
-      '24/7 Dedicated Support SLA',
+      'Unlimited Properties & Plot Ledger Registry.',
+      'Dedicated Cloud Infrastructure.',
+      'Custom Local Bank API Integrations.',
+      'Full AI Automation Suite.',
+      '24/7 Dedicated Support SLA.',
     ],
     cta: 'Speak to Our Solutions Architect',
   },

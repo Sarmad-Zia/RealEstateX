@@ -2,7 +2,7 @@ export const styles = {
   py5: "py-24 px-6",
   bgLight: "bg-sand",
   sectionHeader: "text-center mb-16",
-  sectionTitle: "text-3xl md:text-4xl font-extrabold font-poppins text-ink tracking-tight",
+  sectionTitle: "font-extrabold font-poppins text-ink tracking-tight",
   sectionDesc: "text-body-text mt-4 max-w-2xl mx-auto text-base md:text-lg leading-relaxed",
 
   featureBox:
@@ -60,5 +60,5 @@ export const styles = {
   featureUnderline:
     "block w-14 h-[3px] rounded-full bg-gradient-to-r from-forest to-mint mb-4",
   featureTextDescription:
-    "text-body-text text-sm md:text-base leading-relaxed max-w-2xl",
+    "text-body-text text-sm md:text-base leading-relaxed w-full text-justify md:text-left",
 };

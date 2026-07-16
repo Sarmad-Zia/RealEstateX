@@ -5,9 +5,9 @@ export const styles = {
 
   eyebrowRow: "flex items-center gap-3 mb-4",
   eyebrowLine: "h-px w-8 bg-mint/40",
-  eyebrow: "font-inter text-xs md:text-sm font-semibold tracking-[0.2em] uppercase text-mint",
+  eyebrow: "font-inter text-xs md:text-sm font-semibold uppercase text-cream mb-2 lg:mb-4",
 
-  heading: "text-center text-white text-2xl md:text-4xl font-extrabold font-poppins mb-10 md:mb-14 px-2",
+  heading: "text-center text-white text-xl md:text-3xl font-extrabold font-poppins mb-10 md:mb-14 px-2",
   headingAccent: "text-neon",
 
   // no overflow, wraps naturally — never scrolls in any direction

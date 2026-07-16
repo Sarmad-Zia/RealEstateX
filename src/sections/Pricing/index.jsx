@@ -55,9 +55,9 @@ export default function Pricing({ onSelectTier = () => {} }) {
           <span className={styles.eyebrow}>Enterprise Investment</span>
           <span className={styles.eyebrowLine} />
         </div>
-        <h2 className={styles.heading}>Pricing Built for Scale, Not Subscriptions</h2>
+        <h2 className={styles.heading + ' generalTitle'}>Pricing Built for Scale, Not Subscriptions</h2>
         <p className={styles.subhead}>
-          RealEstateX is procured the way enterprise infrastructure is procured —
+          PropertyVerx is procured the way enterprise infrastructure is procured —
           scoped to your portfolio, not billed like a phone app.
         </p>
       </header>

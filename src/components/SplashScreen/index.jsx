@@ -3,7 +3,7 @@
 // import { styles } from "./style.js";
 // import "./style.css";
 
-// const NAME = "RealEstateX";
+// const NAME = "PropertyVerx";
 // const SPLASH_DURATION = 2600;
 // const EXIT_DURATION = 900; 
 // const LETTER_START_DELAY = 0.2; 
@@ -40,7 +40,7 @@
 //     <div
 //       className={`${styles.screen} ${isExiting ? styles.screenExit : ""}`}
 //       role="status"
-//       aria-label="Loading RealEstateX"
+//       aria-label="Loading PropertyVerx"
 //     >
 //       {/* background watermarks — subtle, purpose-driven, never competing with the wordmark */}
 //       {BACKGROUND_ICONS.map(({ Icon, position, opacity, duration, delay, dissolveX, dissolveY }, i) => (
@@ -136,13 +136,13 @@ import buildingImg from "../../assets/images/building.png";
  * letter/icon/badge dissolve animations are shorter and finish inside
  * that window.
  */
-const NAME = "RealEstateX";
+const NAME = "PropertyVerx";
 const SPLASH_DURATION = 2600; // total time the splash stays fully visible
 const EXIT_DURATION = 900; // must match .splash-exit background fade duration in style.css
 const LETTER_START_DELAY = 0.8; // seconds before the first letter animates (after the image fades in)
 const LETTER_STAGGER = 0.045; // seconds between each letter's animation start
 
-// Faint background watermarks — chosen for what RealEstateX actually manages:
+// Faint background watermarks — chosen for what PropertyVerx actually manages:
 // buildings/units, plot allocation, statements & commissions, and record-keeping.
 const BACKGROUND_ICONS = [
   { Icon: Building2, position: styles.bgIconTopLeft, opacity: 0.09, duration: "6.5s", delay: "0s", dissolveX: "-24px", dissolveY: "-24px" },
@@ -174,7 +174,7 @@ export default function SplashScreen({ onFinish }) {
     <div
       className={`${styles.screen} ${isExiting ? styles.screenExit : ""}`}
       role="status"
-      aria-label="Loading RealEstateX"
+      aria-label="Loading PropertyVerx"
     >
       {/* background watermarks — subtle, purpose-driven, never competing with the wordmark */}
       {BACKGROUND_ICONS.map(({ Icon, position, opacity, duration, delay, dissolveX, dissolveY }, i) => (

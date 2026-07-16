@@ -1,7 +1,7 @@
 // src/components/ContactForm/data.js
 
 // TODO: replace with your real sales inbox and line before this goes live.
-export const SALES_EMAIL = 'sales@realestatex.com';
+export const SALES_EMAIL = 'sales@propertyverx.com';
 export const SALES_PHONE = '+92 300 1234567';
 export const SALES_PHONE_HREF = 'tel:+923001234567';
 

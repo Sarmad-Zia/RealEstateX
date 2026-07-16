@@ -19,7 +19,7 @@ export default function Features() {
           ref={headerRef}
           className={`${styles.sectionHeader} animate blur-in scroll-hidden delay-2`}
         >
-          <h2 className={styles.sectionTitle}>
+          <h2 className={styles.sectionTitle + " generalTitle " }>
             Everything Needed to Scale Your{" "}
             <span className="text-gradient">Real Estate Operations</span>
           </h2>
@@ -75,7 +75,7 @@ export default function Features() {
                 <span className={styles.chromeDotAmber} />
                 <span className={styles.chromeDotGreen} />
                 <span className={styles.featureWindowUrlBar}>
-                  app.realestatex.io
+                  app.propertyverx.io
                 </span>
               </div>
 

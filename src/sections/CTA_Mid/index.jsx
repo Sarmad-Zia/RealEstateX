@@ -4,7 +4,9 @@ import { useScrollAnimation } from '../../hooks/UserInteractionObserver'; // Adj
 import { CalendarCheck } from 'lucide-react';
 
 // After ai section 
-export default function CTABanner({ onBookDemo = () => {} }) {
+export default function CTABanner({ onBookDemo = () => {
+  window.location.href=  '#contact'
+} }) {
   const cardRef = useScrollAnimation();
 
   return (
@@ -12,8 +14,8 @@ export default function CTABanner({ onBookDemo = () => {} }) {
       <div ref={cardRef} className={`${styles.card} animate scale-in scroll-hidden`}>
         <div className={styles.textBlock}>
           <p className={styles.eyebrow}>See It In Action</p>
-          <h3 className={styles.heading}>Want to see how easy it is to set up a <span className='text-forest' >36-month</span> custom property installment plan? </h3>
-          {/* <h3 className={styles.heading}>See Your Own Ledger Inside RealEstateX</h3> */}
+          <h3 className={styles.heading + ' generalTitle' }>Want to see how easy it is to set up a <span className='text-forest' >36-months</span> custom property installment plan? </h3>
+          {/* <h3 className={styles.heading}>See Your Own Ledger Inside PropertyVerx</h3> */}
           {/* <p className={styles.subhead}>
             A walkthrough shows exactly how your society&apos;s files, installments, and
             balloting would look, live.

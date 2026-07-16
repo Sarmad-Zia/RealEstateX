@@ -24,7 +24,7 @@ const agentsData = [
     icon: "FileText"
   },
   {
-    title: " Intelligent Real-Time Revenue  Forecasting \u00A0 ",
+    title: "Intelligent Real-Time Revenue Forecasting Engine ",
     desc: "Run predictive cash flow models on your entire development portfolio. Let AI calculate project timelines against future monthly installment collections.",
     cmd: '"Forecast monthly cash flow for all active development projects."',
     icon: "ChartPie"
@@ -77,8 +77,8 @@ export default function Agents() {
           className={`${styles.sectionHeader} animate blur-in scroll-hidden`}
         >
           <span className={styles.sectionTag}>Operational AI</span>
-          <h2 className={styles.sectionTitle}>Intelligent Property Tech:   <span className="text-gradient dark:lightText-gradient">AI-Driven Real Estate Operations</span></h2>
-          <p className={styles.sectionDesc}>RealEstateX replaces manual effort with intelligent AI agents that understand your society data like a human expert.</p>
+          <h2 className={styles.sectionTitle + ' generalTitle' }>Intelligent Property Tech:   <span className="text-gradient dark:lightText-gradient">AI-Driven Real Estate Operations</span></h2>
+          <p className={styles.sectionDesc}>PropertyVerx replaces manual effort with intelligent AI agents that understand your society data like a human expert.</p>
         </div>
 
         {/* Dynamic grid engine mapping structural item containers */}

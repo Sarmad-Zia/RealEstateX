@@ -35,7 +35,7 @@ export default function Home() {
   }, [isDarkMode]);
 
   return (
-    <div className="font-sans text-navy-dark bg-white min-h-screen selection:bg-azure-primary selection:text-white antialiased">
+    <div className="w-full p-0">
       {/* <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
       <Hero />
       <TrustedBy />
@@ -54,7 +54,7 @@ export default function Home() {
 
       <FootprintStrip /> 
 
-      <CTABanner onBookDemo={() => setIsOpen(true)} />
+      <CTABanner />
       <Agents />
       <Features />
 

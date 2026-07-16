@@ -15,10 +15,10 @@ export default function HeroSection() {
       <div className={styles.heroGrid}>
         {/* Copy column */}
         <div className={styles.copyCol + " animate delay-3 py-10 slide-left"}>
-          <div className={styles.textSection}>
             <span className={styles.sectionTag}>The Next-Gen Real Estate OS</span>
+          <div className={styles.textSection}>
 
-            <h1 className={styles.heroTitle}>
+            <h1 className={styles.heroTitle + ' generalTitle' }>
               The Enterprise Real Estate OS: Automate Listings, Installments,
               and Agent Commissions
             </h1>
@@ -65,7 +65,7 @@ export default function HeroSection() {
           <div className={styles.mockupContainer}>
             <img
               src={heroImage}
-              alt="RealEstateX Dashboard"
+              alt="PropertyVerx Dashboard"
               className={styles.mockupImg}
               loading="eager"
             />

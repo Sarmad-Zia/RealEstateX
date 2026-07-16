@@ -56,9 +56,9 @@ export const styles = {
     "bg-neon px-4 py-1.5 font-inter text-[11px] font-semibold uppercase tracking-wide text-ink " +
     "shadow-[var(--shadow-sm)] dark:text-forest-deep! ",
 
-  tierName: "font-poppins text-xl md:text-2xl font-extrabold text-ink mb-2",
+  tierName: "font-poppins text-xl md:text-2xl font-extrabold text-ink mb-2 text-center",
 
-  tierAudience: "font-inter text-sm text-body-text leading-relaxed min-h-[3.5rem]",
+  tierAudience: "font-inter text-sm text-body-text leading-relaxed min-h-[3.5rem] text-justify ",
 
   metricsRow:
     "grid grid-cols-3 divide-x divide-sand border-y border-sand my-6 py-4",

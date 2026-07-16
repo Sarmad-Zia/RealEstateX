@@ -98,7 +98,7 @@ export default function Footer() {
         />
 
         <p className={`${styles.footerBottomRow} animate fade-in delay-2`}>
-          © 2026 Hashverx Labs. All Rights Reserved.
+          © 2026  <a href="https://hashverx.com/" className='text-forest' >Hashverx</a> . All Rights Reserved.
         </p>
       </footer>
     </div>

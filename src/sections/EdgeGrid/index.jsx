@@ -15,7 +15,7 @@ export default function EdgeGrid() {
           ref={headerRef}
           className={`${styles.sectionHeader} animate blur-in scroll-hidden`}
         >
-          <h2 className={styles.sectionTitle}>The <span className="text-gradient">RealEstateX</span> Edge</h2>
+          <h2 className={styles.sectionTitle}>The <span className="text-gradient">PropertyVerx</span> Edge</h2>
         </div>
         
         {/* Table Wrapper Block: Glides up comfortably using fade-up once visible */}
@@ -27,7 +27,7 @@ export default function EdgeGrid() {
             <thead>
               <tr>
                 <th className={styles.th}>Capability</th>
-                <th className={styles.th}>RealEstateX AI-OS</th>
+                <th className={styles.th}>PropertyVerx AI-OS</th>
                 <th className={styles.th}>Legacy Systems / Excel</th>
               </tr>
             </thead>
@@ -72,7 +72,7 @@ export default function EdgeGrid() {
 //     <section className={`${styles.py5} ${styles.bgWhite}`}>
 //       <div className="max-w-7xl mx-auto">
 //         <div className={styles.sectionHeader}>
-//           <h2 className={styles.sectionTitle}>The <span className="text-gradient">RealEstateX</span> Edge</h2>
+//           <h2 className={styles.sectionTitle}>The <span className="text-gradient">PropertyVerx</span> Edge</h2>
 //         </div>
         
 //         <div className={styles.tableResponsive}>
@@ -80,7 +80,7 @@ export default function EdgeGrid() {
 //             <thead>
 //               <tr>
 //                 <th className={styles.th}>Capability</th>
-//                 <th className={styles.th}>RealEstateX AI-OS</th>
+//                 <th className={styles.th}>PropertyVerx AI-OS</th>
 //                 <th className={styles.th}>Legacy Systems / Excel</th>
 //               </tr>
 //             </thead>
