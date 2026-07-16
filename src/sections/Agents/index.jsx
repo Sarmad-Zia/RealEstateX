@@ -12,7 +12,7 @@ import { Button } from '../../components/CTAButton';
 
 const agentsData = [
   {
-    title: "Predictive Smart Lead & Tenant Matching",
+    title: "Predictive Smart Lead and Tenant Matching",
     desc: "Match verified buyers and prospective tenants with available properties, plots, or commercial spaces using predictive budget and behavioral analysis.",
     cmd: '"Match verified buyers with suitable properties based on budget and behavior."',
     icon: "UsersRound"

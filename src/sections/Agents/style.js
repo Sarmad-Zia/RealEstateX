@@ -8,7 +8,7 @@ export const styles = {
   agentsGrid: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6",
   aiCard: "bg-paper border border-sand rounded-3xl p-10 shadow-sm relative overflow-hidden group hover:-translate-y-2.5 hover:shadow-lg transition-all duration-400 before:absolute before:top-0 before:left-0 before:w-full before:h-1 before:bg-grad-premium before:opacity-0 group-hover:before:opacity-100 before:transition-opacity before:duration-300",
   aiIconBox: "w-[70px] h-[70px] bg-grad-icon text-forest flex items-center justify-center rounded-2xl mb-8 transition-transform duration-300 group-hover:scale-105 dark:text-ink",
-  aiCardTitle: "text-xl font-bold font-poppins text-ink mb-2 text-center",
+  aiCardTitle: "text-xl font-bold font-poppins text-ink mb-2 text-left",
   aiCardDesc: "text-sm text-body-text leading-relaxed mb-6 text-justify ",
   aiCommandBox: "bg-sand border-l-4 border-mint p-4 rounded-r-xl font-mono text-xs text-ink font-semibold break-words text-justify ",
   heroBtnPremium: "bg-grad-premium text-ink dark:text-white px-9 py-4 rounded-xl font-semibold shadow-[0_10px_20px_-5px_rgba(15,122,77,0.4)] hover:-translate-y-0.5 hover:shadow-[0_20px_30px_-10px_rgba(15,122,77,0.5)] active:translate-y-0 transition-all duration-300 text-base",
