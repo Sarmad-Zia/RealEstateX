@@ -1,7 +1,8 @@
 import React from 'react';
 import { styles } from './style';
-import { useScrollAnimation } from '../../hooks/UserInteractionObserver'; // Double-check this matches your hook's file name
+import { useScrollAnimation } from '../../hooks/UserInteractionObserver';
 import { Button } from '../../components/CTAButton';
+import { bannerContent } from '../../data/commonData';
 
 
 export default function InterstitialBanner() {
@@ -15,21 +16,16 @@ export default function InterstitialBanner() {
     >
       {/* Title element pops into view with a base delay configuration */}
       <h2 className={`${styles.bannerTitle} animate fade-up delay-1`}>
-        This Is Not Just Software. This Is an AI-Powered Operating System.
+        {bannerContent.title}
       </h2>
       
-      {/* Subtext description follows immediately after */}
       <p className={`${styles.bannerDesc} animate fade-up delay-2`}>
-        Replace slow manual processes with the speed of intelligent automation.
+        {bannerContent.description}
       </p>
       
-      {/* Action button rendering sequentially at the tail of the cascade */}
-      {/* <button className={`${styles.bannerBtn} animate fade-up delay-3`}>
-        See AI in Action
-      </button> */}
       <Button
         className={`${styles.bannerBtn} animate fade-up delay-3`}
-        text="See AI in Action"
+        text={bannerContent.btnText}
         onPress={() => console.log('See AI in Action')}
       />
     </section>

@@ -1,7 +1,7 @@
 // src/components/TrustedBy/index.jsx
 import React from 'react';
 import { styles } from './style';
-import { trustedClients } from './data';
+import { trustedClients } from '../../data/commonData.js';
 import { useScrollAnimation } from '../../hooks/UserInteractionObserver'; // adjust path if needed
 
 export default function TrustedBy() {
@@ -14,8 +14,8 @@ export default function TrustedBy() {
     >
       <div className={styles.container}>
         {/* <div className={styles.eyebrowRow}> */}
-          {/* <span className={styles.eyebrowLine} /> */}
-          {/* <span className={styles.eyebrow + ' generalTitle' }>Trusted By</span> */}
+        {/* <span className={styles.eyebrowLine} /> */}
+        {/* <span className={styles.eyebrow + ' generalTitle' }>Trusted By</span> */}
         {/* </div> */}
 
         <h2 className={styles.heading}>

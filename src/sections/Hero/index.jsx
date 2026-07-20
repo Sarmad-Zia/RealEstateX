@@ -1,7 +1,7 @@
 import { styles } from "./style";
 import { images } from "../../assets/images.js";
 import { ShieldAlert } from "lucide-react";
-import { painPoints } from "./data";
+import { painPoints, heroContent } from "../../data/commonData";
 
 export default function HeroSection() {
   return (
@@ -9,19 +9,15 @@ export default function HeroSection() {
       <div className={styles.heroGrid}>
         {/* Copy column */}
         <div className={styles.copyCol + " animate delay-3 py-10 slide-left"}>
-            <span className={styles.sectionTag}>The Next-Gen Real Estate OS</span>
+            <span className={styles.sectionTag}>{heroContent.sectionTag}</span>
           <div className={styles.textSection}>
 
             <h1 className={styles.heroTitle + ' generalTitle' }>
-              The Enterprise Real Estate OS: Automate Listings, Installments,
-              and Agent Commissions
+              {heroContent.title}
             </h1>
 
             <p className={styles.heroDescription}>
-              A unified management platform built for modern developers,
-              realtors, and property societies. Streamline buying, selling,
-              and leasing with automated invoicing, localized flexible
-              installment plans, and an instant client portal.
+              {heroContent.description}
             </p>
 
             <ul className={styles.painList + " animate delay-4 fade-up"}>
@@ -43,13 +39,13 @@ export default function HeroSection() {
                 " animate delay-5 pop-in text-forest-deep!"
               }
             >
-              Book a Live Demo
+              {heroContent.primaryBtn}
             </button>
 
             <button
               className={styles.heroBtnOutline + " animate delay-5 pop-in"}
             >
-              📞 Call Sales Team
+              {heroContent.secondaryBtn}
             </button>
           </div>
         </div>
@@ -59,7 +55,7 @@ export default function HeroSection() {
           <div className={styles.mockupContainer}>
             <img
               src={images.hero.main}
-              alt="PropertyVerx Dashboard"
+              alt={heroContent.mockupAlt}
               className={styles.mockupImg}
               loading="eager"
             />

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { styles } from './style.js'
-import { footprintData } from './data.js'
+import { footprintData, counterContent } from '../../data/commonData.js'
 import { Button } from '../../components/CTAButton/index.jsx'
 import RegulatoryCompliance from '../Accredatation/index.jsx'
 
@@ -79,7 +79,7 @@ function FootprintStrip() {
     return (
         <section ref={sectionRef} className={styles.section}>
 
-            <p className={styles.tag + ' font-bold!'}>Our Operating Footprint</p>
+            <p className={styles.tag + ' font-bold!'}>{counterContent.tag}</p>
 
             <div className={styles.grid}>
                 {footprintData.map((item, index) => (

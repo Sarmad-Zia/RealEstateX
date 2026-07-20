@@ -10,7 +10,7 @@ import {
   CheckCircle2,
   X,
 } from "lucide-react";
-import marketInsights from "./data";
+import { marketInsights } from "../../data/commonData.js";
 import { styles, ledgerLinesStyle } from "./style";
 
 const ICONS = {

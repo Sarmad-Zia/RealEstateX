@@ -1,6 +1,6 @@
 import React from 'react';
 import { styles } from './style';
-import { operations } from './data';
+import { operations } from '../../data/commonData.js';
 import { useScrollAnimation } from '../../hooks/UserInteractionObserver'; // Adjust path if needed
 
 function OperationCard({ op, index }) {

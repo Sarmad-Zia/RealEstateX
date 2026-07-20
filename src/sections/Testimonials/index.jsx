@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { styles } from './style';
-import { testimonials } from './data';
-import { useScrollAnimation } from '../../hooks/UserInteractionObserver'; // Adjust path if needed
+import { testimonials, testimonialsContent } from '../../data/commonData';
+import { useScrollAnimation } from '../../hooks/UserInteractionObserver';
 import '../../assets/animations/gerneralAnimations.css'; // Uses .animate, .scale-in, .pop-in, .pulse etc.
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import TrustedBy from '../TrustedBy';
@@ -26,7 +26,7 @@ export default function Testimonials() {
       <div className={styles.divider} ></div>
 
       <h2 className={styles.heading + 'pt-6'}>
-        Our Customers Love <span className={styles.headingAccent}>PropertyVerx</span>
+        {testimonialsContent.heading} <span className={styles.headingAccent}>{testimonialsContent.headingAccent}</span>
       </h2>
 
       <div className={styles.carouselRow}>

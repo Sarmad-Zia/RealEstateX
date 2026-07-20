@@ -1,6 +1,7 @@
 import React from 'react';
 import { styles } from './style';
-import { useScrollAnimation } from '../../hooks/UserInteractionObserver'; // Hook file verbatim
+import { useScrollAnimation } from '../../hooks/UserInteractionObserver';
+import { brand, footerContent } from '../../data/commonData';
 
 export default function Footer() {
   const footerContentRef = useScrollAnimation();
@@ -16,20 +17,21 @@ export default function Footer() {
           {/* Brand + Social Column */}
           <div className={styles.footerColBrand}>
             <div className={`${styles.logo} ${styles.logoFull} animate fade-in delay-2`}>
-              RealEstate
+              {brand.footerLogoText}
               <span className={`${styles.logoAccent} animate-logo-x`}>
-                X
+                {brand.footerLogoAccent}
               </span>
             </div>
             <p className={`${styles.footerBrandDesc} animate fade-in delay-3 mb-5 `}>
-              Building high-performance software systems for global property and business automation. 
+              {footerContent.brandDesc}
             </p>
             <div className={`${styles.footerSocialRow} animate fade-in delay-3`}>
-              <a href="#" aria-label="LinkedIn" className={styles.footerSocialIcon}>in</a>
-              <a href="#" aria-label="Facebook" className={styles.footerSocialIcon}>f</a>
+              {footerContent.socialLinks.map((link, idx) => (
+                <a key={idx} href={link.href} aria-label={link.label} className={styles.footerSocialIcon}>{link.display}</a>
+              ))}
             </div>
-            <a href="#contact" className={`${styles.footerContactLink} animate fade-in delay-4`}>
-              Get in contact with us <span>›</span>
+            <a href={footerContent.contactHref} className={`${styles.footerContactLink} animate fade-in delay-4`}>
+              {footerContent.contactLinkText} <span>›</span>
             </a>
           </div>
 
@@ -51,28 +53,21 @@ export default function Footer() {
 
           {/* Other Links Column */}
           <div className={styles.footerColLinks}>
-            <h6 className={`${styles.footerSectionHeading} animate fade-down delay-2`}>Other Links</h6>
+            <h6 className={`${styles.footerSectionHeading} animate fade-down delay-2`}>{footerContent.otherLinksHeading}</h6>
             <ul className={styles.footerList}>
-              <li className="animate slide-left delay-3">
-                {/* <a href="#login" className={styles.footerLink}>Login</a> */}
-              </li>
-              <li className="animate slide-left delay-4">
-                <a href="#help" className={styles.footerLink}>Help Center</a>
-              </li>
-              <li className="animate slide-left delay-5">
-                <a href="#privacy" className={styles.footerLink}>Privacy Policy</a>
-              </li>
-              <li className="animate slide-left delay-6">
-                <a href="#terms" className={styles.footerLink}>Terms of Use</a>
-              </li>
+              {footerContent.otherLinks.map((link, idx) => (
+                <li key={idx} className={`animate slide-left delay-${3 + idx}`}>
+                  <a href={link.href} className={styles.footerLink}>{link.label}</a>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Newsletter Column */}
           <div className={styles.footerColNewsletter}>
-            <h6 className={`${styles.footerSectionHeading} animate fade-down delay-2`}>Newsletter</h6>
+            <h6 className={`${styles.footerSectionHeading} animate fade-down delay-2`}>{footerContent.newsletterHeading}</h6>
             <p className={`${styles.footerNewsletterDesc} animate fade-in delay-3`}>
-              Sign-up to receive product updates. Only good stuff, no spam.
+              {footerContent.newsletterDesc}
             </p>
             <form
               className={`${styles.footerNewsletterForm} animate fade-up delay-4`}
@@ -81,11 +76,11 @@ export default function Footer() {
               <input
                 type="email"
                 required
-                placeholder="Work Email*"
+                placeholder={footerContent.newsletterPlaceholder}
                 className={styles.footerNewsletterInput}
               />
               <button type="submit" className={styles.footerNewsletterBtn}>
-                Sign Up
+                {footerContent.newsletterBtnText}
               </button>
             </form>
           </div>
@@ -98,7 +93,7 @@ export default function Footer() {
         />
 
         <p className={`${styles.footerBottomRow} animate fade-in delay-2`}>
-          © 2026  <a href="https://hashverx.com/" className='text-forest' >Hashverx</a> . All Rights Reserved.
+          {brand.copyright} <a href={brand.copyrightLink} className='text-forest' >{brand.copyrightLinkText}</a>{brand.copyrightSuffix}
         </p>
       </footer>
     </div>

@@ -2,6 +2,7 @@ import React from "react";
 import { styles } from "./style";
 import { useScrollAnimation } from "../../hooks/UserInteractionObserver";
 import { CalendarCheck } from "lucide-react";
+import { ctaContent } from "../../data/commonData";
 
 export default function CTA({ onBookDemo = () => {
   window.location.href='#contact'
@@ -18,8 +19,7 @@ export default function CTA({ onBookDemo = () => {
         className={`${styles.content} animate fade-up scroll-hidden`}
       >
         <h2 className={`${styles.heading + ' generalTitle' } animate fade-up delay-1`}>
-          Ready to eliminate manual spreadsheets and centralize your entire
-          property inventory?
+          {ctaContent.heading}
         </h2>
 
         <div className={`${styles.buttonsRow} animate scale-in delay-2`}>
@@ -29,7 +29,7 @@ export default function CTA({ onBookDemo = () => {
             onClick={onBookDemo}
           >
             <CalendarCheck className="w-5 h-5" />
-            Consult with a Real Estate Systems Architect
+            {ctaContent.btnText}
           </button>
         </div>
       </div>

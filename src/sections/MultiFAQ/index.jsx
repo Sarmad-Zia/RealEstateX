@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { styles } from './style';
-import { faqItems } from './data';
+import { faqItems, multiFaqContent } from '../../data/commonData';
 import { useScrollAnimation } from '../../hooks/UserInteractionObserver';
 import { Plus } from 'lucide-react';
 
@@ -25,13 +25,12 @@ export default function FAQ() {
           ref={headerRef}
           className={`${styles.sectionHeader} animate blur-in scroll-hidden`}
         >
-          <span className={styles.eyebrow}>Support Center</span>
+          <span className={styles.eyebrow}>{multiFaqContent.eyebrow}</span>
           <h2 className={styles.sectionTitle + ' generalTitle'}>
-            Frequently Asked <span className="text-gradient">Questions</span>
+            {multiFaqContent.sectionTitle} <span className="text-gradient">{multiFaqContent.sectionTitleAccent}</span>
           </h2>
           <p className={styles.sectionSubtitle}>
-            Everything you need to know about deploying PropertyVerx for your
-            society, development company, or broker network.
+            {multiFaqContent.sectionSubtitle}
           </p>
         </div>
 
@@ -97,9 +96,9 @@ export default function FAQ() {
 
         {/* Closing CTA */}
         <div className={styles.faqCta}>
-          <p className={styles.faqCtaText}>Still have questions?</p>
-          <a href="#contact" className={styles.faqCtaButton}>
-            Talk to our team
+          <p className={styles.faqCtaText}>{multiFaqContent.ctaText}</p>
+          <a href={multiFaqContent.ctaHref} className={styles.faqCtaButton}>
+            {multiFaqContent.ctaBtnText}
           </a>
         </div>
       </div>

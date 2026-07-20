@@ -1,7 +1,7 @@
 import React from 'react';
 import { styles } from './style';
-import { hostingOptions, specs } from './data';
-import { useScrollAnimation } from '../../hooks/UserInteractionObserver'; // Adjust file path if needed
+import { securityHostingOptions as hostingOptions, securitySpecs as specs, securityContent } from '../../data/commonData';
+import { useScrollAnimation } from '../../hooks/UserInteractionObserver';
 import { ShieldCheck, CheckCircle2 } from 'lucide-react';
 
 export default function Security() {
@@ -19,16 +19,15 @@ export default function Security() {
           className="lg:pr-8 animate slide-left scroll-hidden"
         >
           <span className={`${styles.sectionTag} inline-block animate pop-in delay-1`}>
-            Cybersecurity &amp; Deployment
+            {securityContent.sectionTag}
           </span>
 
           <h2 className={`${styles.heading + ' generalTitle' } animate fade-up delay-2`}>
-            Enterprise Grade Security &amp; Deployment Flexibility
+            {securityContent.heading}
           </h2>
 
           <p className={`${styles.bodyText } animate fade-up delay-3`}>
-            Run PropertyVerx on Tier-1 AWS cloud infrastructure, or keep every record on a
-            server you control the same security guarantees apply either way.
+            {securityContent.bodyText}
           </p>
 
           {/* Hosting options */}
@@ -59,7 +58,7 @@ export default function Security() {
           <div className={styles.specsCard}>
             <div className={`${styles.specsTitleRow} animate fade-down delay-2`}>
               <ShieldCheck className="text-forest" size={22} />
-              <h4 className={styles.specsTitle}>Security Guarantees</h4>
+              <h4 className={styles.specsTitle}>{securityContent.specsTitle}</h4>
             </div>
 
             <ul className={styles.specsList}>

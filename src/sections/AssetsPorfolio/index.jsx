@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect, useCallback } from 'react'
 import { styles } from './style.js'
-import { assetData } from './data.js'
+import { assetData } from '../../data/commonData.js'
 import { ChevronLeft,ChevronRight } from 'lucide-react'
 
 const GAP = 20 // must match the `gap-5` in styles.track

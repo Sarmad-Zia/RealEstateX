@@ -1,8 +1,8 @@
 import React from 'react';
 import { CheckCircle2, XCircle, MinusCircle } from 'lucide-react';
 import { styles } from './style';
-import { competitors, comparisonRows } from './data';
-import { useScrollAnimation } from '../../hooks/UserInteractionObserver'; // Adjust file path if needed
+import { competitors, comparisonRows, comparisonContent } from '../../data/commonData';
+import { useScrollAnimation } from '../../hooks/UserInteractionObserver';
 
 function getStatus(value) {
   if (typeof value === 'boolean') return value ? 'positive' : 'negative';
@@ -49,12 +49,12 @@ export default function FeatureComparisonMatrix() {
           ref={headerRef}
           className={`${styles.sectionHeader} animate blur-in scroll-hidden`}
         >
-          <span className={styles.eyebrow}>How We Compare</span>
+          <span className={styles.eyebrow}>{comparisonContent.eyebrow}</span>
           <h2 className={styles.title + ' generalTitle'}>
-            One Platform, <span className="text-gradient">No Compromises</span>
+            {comparisonContent.title} <span className="text-gradient">{comparisonContent.titleAccent}</span>
           </h2>
           <p className={styles.subtitle + ' generalDesc'}>
-            See how PropertyVerx stacks up against the tools you&apos;re already juggling.
+            {comparisonContent.subtitle}
           </p>
         </div>
 
@@ -66,7 +66,7 @@ export default function FeatureComparisonMatrix() {
           <table className={styles.table}>
             <thead>
               <tr className={styles.theadRow}>
-                <th className={styles.thFeature}>Feature Matrix</th>
+                <th className={styles.thFeature}>{comparisonContent.thFeature}</th>
                 {competitors.map((c) => (
                   <th
                     key={c.key}
@@ -98,7 +98,7 @@ export default function FeatureComparisonMatrix() {
           </table>
         </div>
 
-        <p className={styles.footnote}>Swipe sideways on mobile to see the full comparison →</p>
+        <p className={styles.footnote}>{comparisonContent.footnote}</p>
       </div>
     </section>
   );

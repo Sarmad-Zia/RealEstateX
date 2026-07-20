@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { styles } from './style';
-import { faqData } from './data';
-import { useScrollAnimation } from '../../hooks/UserInteractionObserver'; // Hook file verbatim
+import { faqData, faqContent } from '../../data/commonData';
+import { useScrollAnimation } from '../../hooks/UserInteractionObserver';
 import { HelpCircle, Plus } from 'lucide-react';
 
 export default function FAQ() {
@@ -25,7 +25,7 @@ export default function FAQ() {
           className={`${styles.sectionHeader} animate blur-in scroll-hidden`}
         >
           <h2 className={styles.sectionTitle}>
-            Common <span className="text-gradient">Questions</span>
+            {faqContent.sectionTitle} <span className="text-gradient">{faqContent.sectionTitleAccent}</span>
           </h2>
         </div>
 

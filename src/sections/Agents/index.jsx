@@ -1,7 +1,7 @@
 import React from 'react';
 import { styles } from './style';
-import { agentsData } from './data';
-import { useScrollAnimation } from '../../hooks/UserInteractionObserver'; // Adjust path as necessary
+import { agentsData, agentsContent } from '../../data/commonData';
+import { useScrollAnimation } from '../../hooks/UserInteractionObserver';
 
 
 function AgentCard({ agent, index }) {
@@ -39,9 +39,9 @@ export default function Agents() {
           ref={headerRef}
           className={`${styles.sectionHeader} animate blur-in scroll-hidden`}
         >
-          <span className={styles.sectionTag}>Operational AI</span>
-          <h2 className={styles.sectionTitle + ' generalTitle' }>Intelligent Property Tech:   <span className="text-gradient dark:lightText-gradient">AI-Driven Real Estate Operations</span></h2>
-          <p className={styles.sectionDesc+ ' generalDesc'}>PropertyVerx replaces manual effort with intelligent AI agents that understand your society data like a human expert.</p>
+          <span className={styles.sectionTag}>{agentsContent.sectionTag}</span>
+          <h2 className={styles.sectionTitle + ' generalTitle' }>{agentsContent.sectionTitle}   <span className="text-gradient dark:lightText-gradient">{agentsContent.sectionTitleAccent}</span></h2>
+          <p className={styles.sectionDesc+ ' generalDesc'}>{agentsContent.sectionDesc}</p>
         </div>
 
         {/* Dynamic grid engine mapping structural item containers */}

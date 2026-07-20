@@ -7,7 +7,7 @@ import {
   SALES_PHONE_HREF,
   PROJECT_TYPES,
   initialForm,
-} from './data';
+} from '../../data/commonData.js';
 import { useScrollAnimation } from '../../hooks/UserInteractionObserver'; // Adjust file path if needed
 import {
   User,

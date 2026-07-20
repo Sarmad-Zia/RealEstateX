@@ -1,18 +1,18 @@
 import React from 'react';
 import { styles } from './style';
-import { accreditations } from './data';
-import { useScrollAnimation } from '../../hooks/UserInteractionObserver'; // Adjust file path if needed
+import { accreditations, accreditationContent } from '../../data/commonData';
+import { useScrollAnimation } from '../../hooks/UserInteractionObserver';
 
 export default function RegulatoryCompliance() {
   const marqueeRef = useScrollAnimation();
 
   return (
     <section id="compliance" className={styles.section}>
-      <p className={styles.label}>Built for Compliance, Regulated for Security
+      <p className={styles.label}>{accreditationContent.label}
       </p>
 
       <p className={styles.discrption + ' generalDesc'}>
-        Our real estate ecosystem integrates natively with regional housing authorities, land departments, and financial frameworks to protect legal data and transaction integrity. 
+        {accreditationContent.description}
       </p>
 
       {/* Entrance animation lives here; the infinite scroll animation lives

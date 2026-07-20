@@ -8,7 +8,7 @@ import {
   CheckCircle2,
   ArrowRight,
 } from "lucide-react";
-import { hostingOptions, pricingTiers, pricingDisclaimer } from "./data";
+import { pricingHostingOptions as hostingOptions, pricingTiers, pricingDisclaimer, pricingContent } from "../../data/commonData";
 import { styles } from "./style";
 
 const METRIC_ICONS = {
@@ -52,13 +52,12 @@ export default function Pricing({ onSelectTier = () => {} }) {
       >
         <div className={styles.eyebrowRow}>
           <span className={styles.eyebrowLine} />
-          <span className={styles.eyebrow}>Enterprise Investment</span>
+          <span className={styles.eyebrow}>{pricingContent.eyebrow}</span>
           <span className={styles.eyebrowLine} />
         </div>
-        <h2 className={styles.heading + ' generalTitle'}>Pricing Built for Scale, Not Subscriptions</h2>
+        <h2 className={styles.heading + ' generalTitle'}>{pricingContent.heading}</h2>
         <p className={styles.subhead}>
-          PropertyVerx is procured the way enterprise infrastructure is procured —
-          scoped to your portfolio, not billed like a phone app.
+          {pricingContent.subhead}
         </p>
       </header>
 

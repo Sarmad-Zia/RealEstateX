@@ -3,6 +3,7 @@ import { styles } from './style';
 import { Button } from '../../components/CTAButton';
 import { Menu, Moon, Sun } from 'lucide-react';
 import MobileMenu from '../../components/MobileMenu';
+import { brand, navbarContent } from '../../data/commonData';
 
 export default function Navbar({ isOpen, setIsOpen,isDark,setIsDark }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,9 +31,9 @@ export default function Navbar({ isOpen, setIsOpen,isDark,setIsDark }) {
       <div className={styles.navWrapper}>
         {/* Dynamic Logo Text Color */}
         <div className={`${styles.logo} ${isScrolled ? styles.logoIsland : styles.logoFull}`}>
-          PropertyVer
+          {brand.logoText}
           <span className={`${styles.logoAccent} animate-logo-x`}>
-            X
+            {brand.logoAccent}
           </span>
         </div>
         
@@ -48,27 +49,20 @@ export default function Navbar({ isOpen, setIsOpen,isDark,setIsDark }) {
         
         {/* Dynamic Links and Buttons based on scroll state */}
         <div className={styles.navLinksContainer}>
-          <a href="#agents" className={isScrolled ? styles.navLinkIsland : styles.navLinkFull}>
-            AI Agents
-          </a>
-          <a href="#features" className={isScrolled ? styles.navLinkIsland : styles.navLinkFull}>
-            Core Features
-          </a>
-          <a href="#security" className={isScrolled ? styles.navLinkIsland : styles.navLinkFull}>
-            Security
-          </a>
-          <a href="#pricing" className={isScrolled ? styles.navLinkIsland : styles.navLinkFull}>
-            Pricing
-          </a>
+          {navbarContent.links.map((link, idx) => (
+            <a key={idx} href={link.href} className={isScrolled ? styles.navLinkIsland : styles.navLinkFull}>
+              {link.label}
+            </a>
+          ))}
           
           <Button 
             className={isScrolled ? styles.navBtnOutlineIsland : styles.navBtnOutlineFull } 
-            text="Call Now" 
-            onPress={() => window.location.href = 'tel:+923344071716'} 
+            text={navbarContent.callBtnText} 
+            onPress={() => window.location.href = navbarContent.callHref} 
           />
           <Button 
             className={isScrolled ? styles.navBtnPremiumIsland : styles.navBtnPremiumFull + " text-forest-deep!"} 
-            text="Book Live Demo" 
+            text={navbarContent.demoBtnText} 
             onPress={() => {console.log('Book Demo Clicked'); window.location.href= '#contact' }} 
           />
           {/* {

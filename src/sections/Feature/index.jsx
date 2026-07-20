@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { styles } from "./style";
-import { featureData } from "./data";
+import { featureData, featuresContent } from "../../data/commonData";
 import { useScrollAnimation } from "../../hooks/UserInteractionObserver";
 
 export default function Features() {
@@ -20,11 +20,11 @@ export default function Features() {
           className={`${styles.sectionHeader} animate blur-in scroll-hidden delay-2`}
         >
           <h2 className={styles.sectionTitle + " generalTitle " }>
-            Everything Needed to Scale Your{" "}
-            <span className="text-gradient">Real Estate Operations</span>
+            {featuresContent.sectionTitle}{" "}
+            <span className="text-gradient">{featuresContent.sectionTitleAccent}</span>
           </h2>
           <p className={styles.sectionDesc+ ' generalDesc'}>
-            A full-lifecycle ERP designed for the high-stakes property market.
+            {featuresContent.sectionDesc}
           </p>
         </div>
 
@@ -75,7 +75,7 @@ export default function Features() {
                 <span className={styles.chromeDotAmber} />
                 <span className={styles.chromeDotGreen} />
                 <span className={styles.featureWindowUrlBar}>
-                  app.propertyverx.io
+                  {featuresContent.urlBar}
                 </span>
               </div>
 
