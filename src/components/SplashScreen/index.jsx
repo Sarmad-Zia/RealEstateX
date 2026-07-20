@@ -113,10 +113,7 @@ import { useEffect, useState } from "react";
 import { ShieldCheck, Building2, LandPlot, ReceiptText, Landmark } from "lucide-react";
 import { styles } from "./style.js";
 import "./style.css";
-
-// Adjust this path if SplashScreen doesn't live at src/components/SplashScreen/ —
-// it should point at src/assets/image/building.png relative to this file.
-import buildingImg from "../../assets/images/building.png";
+import { images } from "../../assets/images.js";
 
 /**
  * Splash screen shown once on initial app load.
@@ -177,28 +174,31 @@ export default function SplashScreen({ onFinish }) {
       aria-label="Loading PropertyVerx"
     >
       {/* background watermarks — subtle, purpose-driven, never competing with the wordmark */}
-      {BACKGROUND_ICONS.map(({ Icon, position, opacity, duration, delay, dissolveX, dissolveY }, i) => (
-        <Icon
-          key={i}
-          aria-hidden="true"
-          strokeWidth={1.25}
-          className={`${styles.bgIcon} ${position}`}
-          style={{
-            "--bg-icon-opacity": opacity,
-            "--dissolve-x": dissolveX,
-            "--dissolve-y": dissolveY,
-            animationDuration: `1s, ${duration}`,
-            animationDelay: `${0.4 + i * 0.15}s, ${delay}`,
-          }}
-        />
-      ))}
+      {BACKGROUND_ICONS.map((iconConfig, i) => {
+        const BackgroundIcon = iconConfig.Icon;
+        return (
+          <BackgroundIcon
+            key={i}
+            aria-hidden="true"
+            strokeWidth={1.25}
+            className={`${styles.bgIcon} ${iconConfig.position}`}
+            style={{
+              "--bg-icon-opacity": iconConfig.opacity,
+              "--dissolve-x": iconConfig.dissolveX,
+              "--dissolve-y": iconConfig.dissolveY,
+              animationDuration: `1s, ${iconConfig.duration}`,
+              animationDelay: `${0.4 + i * 0.15}s, ${iconConfig.delay}`,
+            }}
+          />
+        );
+      })}
 
       {/* ambient background glow — kept subtle, the one atmospheric touch */}
       <div className={styles.glow} />
 
       <div className={styles.content}>
         {/* building mark — fades in above the title before the letters rise */}
-        <img src={buildingImg} alt="" className={styles.building} />
+        <img src={images.splash.building} alt="" className={styles.building} />
         {/* wordmark, announced as one string for screen readers even
             though it's rendered as individually animated letters */}
         <h1 className={styles.wordmark} aria-label={NAME}>

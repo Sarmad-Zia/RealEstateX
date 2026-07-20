@@ -1,13 +1,7 @@
 import { styles } from "./style";
-import heroImage from "../../assets/images/heroImage.png";
+import { images } from "../../assets/images.js";
 import { ShieldAlert } from "lucide-react";
-
-const painPoints = [
-  "Losing revenue due to manual installment tracking?",
-  "Dealing with agent commission disputes?",
-  "Struggling with messy Excel file records?",
-  "Customers constantly calling for ledger updates?",
-];
+import { painPoints } from "./data";
 
 export default function HeroSection() {
   return (
@@ -64,7 +58,7 @@ export default function HeroSection() {
         <div className={styles.mockupWrapper + " animate delay-5 blur-in"}>
           <div className={styles.mockupContainer}>
             <img
-              src={heroImage}
+              src={images.hero.main}
               alt="PropertyVerx Dashboard"
               className={styles.mockupImg}
               loading="eager"

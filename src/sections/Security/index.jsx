@@ -1,40 +1,8 @@
 import React from 'react';
 import { styles } from './style';
+import { hostingOptions, specs } from './data';
 import { useScrollAnimation } from '../../hooks/UserInteractionObserver'; // Adjust file path if needed
-import { Cloud, Server, ShieldCheck, CheckCircle2, ArrowRight } from 'lucide-react';
-
-// Every claim below is traceable to the BRD's Cybersecurity & Infrastructure
-// section: AWS hosting, end-to-end encryption, daily backups, activity logs,
-// and the on-premise option. Nothing about integrations/APIs is included —
-// that's not a documented capability yet.
-
-const hostingOptions = [
-  {
-    icon: Cloud,
-    title: 'AWS Cloud Hosting',
-    caption: 'Rapid deployment on Tier-1 AWS infrastructure.',
-  },
-  {
-    icon: Server,
-    title: 'On-Premises Server',
-    caption: 'Full data residency on infrastructure you control.',
-  },
-];
-
-const specs = [
-  {
-    title: 'End-to-End Data Encryption',
-    caption: 'Every record and transaction is protected, at rest and in transit.',
-  },
-  {
-    title: 'Daily Automated Backups',
-    caption: 'Nightly cloud backups so no ledger entry or agreement is ever lost.',
-  },
-  {
-    title: 'Immutable Activity Logs',
-    caption: 'Every user action is timestamped and permanently recorded for auditability.',
-  },
-];
+import { ShieldCheck, CheckCircle2 } from 'lucide-react';
 
 export default function Security() {
   // Separate hooks to trigger the left side and right side independently on scroll
